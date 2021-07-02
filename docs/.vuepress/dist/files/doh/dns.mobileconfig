@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>PayloadContent</key>
+<array>
+<dict>
+<key>DNSSettings</key>
+<dict>
+<key>DNSProtocol</key>
+<string>HTTPS</string>
+<key>ServerAddresses</key>
+<array>
+<string>2a09::</string>
+<string>2a11::</string>
+<string>185.222.222.222</string>
+<string>45.11.45.11</string>
+</array>
+<key>ServerURL</key>
+<string>https://doh.dns.sb/dns-query</string>
+</dict>
+<key>OnDemandRules</key>
+<array>
+<dict>
+<key>Action</key>
+<string>Connect</string>
+<key>InterfaceTypeMatch</key>
+<string>WiFi</string>
+</dict>
+<dict>
+<key>Action</key>
+<string>Connect</string>
+<key>InterfaceTypeMatch</key>
+<string>Cellular</string>
+</dict>
+<dict>
+<key>Action</key>
+<string>Disconnect</string>
+</dict>
+</array>
+<key>PayloadDescription</key>
+<string>Configures device to use DNS.SB DoH Encrypted DNS over HTTPS</string>
+<key>PayloadDisplayName</key>
+<string>DNS.SB DoH DNS over HTTPS</string>
+<key>PayloadIdentifier</key>
+<string>com.apple.dnsSettings.managed.dae29302-de8d-4fd6-b3c0-95582777a559</string>
+<key>PayloadType</key>
+<string>com.apple.dnsSettings.managed</string>
+<key>PayloadUUID</key>
+<string>b8ba85b7-b591-4cd2-8181-070f91450e0e</string>
+<key>PayloadVersion</key>
+<integer>1</integer>
+<key>ProhibitDisablement</key>
+<false/>
+</dict>
+</array>
+<key>PayloadDescription</key>
+<string>Adds different encrypted DNS configurations to Big Sur and iOS 14 based systems</string>
+<key>PayloadDisplayName</key>
+<string>Encrypted DNS (DoH, DoT)</string>
+<key>PayloadIdentifier</key>
+<string>com.notjakob.apple-dns.154d65ff-3c70-4c33-a0ec-d2d6e1f05dbb</string>
+<key>PayloadRemovalDisallowed</key>
+<false/>
+<key>PayloadType</key>
+<string>Configuration</string>
+<key>PayloadUUID</key>
+<string>9de30751-1dcd-4aa6-9d9b-6a2a75e74a6b</string>
+<key>PayloadVersion</key>
+<integer>1</integer>
+</dict>
+</plist>

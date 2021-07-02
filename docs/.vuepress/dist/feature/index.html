@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Why DNS.SB | DNS.SB</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#211b24">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Spectral:700&amp;display=swap">
+    <meta name="description" content="An introduction to why privacy is important and what problems DNS.SB solves. This is the DNS.SB documentation, an archive of knowledge about the open-source, non-custodial and privacy-focused public recursive name servers for everyone.">
+    <meta name="msapplication-TileColor" content="#211b24">
+    <meta name="theme-color" content="#211b24">
+    
+    <link rel="preload" href="/assets/css/0.styles.bfe90aa7.css" as="style"><link rel="preload" href="/assets/js/app.95d266d9.js" as="script"><link rel="preload" href="/assets/js/3.515a2847.js" as="script"><link rel="preload" href="/assets/js/14.b65aa66f.js" as="script"><link rel="prefetch" href="/assets/js/10.a80568af.js"><link rel="prefetch" href="/assets/js/11.ec200202.js"><link rel="prefetch" href="/assets/js/12.3f9172b6.js"><link rel="prefetch" href="/assets/js/13.03b0e085.js"><link rel="prefetch" href="/assets/js/15.7232e626.js"><link rel="prefetch" href="/assets/js/16.8cd367a1.js"><link rel="prefetch" href="/assets/js/17.d7f131df.js"><link rel="prefetch" href="/assets/js/18.6c5065db.js"><link rel="prefetch" href="/assets/js/19.b5a68fc1.js"><link rel="prefetch" href="/assets/js/20.b34af816.js"><link rel="prefetch" href="/assets/js/21.d8b174dd.js"><link rel="prefetch" href="/assets/js/22.b38f6213.js"><link rel="prefetch" href="/assets/js/23.18e454d7.js"><link rel="prefetch" href="/assets/js/24.4120fcf6.js"><link rel="prefetch" href="/assets/js/25.efdadc1d.js"><link rel="prefetch" href="/assets/js/26.4d9147c0.js"><link rel="prefetch" href="/assets/js/27.07f1c341.js"><link rel="prefetch" href="/assets/js/28.a84b973b.js"><link rel="prefetch" href="/assets/js/29.dacdf5b4.js"><link rel="prefetch" href="/assets/js/30.b04781fd.js"><link rel="prefetch" href="/assets/js/31.6270abd9.js"><link rel="prefetch" href="/assets/js/32.df1a76be.js"><link rel="prefetch" href="/assets/js/33.bd410458.js"><link rel="prefetch" href="/assets/js/34.bde3d4e3.js"><link rel="prefetch" href="/assets/js/35.14424116.js"><link rel="prefetch" href="/assets/js/4.d8148c00.js"><link rel="prefetch" href="/assets/js/5.9fecb017.js"><link rel="prefetch" href="/assets/js/6.e8932619.js"><link rel="prefetch" href="/assets/js/7.b7ceef9f.js"><link rel="prefetch" href="/assets/js/8.665e45a5.js"><link rel="prefetch" href="/assets/js/9.ea13b8c4.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.4ad889dc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bfe90aa7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/Logo_without_text.png" alt="DNS.SB" class="logo"> <span class="site-name can-hide">DNS.SB</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/feature/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Why DNS.SB
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Using DNS.SB
+</a></div><div class="nav-item"><a href="/dot/" class="nav-link">
+  DNS over TLS
+</a></div><div class="nav-item"><a href="/doh/" class="nav-link">
+  DNS over HTTPS
+</a></div><div class="nav-item"><a href="/faq/" class="nav-link">
+  FAQ
+</a></div><div class="nav-item"><a href="/tos/" class="nav-link">
+  ToS
+</a></div><div class="nav-item"><a href="/privacy/" class="nav-link">
+  Privacy
+</a></div><div class="nav-item"><a href="/contact/" class="nav-link">
+  Contact
+</a></div><div class="nav-item"><a href="https://xtom.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Sponsor
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/dns-sb/dns.sb" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/feature/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Why DNS.SB
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Using DNS.SB
+</a></div><div class="nav-item"><a href="/dot/" class="nav-link">
+  DNS over TLS
+</a></div><div class="nav-item"><a href="/doh/" class="nav-link">
+  DNS over HTTPS
+</a></div><div class="nav-item"><a href="/faq/" class="nav-link">
+  FAQ
+</a></div><div class="nav-item"><a href="/tos/" class="nav-link">
+  ToS
+</a></div><div class="nav-item"><a href="/privacy/" class="nav-link">
+  Privacy
+</a></div><div class="nav-item"><a href="/contact/" class="nav-link">
+  Contact
+</a></div><div class="nav-item"><a href="https://xtom.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Sponsor
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/dns-sb/dns.sb" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Why DNS.SB</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/feature/why-privacy-is-important/" class="sidebar-link">Why Privacy is Important</a></li><li><a href="/feature/why-dns-privacy-is-important/" class="sidebar-link">Why DNS Privacy is Especially Important</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="why-dns-sb"><a href="#why-dns-sb" class="header-anchor">#</a> Why DNS.SB</h1> <p>This is the place with an introduction to privacy in general, and why especially DNS privacy is so important.</p> <hr> <h2 id="why-privacy"><a href="#why-privacy" class="header-anchor">#</a> Why Privacy</h2> <ul><li><a href="/feature/why-privacy-is-important/">Why Privacy is Important</a></li> <li><a href="/feature/why-dns-privacy-is-important/">Why DNS Privacy is Especially Important</a></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/dns-sb/dns.sb/edit/master/docs/feature/README.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.95d266d9.js" defer></script><script src="/assets/js/3.515a2847.js" defer></script><script src="/assets/js/14.b65aa66f.js" defer></script>
+  </body>
+</html>
