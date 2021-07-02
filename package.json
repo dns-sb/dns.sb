@@ -1,0 +1,33 @@
+{
+  "name": "dns.sb",
+  "version": "0.1.0",
+  "description": "[DNS.SB](https://dns.sb) docs.",
+  "config": {
+    "dist": "docs/.vuepress/dist"
+  },
+  "scripts": {
+    "prestart": "rm -rf $npm_package_config_dist",
+    "dev": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "echo 'docs.wasabiwallet.io' > $npm_package_config_dist/CNAME && gh-pages -d $npm_package_config_dist -m 'deploy'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dns-sb/dns.sb.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dns-sb/dns.sb/issues"
+  },
+  "homepage": "https://github.com/dns-sb/dns.sb#readme",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "1.8.2",
+    "gh-pages": "2.2.0",
+    "markdown-it-custom-block": "0.1.2",
+    "nodemon": "^2.0.9",
+    "vuepress": "1.8.2"
+  },
+  "engines": {
+    "node": ">=10.16"
+  }
+}

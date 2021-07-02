@@ -1,0 +1,318 @@
+// Custom styles, see this file for details:
+// https://github.com/vuejs/vuepress/blob/master/packages/docs/docs/miscellaneous/design-concepts.md#reasonable-priority-management
+
+// Default is dark mode: @media (prefers-color-scheme: dark)
+// Overrides can be done using @media (prefers-color-scheme: light)
+html
+body
+  background $darkBgColor
+  color $lightTextColor
+
+  @media (prefers-color-scheme: light)
+    background #fff
+    color $textColor
+
+    .theme-default-content code
+      color $codeTextColor
+
+#app
+  overflow hidden
+
+  // fonts
+  font-family Inconsolata, monospace
+  font-weight 400
+  line-height 1.5
+
+  @media (min-width: 0)
+    font-size 15px
+  @media (min-width: ($MQMobileNarrow + 1px))
+    font-size 16px
+  @media (min-width: ($MQMobile + 1px))
+    font-size 17px
+  @media (min-width: ($MQNarrow + 1px))
+    font-size 18px
+
+  h1
+  h2
+  .site-name
+    font-family Spectral, serif
+    font-weight 700
+    line-height 1.2
+    text-transform capitalize
+
+  h1
+    font-size 3rem
+    margin-bottom 1.5rem
+
+  h2
+    font-size 2rem
+    border-bottom-color $dividerColor
+
+  h3
+  h4
+  summary
+    text-transform capitalize
+    letter-spacing 0.05rem
+    font-weight 700
+
+  details
+    margin -3rem 0 0 0
+    &[open]
+      > :last-child
+        margin-bottom 3rem
+
+    + h2
+      padding-top 6.6rem
+
+  h2
+    + details
+      margin-top -3rem
+
+  summary
+    margin-top (0.5rem - $navbarHeight)
+    padding-top ($navbarHeight + 1rem)
+    margin-bottom 0
+    outline none
+    &:first-child
+      margin-top -1.5rem
+      margin-bottom 1rem
+    &:hover .header-anchor
+      opacity 1
+    &::marker
+      color $accentColor
+    h4
+      margin 0
+      display inline
+
+  hr
+    margin 2.5rem 0
+    border-color $dividerColor
+
+  // home
+  .home
+    .action-button
+      background $buttonColor
+      border 1px solid $buttonColor
+      text-transform capitalize
+      &:hover
+        background-color: #4b8c57
+        border-color: #468452
+    .custom
+    .hero .description
+      color $reducedTextColor
+      a
+        color lighten($reducedTextColor, 40%)
+        @media (prefers-color-scheme: light)
+          color darken($reducedTextColor, 40%)
+        &:hover
+          text-decoration underline
+    .feature h2
+    .feature p
+      color unset
+
+  // navbar
+  .navbar
+    color $navbarTextColor
+    background $navbarBgColor
+    border-bottom-color lighten($navbarBgColor, 10%)
+    .logo
+      margin-right .25rem
+    .nav-links
+      .nav-item
+        margin-left 1.75rem
+    .nav-link,
+    .repo-link
+      color $navbarTextColor
+      font-weight 700
+    .site-name
+      color $navbarTextColor
+      font-size 1.5rem
+    .links
+      background $navbarBgColor
+      color $navbarTextColor
+      font-size 1em
+
+    .search-box
+      order 10
+      margin 0 0 0 2rem
+      input
+        background-color white !important
+
+      .search-query.ds-hint
+        display none !important
+
+      @media (max-width: 899px)
+        input
+          left 0
+
+    .ds-dropdown-menu
+      position fixed !important
+      top 3.25rem !important
+      bottom 0 !important
+      right 0 !important
+      overflow-y auto
+      border-radius 0
+      border-color lighten($navbarBgColor, 10%)
+
+      [class^="ds-dataset-"]
+        border-radius 0
+
+    .suggestions
+      background $navbarBgColor
+      @media (prefers-color-scheme: light)
+        background #fff
+
+    .suggestion
+      a
+        color $navbarTextColor
+        @media (prefers-color-scheme: light)
+          color $textColor
+      &.focused
+        background-color alpha($accentColor, 30%)
+        @media (prefers-color-scheme: light)
+          background-color alpha($textColor, 10%)
+        a
+          color darken($lightTextColor, 20%)
+          @media (prefers-color-scheme: light)
+            color darken($textColor, 20%)
+
+  // sidebar
+  .sidebar-mask
+    background alpha($darkBgColor, 90%)
+    @media (prefers-color-scheme: light)
+      background alpha(#fff, 90%)
+
+  .sidebar
+    font-size unset
+    border-right-color lighten($navbarBgColor, 10%)
+    background $darkBgColor
+    @media (prefers-color-scheme: light)
+      border-right-color $borderColor
+      background: #fff
+
+    .sidebar-link
+      color unset
+      &.active
+        color $accentColor
+        @media (prefers-color-scheme: light)
+          color darken($accentColor, 20%)
+      &:hover
+        color $accentColor
+        @media (prefers-color-scheme: light)
+          color darken($accentColor, 40%)
+
+  // content
+  .page
+    a:not(.nav-link)
+      text-decoration none
+      color $accentColor
+      @media (prefers-color-scheme: light)
+        color darken($accentColor, 20%)
+      &:hover
+        text-decoration underline
+        color lighten($accentColor, 40%)
+        @media (prefers-color-scheme: light)
+          color darken($accentColor, 40%)
+
+    // force long words (i.e. onion addresses to break)
+    p
+      word-break break-word
+
+    code
+      color darken($lightTextColor, 20%)
+      background-color alpha($accentColor, 30%)
+      @media (prefers-color-scheme: light)
+        color lighten($textColor, 20%)
+        background-color alpha($textColor, 10%)
+
+    pre
+      code
+        color unset
+        background-color unset
+
+    blockquote
+      margin 1rem 0
+      color $reducedTextColor
+      border-left-color darken($reducedTextColor, 50%)
+      @media (prefers-color-scheme: light)
+        border-left-color lighten($reducedTextColor, 50%)
+
+    ul
+      padding-left 1em
+
+    ol
+      padding-left 1.5em
+
+    img
+      margin 1rem 0
+      border 1px solid $borderColor
+      &.shield
+        width 14px
+        height 15px
+        margin 0
+        border 0
+
+    table
+      width 100%
+
+    tr:nth-child(2n)
+      background-color alpha($borderColor, 10%)
+
+    .custom-block
+      background-color $codeBgColor
+      &.danger
+        color #c00
+        a
+          color #e63e3e
+      &.warning
+        color #c8af33
+      @media (prefers-color-scheme: light)
+        &.tip,
+        &.danger
+          background-color #f3f5f7
+        &.warning
+          color #6b5900
+          background-color rgba(255,229,100,.3)
+
+    .ytEmbed
+      position relative
+      margin 1rem 0 2rem
+      height 0
+      overflow hidden
+      max-width 100%
+      padding-bottom 56.25%
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+      background-color $codeBgColor
+
+      &:before
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAERklEQVR4nOWbTWhcVRTHb1IJVoxGtNCNdal2JYJReC6GWuO83PM/59yUS3FRFARdFlwYP1CfiojQWt36sRCUurRIdVFXIn41lAoVdRGrG1M01YpKrWjiYmaSl8ybZJL3cd+YA//NLObd3++eO8x79z5jSq5Gw+8kov0AP8vMR5l1BtBZQM4B8ks75wCdZdYZZj5qLZ4hov2Nht9Z9vhKKSIaB/gI4M4w62KeAO6Mte4lYOq20FxrlqqOibhHmeWbvNC9ZfDX1mLae391aN6limO/gwgvAPJbWeAZuSDingdwXTBw7/0IsyaA/Fkh+KqOkD+YNfHej1QKD+y7iVlOhgLvFqFfNJvNGyuBJ+KDAF8MDd0tgS8y64OlgSdJMsysL4cG7SOHkyQZLhTee7+d2R2rAVy/S+Jd7/32ouBHAP4gNNRGQyTHc/84NhqNywZp5rvjjnnvt21aABFeCQ+RLwAf2hQ8s7sv9OCLk6AHNgQvIrvbfzKCD76g/O6cu7lf/iER/aQGgy448pExZmhdegAPhR9sObFWH1gT3lp7DaA/5bkIgJhZPgsNmz02novj+KqeApj1ubwXWe4kdyeznAgNvTpE/HQmvKqOMeuFogTUVQSRno+iaLRLAJF7uIgL9O4ubgL8aWgB7S44mNX+35YpICUiAvS9sBLkq1WzT+NFffl6AuoiApi6NT37h6sWkBIRZGkQ8YtLgyji6e1mBYTqCEBPG2Naz+0BWQgtoGoRgCzEsd9hAN1X5BfnFZASUfrSAFQNsyZ1FJASUVpHiLinDJG8U2cBZYogkrcNs5waBAGdstbeU9zdqpw0gPwwSAI6VUxHyFlDpOcHUUBBIuYNs14aZAE5RVwyzPr3/0EAEY0TyfGNjBWQvwZ +CTSbehfAH29mrID8bET0+0EUkAd8WYDOmqJ3ecsG30yr9wqRfm6Y+a1BEFDEjHfHvWmY9ck6CygHvBVr8Xhtb4ZE5HZA3y8DvBNA1TjnrmXWf+sioMwZX5V/VHXMGGMMoKdDCxCRvRWBdzKzdHEO+EisilbPyopHYqp6S9UCAsz4iojI7hUDAtyXVQgIDd6KnOoaWNkbI6FaPSuZGyMArsi7MZoloB4zviI/Nhr3X95jltwTRQmoIfgisy5ai+me67OI7fE4nrqjrqfK1t0eby0FPRB6oGVlchL3rgnfrq19RKbVBdhV9IOSwJmfmJi4vi/4ThERitwyCxVAFqydshuCX5awhQ9KtmuIWd8IDZED/nXT77rvVVv6sHRKwjYi91poqP7Dr+Y6JJ1VSZIMA3wkPNy6bX+o8Bcm0sXMdwM8Fxo0A3xORPaWBp6uPXsmbxCRD0NDL0dOANhVCXy6iAjMcjbcrMt3RITKwdMVRdFo+y5yvkL4eWZ+zHt/ZVD4dEVRNGotpst+dZZZH8k86lqn2pIvT/eqrNfn2xuyqYPZ8mv7s8pfn/8Pybm4TIjanscAAAAASUVORK5CYII=") no-repeat center center
+        background-size 64px 64px
+        position absolute
+        height 100%
+        width 100%
+        opacity .8
+        transition all 0.2s ease-out
+        content ''
+        cursor pointer
+
+      iframe
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        display none
+        &[src]
+          display block
+
+    .page-nav .inner
+      border-color $dividerColor
+
+    .edit-link a
+    .edit-link .icon
+    .last-updated .prefix
+    .last-updated .time
+      font-size .9rem
+      color $reducedTextColor
