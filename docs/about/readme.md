@@ -22,3 +22,7 @@ We are operating the following DNS resolvers. All our resolvers can be used free
 `2a11::` or `2a11:0000:0000:0000:0000:0000:0000:0000`
 
 *No Logging, DNSSEC enabled*
+
+## Transparency Report
+
+Please check our transparency report [here](/report/).

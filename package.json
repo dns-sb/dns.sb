@@ -9,7 +9,7 @@
     "prestart": "rm -rf $npm_package_config_dist",
     "dev": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "echo 'docs.wasabiwallet.io' > $npm_package_config_dist/CNAME && gh-pages -d $npm_package_config_dist -m 'deploy'"
+    "deploy": "echo 'dns.sb' > $npm_package_config_dist/CNAME && gh-pages -d $npm_package_config_dist -m 'deploy'"
   },
   "repository": {
     "type": "git",

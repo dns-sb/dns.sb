@@ -16,7 +16,7 @@ footer: MIT License | Copyright © 2019 - 2021 xTom GmbH
 
 -----
 
-This is [DNS.SB](https://dns.sb/) open source documentation.
+This is [DNS.SB](/) open source documentation.
 
 Here you will find information about the privacy in DNS, how DNS.SB solves some of the existing problems, and how you can use our service to protect yourself.
 
@@ -40,4 +40,4 @@ If you have a question about some particular detail, then use the search functio
 
 ## Special Thanks
 
-[DNS.SB](https://dns.sb/) documentation is built with [Vuepress](https://vuepress.vuejs.org/), theme forked from [WasabiDoc](https://github.com/zkSNACKs/WasabiDoc).
+[DNS.SB](/) documentation is built with [Vuepress](https://vuepress.vuejs.org/), theme forked from [WasabiDoc](https://github.com/zkSNACKs/WasabiDoc).
