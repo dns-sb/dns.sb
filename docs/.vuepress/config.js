@@ -23,7 +23,7 @@ module.exports = {
     ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" }],
     ["link", { rel: "manifest", href: "/site.webmanifest" }],
     ["link", { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: themeColor }],
-    ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Inconsolata:400,700|Spectral:700&display=swap" }],
+    ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Ubuntu:wght@400;700&display=swap" }],
     ["meta", { name: "msapplication-TileColor", content: themeColor }],
     ["meta", { name: "theme-color", content: themeColor }],
   ],
@@ -82,8 +82,8 @@ module.exports = {
     }
   },
   themeConfig: {
-    logo: "/Logo_without_text.png",
-    searchPlaceholder: 'Search the docs...',
+    logo: "/android-chrome-192x192.png",
+    searchPlaceholder: 'Search...',
     displayAllHeaders: false,
     sidebarDepth: 0,
     repo: "dns-sb/dns.sb",
