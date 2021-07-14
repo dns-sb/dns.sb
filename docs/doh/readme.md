@@ -19,6 +19,13 @@ or
 
 `https://doh.sb/dns-query`
 
+or if you don't want domain name in URL
+
+```
+https://185.222.222.222/dns-query
+https://45.11.45.11/dns-query
+```
+
 ### Unicast PoPs
 
 |   Location	            |   DoH URL                          	|   Hosting Provider	|
@@ -37,5 +44,6 @@ or
 |   Singapore               |   `https://sg-sin.doh.sb/dns-query`     |   [Linode](https://xt.om/linode)    	        |
 |   Seoul, South Korea      |   `https://kr-sel.doh.sb/dns-query`     |   [Amazon AWS](https://aws.amazon.com/)       	|
 |   Moscow, Russia          |   `https://ru-mow.doh.sb/dns-query`     |   [Servers.com](https://xt.om/serverscom)       	|
+|   Calgary, Canada         |   `https://ca-yyc.doh.sb/dns-query`     |   [Arrow Calgary](https://arrowcalgary.ca/)       	|
 
 *No Logging, DNSSEC enabled*

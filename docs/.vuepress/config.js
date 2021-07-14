@@ -140,8 +140,8 @@ module.exports = {
         link: "/contact/"
       },
       {
-        text: "Sponsor",
-        link: "https://xtom.com/"
+        text: "Sponsors",
+        link: "/sponsors/"
       }
     ],
 
