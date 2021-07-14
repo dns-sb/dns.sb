@@ -37,6 +37,7 @@ https://45.11.45.11/dns-query
 |   London, United Kingdom  |   `https://uk-lon.doh.sb/dns-query`     |   [xTom](https://xtom.com/)    	        |
 |   Tallinn, Estonia        |   `https://ee-tll.doh.sb/dns-query`     |   [xTom](https://xtom.com/)    	        |
 |   Osaka, Japan            |   `https://jp-kix.doh.sb/dns-query`     |   [xTom](https://xtom.com/)   	        |
+|   Tokyo, Japan            |   `https://jp-nrt.doh.sb/dns-query`     |   [xTom](https://xtom.com/)   	        |
 |   Hong Kong, China        |   `https://hk-hkg.doh.sb/dns-query`     |   [xTom](https://xtom.com/)    	        |
 |   Sydney, Australia       |   `https://au-syd.doh.sb/dns-query`     |   [xTom](https://xtom.com/)    	        |
 |   Chicago, United States  |   `https://us-chi.doh.sb/dns-query`     |   [HostVenom](https://xt.om/hostvenom)       	|
