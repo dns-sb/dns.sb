@@ -362,7 +362,7 @@
         const Promise_dns = new Promise((resolve, reject) => {
             //检测dns
             Ajax({
-                url: 'http://dns.sb.test/',
+                url: 'https://dns.sb.test/',
                 success(res){
                     _span.innerText = 'You are using DNS.SB. Your DNS requests are encrypted!';
                     _span.classList.add('dns-success');
