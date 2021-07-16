@@ -103,6 +103,10 @@
                         font-size: 14px !important;
                         margin-right: 20px;
                     }
+                    .dns-detect >.span_warp >.country {
+                        font-size: 14px !important;
+                        margin-right: 20px;
+                    }
                     .dns-detect >.span_warp >.dns-close-warp{
                         font-size: 14px !important;
                         cursor: pointer;
@@ -228,6 +232,9 @@
         
         let _isp_span = document.createElement('span');
         _isp_span.classList.add('isp');
+
+        let _country_span = document.createElement('span');
+        _country_span.classList.add('country');
         
         let _close_span = document.createElement('span');
         _close_span.innerHTML = "&times";
@@ -340,17 +347,21 @@
                 success(res) {
                     _ip_span.innerText = `IP Address: ${res.ip}`;
                     _isp_span.innerText = `ISP: ${res.isp}`;
+                    _country_span.innerText = `Location: ${res.country}`;
                     _ip_warp.appendChild(_ip_span);
                     _ip_warp.appendChild(_isp_span);
+                    _ip_warp.appendChild(_country_span);
                     _ip_warp.appendChild(_close_span);
                     dns_html.appendChild(_ip_warp)
                     resolve()
                 },
                 error(status) {
                     _ip_span.innerText = `Failed to get IP address`;
-                    _ip_span.innerText = `Failed to get ISP`;
+                    _isp_span.innerText = `Failed to get ISP`;
+                    _country_span.innerText = `Failed to get Location`;
                     _ip_warp.appendChild(_ip_span);
                     _ip_warp.appendChild(_isp_span);
+                    _ip_warp.appendChild(_country_span);
                     _ip_warp.appendChild(_close_span);
                     dns_html.appendChild(_ip_warp)
                     resolve()
