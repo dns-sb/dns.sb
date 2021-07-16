@@ -11,13 +11,18 @@
 
 ## Platinum Sponsors
 
-<a href="https://sa.net/" target="_blank"><img src="/files/sponsors/rivencloud.png" alt="Riven Cloud" width="200" border="0" /></a><br />
-<a href="https://misaka.io/" target="_blank"><img src="/files/sponsors/misaka.svg" alt="Misaka Network" width="200" border="0" /></a><br />
-<a href="https://v.ps/" target="_blank"><img src="/files/sponsors/v.ps.png" alt="V.PS" width="200" border="0" /></a>
+<div class="pl_logo_warp">
+  <a href="https://sa.net/" target="_blank"><img src="/files/sponsors/rivencloud.png" alt="Riven Cloud" /></a><br />
+  <a href="https://misaka.io/" target="_blank"><img src="/files/sponsors/misaka.svg" alt="Misaka Network" /></a><br />
+  <a href="https://v.ps/" target="_blank"><img src="/files/sponsors/v.ps.svg" alt="V.PS" /></a><br />
+  <a href="https://locix.online/" target="_blank"><img src="/files/sponsors/locix.png" alt="LocIX" /></a>
+</div>
 
 ## Gold Sponsors
 
-None
+<div class="pl_logo_warp">
+  <a href="https://meerfarbig.net/" target="_blank"><img src="/files/sponsors/meerfarbig.png" alt="Meerfarbig" /></a><br />
+</div>
 
 ## Silver Sponsors
 

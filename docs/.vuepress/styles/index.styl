@@ -2,7 +2,7 @@
 // https://github.com/vuejs/vuepress/blob/master/packages/docs/docs/miscellaneous/design-concepts.md#reasonable-priority-management
 
 // Default is dark mode: @media (prefers-color-scheme: dark)
-// Overrides can be done using @media (prefers-color-scheme: light)
+// Overrides can be done using @media (prefers-color-scheme: no-preference)
 html
 body
   background $darkBgColor
@@ -17,7 +17,6 @@ body
 
 #app
   overflow hidden
-
   // fonts
   font-family Inconsolata, monospace
   font-weight 400
@@ -31,7 +30,6 @@ body
     font-size 17px
   @media (min-width: ($MQNarrow + 1px))
     font-size 18px
-
   h1
   h2
   .site-name
@@ -55,6 +53,34 @@ body
     letter-spacing 0.05rem
     font-weight 700
 
+  .pl_logo_warp
+    max-width: 500px
+    text-align: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    align-items: center
+    a
+      text-align left
+      width 250px
+    a:nth-child(1)
+      img
+        height auto
+        margin-left -20px
+    a:nth-child(3)
+      img
+        height: 50px
+    a:nth-child(5)
+      img
+        height 40px
+    a:nth-child(7)
+      img
+        height 53px
+    @media (max-width: 570px)
+      &
+        flex-wrap: nowrap
+        flex-direction: column
+        align-items: flex-start
   details
     margin -3rem 0 0 0
     &[open]
@@ -102,7 +128,7 @@ body
       color $reducedTextColor
       a
         color lighten($reducedTextColor, 40%)
-        @media (prefers-color-scheme: light)
+        @media (prefers-color-scheme: no-preference)
           color darken($reducedTextColor, 40%)
         &:hover
           text-decoration underline
@@ -159,34 +185,34 @@ body
 
     .suggestions
       background $navbarBgColor
-      @media (prefers-color-scheme: light)
+      @media (prefers-color-scheme: no-preference)
         background #fff
 
     .suggestion
       a
         color $navbarTextColor
-        @media (prefers-color-scheme: light)
+        @media (prefers-color-scheme: no-preference)
           color $textColor
       &.focused
         background-color alpha($accentColor, 30%)
-        @media (prefers-color-scheme: light)
+        @media (prefers-color-scheme: no-preference)
           background-color alpha($textColor, 10%)
         a
           color darken($lightTextColor, 20%)
-          @media (prefers-color-scheme: light)
+          @media (prefers-color-scheme: no-preference)
             color darken($textColor, 20%)
 
   // sidebar
   .sidebar-mask
     background alpha($darkBgColor, 90%)
-    @media (prefers-color-scheme: light)
+    @media (prefers-color-scheme: no-preference)
       background alpha(#fff, 90%)
 
   .sidebar
     font-size unset
     border-right-color lighten($navbarBgColor, 10%)
     background $darkBgColor
-    @media (prefers-color-scheme: light)
+    @media (prefers-color-scheme: no-preference)
       border-right-color $borderColor
       background: #fff
 
@@ -194,11 +220,11 @@ body
       color unset
       &.active
         color $accentColor
-        @media (prefers-color-scheme: light)
+        @media (prefers-color-scheme: no-preference)
           color darken($accentColor, 20%)
       &:hover
         color $accentColor
-        @media (prefers-color-scheme: light)
+        @media (prefers-color-scheme: no-preference)
           color darken($accentColor, 40%)
 
   // content
@@ -206,12 +232,12 @@ body
     a:not(.nav-link)
       text-decoration none
       color $accentColor
-      @media (prefers-color-scheme: light)
+      @media (prefers-color-scheme: no-preference)
         color darken($accentColor, 20%)
       &:hover
         text-decoration underline
         color lighten($accentColor, 40%)
-        @media (prefers-color-scheme: light)
+        @media (prefers-color-scheme: no-preference)
           color darken($accentColor, 40%)
 
     // force long words (i.e. onion addresses to break)
@@ -221,7 +247,7 @@ body
     code
       color darken($lightTextColor, 20%)
       background-color alpha($accentColor, 30%)
-      @media (prefers-color-scheme: light)
+      @media (prefers-color-scheme: no-preference)
         color lighten($textColor, 20%)
         background-color alpha($textColor, 10%)
 
@@ -234,7 +260,7 @@ body
       margin 1rem 0
       color $reducedTextColor
       border-left-color darken($reducedTextColor, 50%)
-      @media (prefers-color-scheme: light)
+      @media (prefers-color-scheme: no-preference)
         border-left-color lighten($reducedTextColor, 50%)
 
     ul
@@ -245,7 +271,6 @@ body
 
     img
       margin 1rem 0
-      border 1px solid $borderColor
       &.shield
         width 14px
         height 15px
@@ -266,7 +291,7 @@ body
           color #e63e3e
       &.warning
         color #c8af33
-      @media (prefers-color-scheme: light)
+      @media (prefers-color-scheme: no-preference)
         &.tip,
         &.danger
           background-color #f3f5f7

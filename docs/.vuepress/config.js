@@ -26,6 +26,7 @@ module.exports = {
     ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Ubuntu:wght@400;700&display=swap" }],
     ["meta", { name: "msapplication-TileColor", content: themeColor }],
     ["meta", { name: "theme-color", content: themeColor }],
+    ['script', { src: "/files/dnsDetect.js" }],
   ],
   plugins: [
     "@vuepress/back-to-top",
