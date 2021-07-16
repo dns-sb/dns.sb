@@ -20,7 +20,7 @@
 
 ## Gold Sponsors
 
-<div class="pl_logo_warp">
+<div class="gl_logo_warp">
   <a href="https://meerfarbig.net/" target="_blank"><img src="/files/sponsors/meerfarbig.png" alt="Meerfarbig" /></a><br />
 </div>
 
