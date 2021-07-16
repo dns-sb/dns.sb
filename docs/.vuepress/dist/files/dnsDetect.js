@@ -331,7 +331,7 @@
         const Promise_ip = new Promise((resolve, reject) => {
             //获取 ip
             Ajax({
-                url: 'https://api.ip.gs/LrkBCZ29O15Gv6St',
+                url: 'https://ip.dns.sh/showfom-is-best',
                 headers: {
                   'Content-Type': 'application/json'
                 },

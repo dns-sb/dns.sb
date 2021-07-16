@@ -50,3 +50,15 @@ You may need IPv6 with full address in some old devices
 - [Linux](/guide/doh/linux/)
 - [Android](/guide/doh/android/)
 - [iOS & macOS](/guide/doh/apple/)
+
+# How to verify if I'm using DNS.SB?
+
+You can simply visit [DNS.SB](https://dns.sb/) and check on top of the website
+
+If you are using our service:
+
+![Klik.png](https://s3.image.hosting/2021/07/16/Klik.png)
+
+If not:
+
+![KrSV.png](https://s3.image.hosting/2021/07/16/KrSV.png)
