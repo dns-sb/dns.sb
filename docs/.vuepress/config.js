@@ -97,7 +97,8 @@ module.exports = {
       apiKey: 'e18de52712a4fe4c2a58cb37508b836a',
       // See https://www.algolia.com/doc/api-reference/api-parameters/
       algoliaOptions: {
-        hitsPerPage: 25
+        hitsPerPage: 10,
+        facetFilters: ""
       },
       // See https://community.algolia.com/docsearch/behavior.html#autocompleteoptions
       autocompleteOptions: {
