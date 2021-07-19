@@ -93,6 +93,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     algolia: {
       indexName: 'dns-sb',
+      appId: 'BX2RMLOD1H',
       apiKey: 'e18de52712a4fe4c2a58cb37508b836a',
       // See https://www.algolia.com/doc/api-reference/api-parameters/
       algoliaOptions: {
