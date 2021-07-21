@@ -22,6 +22,7 @@
   "homepage": "https://github.com/dns-sb/dns.sb#readme",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "1.8.2",
+    "docsearch.js": "^2.6.3",
     "gh-pages": "2.2.0",
     "markdown-it-custom-block": "0.1.2",
     "nodemon": "^2.0.9",
