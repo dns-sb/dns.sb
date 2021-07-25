@@ -23,9 +23,17 @@ module.exports = {
     ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" }],
     ["link", { rel: "manifest", href: "/site.webmanifest" }],
     ["link", { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: themeColor }],
-    ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Ubuntu:wght@400;700&display=swap" }],
+    ["link", { rel: "stylesheet", href: "https://fonts.rsb.net/css2?family=Inconsolata:wght@400;700&family=Ubuntu:wght@400;700&display=swap" }],
     ["meta", { name: "msapplication-TileColor", content: themeColor }],
     ["meta", { name: "theme-color", content: themeColor }],
+    ['script', {}, `
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script['data-domain'] = 'dns.sb';
+    script.src = 'https://stat.dns.sb/js/plausible.js';
+    document.head.appendChild(script);`
+    ],
     ['script', { src: "/files/dnsDetect.js" }],
   ],
   plugins: [
