@@ -97,7 +97,9 @@ module.exports = {
     sidebarDepth: 0,
     repo: "dns-sb/dns.sb",
     docsDir: "docs",
+    docsBranch: 'master',
     editLinks: true,
+    smoothScroll: true,
     lastUpdated: 'Last Updated',
     nav: [
       {

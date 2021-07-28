@@ -24,7 +24,7 @@ You are welcome to make the DNS.SB documentation better, by contributing on [Git
 
 ## How to use this documentation
 
-This documentation is a good place to start your education on how to use DNS.SB, as it is a thorough archive about many nuances of Bitcoin privacy.
+This documentation is a good place to start your education on how to use DNS.SB.
 
 ### For Newbies
 
