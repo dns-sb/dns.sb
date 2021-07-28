@@ -48,3 +48,13 @@ https://45.11.45.11/dns-query
 |   Calgary, Canada         |   `https://ca-yyc.doh.sb/dns-query`     |   [Arrow Calgary](https://arrowcalgary.ca/)       	|
 
 *No Logging, DNSSEC enabled*
+
+## How to set DNS.SB DoH Server
+
+- [Mozilla Firefox](/guide/doh/firefox/)
+- [Google Chrome](/guide/doh/chrome/)
+- [Microsoft Edge](/guide/doh/edge/)
+- [Windows](/guide/doh/windows/)
+- [Linux](/guide/doh/linux/)
+- [Android](/guide/doh/android/)
+- [iOS & macOS](/guide/doh/apple/)
