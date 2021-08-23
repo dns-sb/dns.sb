@@ -9,4 +9,4 @@
 
 Download this [profile](/files/doh/dns.mobileconfig) and install it at your own risk.
 
-You can also try to use 3rd apps like [DNSCloak](https://apps.apple.com/app/id1452162351) or [AdGuard Pro](https://apps.apple.com/app/id1126386264).
+You can also try to use 3rd apps like [DNSCloak](https://apps.apple.com/app/id1452162351) or [AdGuard Pro](https://apps.apple.com/app/id1126386264) and [DNSecure](https://apps.apple.com/cn/app/dnsecure/id1533413232).
