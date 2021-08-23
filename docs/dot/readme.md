@@ -43,6 +43,12 @@ Note: the old address `2a09::1` will be deprecated soon. When using IPv6 address
 
 *No Logging, DNSSEC enabled*
 
+### SPKI Pin
+
+```
+efdp4GFB1+an2drZsUkcaMeZGQJcpHpzVBcVa9zgmGo=
+```
+
 ## Example Configurations
 
 ### Unbound
