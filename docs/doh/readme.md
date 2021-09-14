@@ -45,7 +45,7 @@ https://45.11.45.11/dns-query
 |   Singapore               |   `https://sg-sin.doh.sb/dns-query`     |   [DigitalOcean](https://xt.om/digitalocean)    	        |
 |   Seoul, South Korea      |   `https://kr-sel.doh.sb/dns-query`     |   [Amazon AWS](https://aws.amazon.com/)       	|
 |   Moscow, Russia          |   `https://ru-mow.doh.sb/dns-query`     |   [Servers.com](https://xt.om/serverscom)       	|
-|   Calgary, Canada         |   `https://ca-yyc.doh.sb/dns-query`     |   [Arrow Calgary](https://arrowcalgary.ca/)       	|
+|   Toronto, Canada         |   `https://ca-yyz.doh.sb/dns-query`     |   [Vultr](https://xt.om/vultr)       	|
 
 *No Logging, DNSSEC enabled*
 
