@@ -41,6 +41,8 @@ https://45.11.45.11/dns-query
 |   Hong Kong, China        |   `https://hk-hkg.doh.sb/dns-query`     |   [xTom](https://xtom.com/)    	        |
 |   Sydney, Australia       |   `https://au-syd.doh.sb/dns-query`     |   [xTom](https://xtom.com/)    	        |
 |   Chicago, United States  |   `https://us-chi.doh.sb/dns-query`     |   [HostVenom](https://xt.om/hostvenom)       	|
+|   New York, United States  |   `https://us-nyc.doh.sb/dns-query`     |   [xTom](https://xtom.com/)       	|
+|   San Jose, United States  |   `https://us-sjc.doh.sb/dns-query`     |   [xTom](https://xtom.com/)       	|
 |   Bengaluru, India        |   `https://in-blr.doh.sb/dns-query`     |   [DigitalOcean](https://xt.om/digitalocean)       	|
 |   Singapore               |   `https://sg-sin.doh.sb/dns-query`     |   [DigitalOcean](https://xt.om/digitalocean)    	        |
 |   Seoul, South Korea      |   `https://kr-sel.doh.sb/dns-query`     |   [Amazon AWS](https://aws.amazon.com/)       	|
