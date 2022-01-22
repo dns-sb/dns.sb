@@ -100,7 +100,6 @@ module.exports = {
     docsBranch: 'master',
     editLinks: true,
     smoothScroll: true,
-    lastUpdated: 'Last Updated',
     nav: [
       {
         text: "About",
