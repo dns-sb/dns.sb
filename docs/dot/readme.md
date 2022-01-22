@@ -15,7 +15,7 @@ DNS over TLS (DoT) is a security protocol for encrypting and wrapping Domain Nam
 
 `dot.sb`
 
-Note: the old hostname `dns.sb` will be deprecated soon.
+Note: The old hostname `dns.sb` will be deprecated soon.
 
 ### TLS Port
 
@@ -26,14 +26,14 @@ Note: the old hostname `dns.sb` will be deprecated soon.
 - `185.222.222.222`
 - `45.11.45.11`
 
-Note: the old address `185.184.222.222` will be deprecated soon.
+Note: The old address `185.184.222.222` will be deprecated soon.
 
 ### IPv6
 
 - `2a09::`
 - `2a11::`
 
-Note: the old address `2a09::1` will be deprecated soon. When using IPv6 address, you must use specific hostname `dot.sb`
+Note: The old address `2a09::1` will be deprecated soon. When using IPv6 address, you must use specific hostname `dot.sb`
 
 
 ### IPv6 with Full Address

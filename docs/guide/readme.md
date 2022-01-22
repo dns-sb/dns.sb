@@ -12,14 +12,14 @@
 - `185.222.222.222`
 - `45.11.45.11`
 
-Note: the old address `185.184.222.222` will be deprecated soon.
+Note: The old address `185.184.222.222` will be deprecated soon.
 
 ## IPv6
 
 - `2a09::`
 - `2a11::`
 
-Note: the old address `2a09::1` will be deprecated soon.
+Note: The old address `2a09::1` will be deprecated soon.
 
 You may need IPv6 with full address in some old devices
 

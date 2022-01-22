@@ -11,7 +11,7 @@ features:
   details: Our IPv6 addresses for DNS name servers are memorable and shortest, [2a09::] and [2a11::]
 - title: Privacy-focused
   details: Without privacy, there is no human dignity. DNS.SB is designed with one goal in mind, to protect your personal DNS data, no logs, forever.
-footer: MIT License | Copyright © 2019 - 2021 xTom GmbH
+footer: MIT License | Copyright © 2019 - 2022 xTom GmbH
 ---
 
 -----
@@ -22,7 +22,7 @@ Here you will find information about the privacy in DNS, how DNS.SB solves some 
 
 You are welcome to make the DNS.SB documentation better, by contributing on [GitHub](https://github.com/dns-sb/dns.sb/).
 
-## How to use this documentation
+## How To Use This Documentation
 
 This documentation is a good place to start your education on how to use DNS.SB.
 
@@ -30,11 +30,11 @@ This documentation is a good place to start your education on how to use DNS.SB.
 
 If you are new to DNS.SB and want to get a quick tutorial on how to use it, you may [start here](/guide/).
 
-### Stand-alone chapters
+### Stand-alone Chapters
 
 If you are interested in the nuances of how one specific aspect of DNS.SB works, then check-out the [detailed chapters here](/feature/).
 
-### Search function
+### Search Function
 
 If you have a question about some particular detail, then use the search function at the top right corner to browse the entire archive, including the [frequently asked questions](/faq/).
 
