@@ -27,7 +27,7 @@ Limit: No limit
 - Medium icon on Sponsors page, in the third section
 - Icon is linked to Sponsor’s homepage
 
-## Sliver
+## Silver
 
 Cost: $500
 
