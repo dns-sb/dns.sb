@@ -21,8 +21,18 @@ Here's an example config
 
 ```
 [Resolve]
-DNS=185.222.222.222 45.11.45.11 2a09:: 2a11::
+DNS=185.222.222.222 45.11.45.11 2a09::#dot.sb 2a11::#dot.sb
 DNSOverTLS=yes
+DNSSEC=yes
+```
+
+or
+
+```
+[Resolve]
+DNS=185.222.222.222#dot.sb 45.11.45.11#dot.sb 2a09::#dot.sb 2a11::#dot.sb
+DNSOverTLS=yes
+DNSSEC=yes
 ```
 
 ### 3. Restart systemd-resolved
