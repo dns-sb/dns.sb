@@ -43,6 +43,10 @@ Note: The old address `2a09::1` will be deprecated soon. When using IPv6 address
 
 *No Logging, DNSSEC enabled*
 
+### PEM / CRT File
+
+[https://github.com/dns-sb/DoT/blob/master/cert/dns.sb.crt](dns.sb.crt)
+
 ### SPKI Pin
 
 ```
