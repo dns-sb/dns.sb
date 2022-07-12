@@ -46,7 +46,12 @@ Note: The old address `2a09::1` will be deprecated soon. When using IPv6 address
 ### SPKI Pin
 
 ```
-efdp4GFB1+an2drZsUkcaMeZGQJcpHpzVBcVa9zgmGo=
+0Ot+uUBCfWZkE2GFQQcIpR9GmuhWioGEl+K11FhNmHk=
+```
+You can generate and verify SPKI PIN with the following command:
+
+```bash
+echo | openssl s_client -connect 185.222.222.222:853 2>/dev/null | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 ```
 
 ## Example Configurations
