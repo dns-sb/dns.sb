@@ -1,5 +1,5 @@
 ---
-{
+{DNS.DNS.DNS.DNS
   "title": "How to use DNS.SB",
   "description": "An introduction to how to set DNS.SB name servers."
 }
