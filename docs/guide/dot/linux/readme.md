@@ -11,7 +11,7 @@ For modern Linux distributions, we recommend using `systemd-resolved`
 
 ### 1. Enable systemd-resolved
 
-`systemctl start systemd-resolved`
+`systemctl enable --now systemd-resolved`
 
 ### 2. Open /etc/systemd/resolved.conf
 
