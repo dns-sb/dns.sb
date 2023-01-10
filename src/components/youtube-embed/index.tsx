@@ -6,6 +6,7 @@ interface YouTubeEmbedProps {
 
 export default function YouTubeEmbed({ id, width, height }: YouTubeEmbedProps) {
   return (
+    // eslint-disable-next-line react/iframe-missing-sandbox
     <iframe
       title={`YouTube ${id}`}
       src={`https://www.youtube-nocookie.com/embed/${id}?autohide=1&modestbranding=1&rel=0`}
@@ -14,7 +15,7 @@ export default function YouTubeEmbed({ id, width, height }: YouTubeEmbedProps) {
       allowFullScreen
       width={width}
       height={height}
-      sandbox="allow-scripts"
+      sandbox="allow-same-origin allow-scripts allow-presentation"
     />
   );
 }
