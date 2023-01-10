@@ -4,6 +4,11 @@ import type { AppProps } from 'next/app';
 import AreYouUsingDnsSb from '../components/detect-dnssb';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  if ('statusCode' in pageProps && pageProps.statusCode === 404) {
+    return (
+      <Component {...pageProps} />
+    );
+  }
   return (
     <>
       <AreYouUsingDnsSb />

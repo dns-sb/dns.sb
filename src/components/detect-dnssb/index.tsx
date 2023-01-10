@@ -44,7 +44,7 @@ const useCheckDns = () => {
 const IsUsingDnsSb = () => {
   const [isUsingDnsSb, isCheckingDns] = useCheckDns();
   if (isCheckingDns) return <div>...</div>;
-  if (!isUsingDnsSb) {
+  if (isUsingDnsSb) {
     return (
       <div className="flex flex-wrap items-center">
         <div className="mt-1 w-4 h-4 rounded-full bg-green-600 border-4 border-green-900" />
