@@ -4,5 +4,8 @@ module.exports = withNextra({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.tsx'
 })({
-  reactStrictMode: true
+  reactStrictMode: true,
+  images: {
+    unoptimized: true
+  }
 });
