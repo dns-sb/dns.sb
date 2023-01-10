@@ -77,8 +77,16 @@ const config: DocsThemeConfig = {
     // const config = useConfig();
     // const { route } = useRouter();
     return (
-      // eslint-disable-next-line react/jsx-no-useless-fragment
-      <></>
+      <>
+        <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <link rel="icon" href="/favicon/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+        <link rel="icon" href="/favicon/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180" />
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#211b24" />
+      </>
     );
   },
   useNextSeoProps() {
@@ -87,7 +95,7 @@ const config: DocsThemeConfig = {
     const description = config.frontMatter.description ? config.frontMatter.description : 'Browse Internet, Faster and More Private with DNS.SB\'s extremely performant and stable DNS resolver services';
 
     const { route } = useRouter();
-    const canonical = useMemo(() => new URL(route.endsWith('/') ? 'route' : `${route}/`, 'https://dns.sb').toString(), [route]);
+    const canonical = useMemo(() => new URL(route.endsWith('/') ? route : `${route}/`, 'https://dns.sb').toString(), [route]);
 
     return {
       defaultTitle: 'DNS.SB',
@@ -97,7 +105,13 @@ const config: DocsThemeConfig = {
       openGraph: {
         url: canonical,
         title,
-        siteName: 'DNS.SB'
+        siteName: 'DNS.SB',
+        images: [
+          {
+            url: '/images/logo_with_text.png',
+            type: 'image/png'
+          }
+        ]
       },
       twitter: {
         cardType: 'summary_large_image'
