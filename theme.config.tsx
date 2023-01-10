@@ -30,7 +30,7 @@ const config: DocsThemeConfig = {
   },
   footer: {
     component: (
-      <footer className="w-full bg-gray-100 dark:bg-gray-900 py-16">
+      <footer className="w-full bg-gray-100 dark:bg-zinc-800 py-16">
         <div className="md:px-12 lg:px-28">
           <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
             <ul
