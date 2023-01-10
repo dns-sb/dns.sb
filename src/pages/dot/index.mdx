@@ -3,6 +3,8 @@ title: "DNS over TLS"
 description: "DNS over TLS (DoT) is a security protocol for encrypting and wrapping Domain Name System (DNS) queries and answers via the Transport Layer Security (TLS) protocol."
 ---
 
+import { Callout } from 'nextra-theme-docs'
+
 # Using DNS over TLS at DNS.SB
 
 ## What is DNS over TLS
@@ -11,11 +13,15 @@ DNS over TLS (DoT) is a security protocol for encrypting and wrapping Domain Nam
 
 ## Our DoT Servers
 
+*No Logging, DNSSEC enabled*
+
 ### Hostname for TLS Authentication
 
 `dot.sb`
 
-Note: The old hostname `dns.sb` will be deprecated soon.
+<Callout type="warning">
+The old hostname `dns.sb` will be deprecated soon.
+</Callout>
 
 ### TLS Port
 
@@ -26,22 +32,23 @@ Note: The old hostname `dns.sb` will be deprecated soon.
 - `185.222.222.222`
 - `45.11.45.11`
 
-Note: The old address `185.184.222.222` will be deprecated soon.
+<Callout type="warning">
+The old address `185.184.222.222` will be deprecated soon.
+</Callout>
 
 ### IPv6
 
 - `2a09::`
 - `2a11::`
 
-Note: The old address `2a09::1` will be deprecated soon. When using IPv6 address, you must use specific hostname `dot.sb`
-
+<Callout type="warning">
+The old address `2a09::1` will be deprecated soon. When using IPv6 address, you must use specific hostname `dot.sb`
+</Callout>
 
 ### IPv6 with Full Address
 
 - `2a09:0000:0000:0000:0000:0000:0000:0000`
 - `2a11:0000:0000:0000:0000:0000:0000:0000`
-
-*No Logging, DNSSEC enabled*
 
 ### PEM / CRT File
 

@@ -11,6 +11,8 @@ DNS over HTTPS (DoH) is a protocol for performing remote Domain Name System (DNS
 
 ## Our DoH Servers
 
+*No Logging, DNSSEC enabled*
+
 ### Global CDN
 
 `https://doh.dns.sb/dns-query`
@@ -48,8 +50,6 @@ https://45.11.45.11/dns-query
 |   Seoul, South Korea      |   `https://kr-sel.doh.sb/dns-query`     |   [Amazon AWS](https://aws.amazon.com/)       	|
 |   Moscow, Russia          |   `https://ru-mow.doh.sb/dns-query`     |   [Servers.com](https://xt.om/serverscom)       	|
 |   Toronto, Canada         |   `https://ca-yyz.doh.sb/dns-query`     |   [Vultr](https://xt.om/vultr)       	|
-
-*No Logging, DNSSEC enabled*
 
 ## How to set DNS.SB DoH Server
 
