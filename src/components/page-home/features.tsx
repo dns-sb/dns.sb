@@ -7,6 +7,7 @@ export default function Features() {
       <Privacy />
       <EasyToRemember />
       <MassiveNetwork />
+      <EncryptedDNS />
     </div>
   );
 }
@@ -98,6 +99,63 @@ function MassiveNetwork() {
             loading="lazy"
             width="450"
             height="300"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function EncryptedDNS() {
+  return (
+    <div className="py-16 text-gray-600">
+      <div className="lg:bg-gray-100 dark:lg:bg-zinc-900 dark:lg:bg-darker lg:p-16 rounded-[4rem] space-y-6 md:flex md:gap-6 md:space-y-0 lg:items-center justify-between">
+        <div className="md:7/12 lg:w-1/2">
+          <h2 className="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">
+            Your DNS, Now Encrypted
+          </h2>
+          <p className="my-8 text-gray-600 dark:text-gray-300">
+            Ensuring secure navigation with key controls built into the service to protect you from threats online and potential prying eyes.
+          </p>
+          <p className="my-8 text-gray-600 dark:text-gray-300">
+            Encrypted DNS.SB increase user privacy and security by preventing eavesdropping and manipulation of DNS data via man-in-the-middle attacks.
+          </p>
+          <div className="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+            <div className="mt-8 flex gap-4 md:items-center">
+              <div className="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 m-auto text-indigo-500 dark:text-indigo-400">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              <div className="w-5/6">
+                <h4 className="font-semibold text-lg text-gray-700 dark:text-indigo-300">DNS over HTTPS</h4>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Performing remote DNS resolution via the encrypted HTTPS protocol
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 flex gap-4 md:items-center">
+              <div className="w-12 h-12 flex gap-4 rounded-full bg-teal-100 dark:bg-teal-900/20">
+                <svg className="w-6 h-6 m-auto text-teal-600 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+              </div>
+              <div className="w-5/6">
+                <h4 className="font-semibold text-lg text-gray-700 dark:text-teal-300">DNS over TLS</h4>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Encrypting and wrapping DNS queries and answers via the TLS protocol
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="md:5/12 lg:w-1/2">
+          <img
+            src="/images/encryption.svg"
+            alt="image"
+            loading="lazy"
+            width=""
+            height=""
           />
         </div>
       </div>

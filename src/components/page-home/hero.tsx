@@ -1,5 +1,6 @@
 import Balancer from 'react-wrap-balancer';
 import TypeAnimation from '../typing-animation';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -39,11 +40,11 @@ export default function Hero() {
                   repeat={Infinity}
                   className="w-full px-2 py-2 md:py-4 md:px-3 font-bold text-lg leading-none flex items-center md:text-3xl xl:text-4xl h-12 md:h-[72px]"
                 />
-                <button type="button" title="Start using" className="border-none ml-auto py-2 md:py-3 px-3 sm:px-6 md:px-8 lg:px-12 rounded-xl text-center transition !bg-red-600">
+                <Link href="/guide/" title="Start using DNS.SB" className="border-none ml-auto py-2 md:py-3 px-3 sm:px-6 md:px-8 lg:px-12 rounded-xl text-center transition !bg-red-600 flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 mx-auto text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
           </div>

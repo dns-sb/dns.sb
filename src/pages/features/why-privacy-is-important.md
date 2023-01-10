@@ -20,7 +20,7 @@ The ability to keep a secret is an essential part of the human experience.
   width="720"
   height="381"
   src="https://www.youtube-nocookie.com/embed/laem7G6LPAM"
-  frameborder="0"
+  frameBorder="0"
   allow="encrypted-media"
   loading="lazy"
   allowfullscreen
@@ -72,6 +72,6 @@ Yet individuals can use the tools of self-defense at their disposal to regain th
 
 <br />
 <br />
-<iframe src="https://anchor.fm/podcast-8f267c0/embed/episodes/Privacy-Matters-with-Max-Hillebrand-BEC008-e3e0qt/a-abhd5q" height="102" width="400" frameborder="0" scrolling="no" loading="lazy"></iframe>
+<iframe src="https://anchor.fm/podcast-8f267c0/embed/episodes/Privacy-Matters-with-Max-Hillebrand-BEC008-e3e0qt/a-abhd5q" height="102" width="400" frameBorder="0" scrolling="no" loading="lazy"></iframe>
 
 This article is forked from [Wasabi Docs](https://docs.wasabiwallet.io/why-wasabi/WhyPrivacyImportant.html)

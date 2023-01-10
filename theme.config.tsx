@@ -1,5 +1,15 @@
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs';
 import { CurrentYear } from './src/components/current-year';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useMemo } from 'react';
+
+const footerLinks = [
+  { name: 'Terms of Services', href: '/tos/' },
+  { name: 'Privacy Policy', href: '/privacy/' },
+  { name: 'Sponsors', href: '/sponsors/' },
+  { name: 'Contact Us', href: '/contact/' }
+];
 
 const config: DocsThemeConfig = {
   logo: (
@@ -14,25 +24,84 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/dns-sb/dns.sb'
   },
-  // chat: {
-  //   link: 'https://discord.com',
-  // },
   docsRepositoryBase: 'https://github.com/dns-sb/dns.sb',
+  gitTimestamp() {
+    return null;
+  },
   footer: {
-    text: <p>
-      Copyright &copy; 2019{' '}-{' '}<CurrentYear defaultYear={2023} />{' '}xTom GmbH
-    </p>
+    component: (
+      <footer className="w-full bg-gray-100 dark:bg-gray-900 py-16">
+        <div className="md:px-12 lg:px-28">
+          <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
+            <ul
+              role="list"
+              className="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
+            >
+              {
+                footerLinks.map(link => (
+                  <li role="listitem" key={link.href}>
+                    <Link href={link.href}>{link.name}</Link>
+                  </li>
+                ))
+              }
+            </ul>
+            <div className="text-center px-2">
+              <span className="text-sm tracking-wide">
+                Copyright &copy; 2019{' '}-{' '}<CurrentYear defaultYear={2023} />
+                <br className="md:hidden" />
+                <span className="hidden md:inline">{' '}</span>
+                <a
+                  href="https://xtom.com"
+                  target="_blank"
+                  rel="noreferrer nooopenner"
+                  className="underline"
+                >
+                  xTom GmbH
+                </a>
+                {' '}
+                | All right reserved
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    )
   },
   // TODO: remove once https://github.com/shuding/nextra/issues/1210 is fixed
   toc: {
     // eslint-disable-next-line react/jsx-no-useless-fragment
     extraContent: <></>
   },
+  head() {
+    // Custom <head /> goes here
+    // const config = useConfig();
+    // const { route } = useRouter();
+    return (
+      // eslint-disable-next-line react/jsx-no-useless-fragment
+      <></>
+    );
+  },
   useNextSeoProps() {
     const config = useConfig();
     const title = config.frontMatter.title ? `${config.frontMatter.title} - DNS.SB` : 'DNS.SB';
+    const description = config.frontMatter.description ? config.frontMatter.description : 'Browse Internet, Faster and More Private with DNS.SB\'s extremely performant and stable DNS resolver services';
+
+    const { route } = useRouter();
+    const canonical = useMemo(() => new URL(route.endsWith('/') ? 'route' : `${route}/`, 'https://dns.sb').toString(), [route]);
+
     return {
-      title
+      defaultTitle: 'DNS.SB',
+      title,
+      description,
+      canonical,
+      openGraph: {
+        url: canonical,
+        title,
+        siteName: 'DNS.SB'
+      },
+      twitter: {
+        cardType: 'summary_large_image'
+      }
     };
   }
 };
