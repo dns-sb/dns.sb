@@ -109,7 +109,9 @@ const config: DocsThemeConfig = {
         images: [
           {
             url: '/images/logo_with_text.png',
-            type: 'image/png'
+            type: 'image/png',
+            width: 2048,
+            height: 632
           }
         ]
       },
