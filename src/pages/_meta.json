@@ -1,3 +1,15 @@
 {
-  "index": "Introduction"
+  "index": {
+    "display": "hidden",
+    "type": "page",
+    "title": "Home",
+    "theme": {
+      "layout": "full",
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false
+    }
+  }
 }

@@ -1,6 +1,8 @@
 {
   "root": true,
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "next/core-web-vitals"
+  ],
   "overrides": [
     {
       "files": [
@@ -9,6 +11,24 @@
       "extends": [
         "sukka/node"
       ]
+    },
+    {
+      "files": [
+        "**/*.mdx"
+      ],
+      "extends": [
+        "plugin:mdx/recommended"
+      ],
+      "settings": {
+        "mdx/code-blocks": true
+      },
+      "rules": {},
+      "parserOptions": {
+        "sourceType": "module",
+        "extraFileExtensions": [
+          ".mdx"
+        ]
+      }
     },
     {
       "files": [
@@ -28,21 +48,7 @@
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "off"
       },
-      "settings": {
-        "node": {
-          "resolvePaths": [
-            "__dirname"
-          ],
-          "tryExtensions": [
-            ".js",
-            ".json",
-            ".node",
-            ".ts",
-            ".d.ts",
-            ".tsx"
-          ]
-        }
-      }
+      "settings": {}
     }
   ]
 }
