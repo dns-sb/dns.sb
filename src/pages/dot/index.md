@@ -1,0 +1,72 @@
+---
+title: "DNS over TLS"
+description: "DNS over TLS (DoT) is a security protocol for encrypting and wrapping Domain Name System (DNS) queries and answers via the Transport Layer Security (TLS) protocol."
+---
+
+# Using DNS over TLS at DNS.SB
+
+## What is DNS over TLS
+
+DNS over TLS (DoT) is a security protocol for encrypting and wrapping Domain Name System (DNS) queries and answers via the Transport Layer Security (TLS) protocol. The goal of the method is to increase user privacy and security by preventing eavesdropping and manipulation of DNS data via man-in-the-middle attacks. ([Wikipedia](https://en.wikipedia.org/wiki/DNS_over_TLS))
+
+## Our DoT Servers
+
+### Hostname for TLS Authentication
+
+`dot.sb`
+
+Note: The old hostname `dns.sb` will be deprecated soon.
+
+### TLS Port
+
+- `853`
+
+### IPv4
+
+- `185.222.222.222`
+- `45.11.45.11`
+
+Note: The old address `185.184.222.222` will be deprecated soon.
+
+### IPv6
+
+- `2a09::`
+- `2a11::`
+
+Note: The old address `2a09::1` will be deprecated soon. When using IPv6 address, you must use specific hostname `dot.sb`
+
+
+### IPv6 with Full Address
+
+- `2a09:0000:0000:0000:0000:0000:0000:0000`
+- `2a11:0000:0000:0000:0000:0000:0000:0000`
+
+*No Logging, DNSSEC enabled*
+
+### PEM / CRT File
+
+[https://github.com/dns-sb/DoT/blob/master/cert/dns.sb.crt](dns.sb.crt)
+
+### SPKI Pin
+
+```
+0Ot+uUBCfWZkE2GFQQcIpR9GmuhWioGEl+K11FhNmHk=
+```
+You can generate and verify SPKI PIN with the following command:
+
+```bash
+echo | openssl s_client -connect 185.222.222.222:853 2>/dev/null | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+```
+
+## Example Configurations
+
+### Unbound
+
+[unbound.conf](https://github.com/dns-sb/DoT/blob/master/example/unbound.conf)
+
+## How to set DNS.SB DoT Server
+
+- [Android](/dot/android/)
+- [Linux](/dot/linux/)
+- [Windows](/dot/windows/)
+- [iOS & macOS](/dot/apple/)

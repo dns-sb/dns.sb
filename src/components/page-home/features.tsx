@@ -66,8 +66,8 @@ function EasyToRemember() {
         <div className="md:5/12 md:px-4 lg:px-6">
           <p className="font-mono my-6 font-bold text-4xl text-red-600">185.222.222.222</p>
           <p className="font-mono my-6 font-bold text-4xl text-red-600">45.11.45.11</p>
-          <p className="font-mono my-6 font-bold text-4xl text-red-600">[2a09::]</p>
-          <p className="font-mono my-6 font-bold text-4xl text-red-600">[2a11::]</p>
+          <p className="font-mono my-6 font-bold text-4xl text-red-600">2a09::</p>
+          <p className="font-mono my-6 font-bold text-4xl text-red-600">2a11::</p>
         </div>
       </div>
     </div>

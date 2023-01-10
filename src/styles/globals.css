@@ -1,3 +1,41 @@
-@tailwind base;
+/* @tailwind base; *//* Already imported by nextra */
 @tailwind components;
 @tailwind utilities;
+
+.pl_logo_warp {
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @apply bg-zinc-900
+}
+.pl_logo_warp a {
+  text-align: left;
+  width: 250px;
+}
+.pl_logo_warp a:nth-child(1) img {
+  height: calc(50px + 32px);
+}
+.pl_logo_warp a:nth-child(3) img {
+  height: calc(50px + 32px)
+}
+.pl_logo_warp a:nth-child(5) img {
+  height: calc(40px + 32px);
+}
+.pl_logo_warp a:nth-child(7) img {
+  height: calc(53px + 32px);
+}
+@media (max-width: 570px) {
+  .pl_logo_warp {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.gl_logo_warp a img {
+  height: 90px;
+}

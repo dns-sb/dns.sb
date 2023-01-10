@@ -5,6 +5,7 @@ module.exports = withNextra({
   themeConfig: './theme.config.tsx'
 })({
   reactStrictMode: true,
+  trailingSlash: true,
   images: {
     unoptimized: true
   }

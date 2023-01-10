@@ -1,4 +1,4 @@
-import type { DocsThemeConfig } from 'nextra-theme-docs';
+import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs';
 import { CurrentYear } from './src/components/current-year';
 
 const config: DocsThemeConfig = {
@@ -29,8 +29,10 @@ const config: DocsThemeConfig = {
     extraContent: <></>
   },
   useNextSeoProps() {
+    const config = useConfig();
+    const title = config.frontMatter.title ? `${config.frontMatter.title} - DNS.SB` : 'DNS.SB';
     return {
-      titleTemplate: '%s - DNS.SB'
+      title
     };
   }
 };

@@ -1,0 +1,70 @@
+---
+title: "How to use DNS.SB"
+description: "An introduction to how to set DNS.SB name servers."
+---
+
+import { Callout } from 'nextra-theme-docs'
+
+# How to use DNS.SB
+
+## DNS.SB Name Servers
+
+### IPv4
+
+- `185.222.222.222`
+- `45.11.45.11`
+
+<Callout type="warning">
+Note: The old address `185.184.222.222` will be deprecated soon.
+</Callout>
+
+### IPv6
+
+- `2a09::`
+- `2a11::`
+
+<Callout type="warning">
+Note: The old address `2a09::1` will be deprecated soon.
+</Callout>
+
+You may need IPv6 with full address in some old devices:
+
+- `2a09:0000:0000:0000:0000:0000:0000:0000`
+- `2a11:0000:0000:0000:0000:0000:0000:0000`
+
+## How to set regular DNS.SB Name Servers
+
+- [Windows](/guide/windows/)
+- [Linux](/guide/linux/)
+- [macOS](/guide/macos/)
+- [iOS](/guide/ios/)
+- [Android](/guide/android/)
+
+## How to set DNS.SB DoT Server
+
+- [Android](/dot/android/)
+- [Linux](/dot/linux/)
+- [Windows](/dot/windows/)
+- [iOS & macOS](/dot/apple/)
+
+# How to set DNS.SB DoH Server
+
+- [Mozilla Firefox](/doh/firefox/)
+- [Google Chrome](/doh/chrome/)
+- [Microsoft Edge](/doh/edge/)
+- [Windows](/doh/windows/)
+- [Linux](/doh/linux/)
+- [Android](/doh/android/)
+- [iOS & macOS](/doh/apple/)
+
+## How to verify if I'm using DNS.SB?
+
+You can simply visit [DNS.SB](https://dns.sb/) and check on top of the website
+
+If you are using our service:
+
+![Klik.png](https://s3.image.hosting/2021/07/16/Klik.png)
+
+If not:
+
+![KrSV.png](https://s3.image.hosting/2021/07/16/KrSV.png)

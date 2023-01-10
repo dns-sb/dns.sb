@@ -11,5 +11,104 @@
       "toc": false,
       "pagination": false
     }
+  },
+  "features": {
+    "type": "page",
+    "title": "Why DNS.SB"
+  },
+  "guide": {
+    "title": "Using DNS.SB",
+    "type": "page"
+  },
+  "dot": {
+    "title": "DNS over TLS",
+    "type": "page"
+  },
+  "doh": {
+    "title": "DNS over HTTPS",
+    "type": "page"
+  },
+  "faq": {
+    "type": "page",
+    "title": "FAQ"
+  },
+  "tos": {
+    "display": "hidden",
+    "title": "ToS",
+    "theme": {
+      "sidebar": false,
+      "pagination": false
+    }
+  },
+  "servers": {
+    "display": "hidden",
+    "title": "Our Servers",
+    "theme": {
+      "sidebar": false,
+      "pagination": false
+    }
+  },
+  "report": {
+    "display": "hidden",
+    "title": "Transparency Report",
+    "theme": {
+      "sidebar": false,
+      "pagination": false
+    }
+  },
+  "privacy": {
+    "display": "hidden",
+    "title": "Privacy Policy",
+    "theme": {
+      "sidebar": false,
+      "pagination": false
+    }
+  },
+  "sponsors": {
+    "display": "hidden",
+    "type": "page",
+    "title": "Sponsors",
+    "theme": {
+      "sidebar": false,
+      "pagination": false
+    }
+  },
+  "contact": {
+    "display": "hidden",
+    "title": "Contact Us",
+    "theme": {
+      "sidebar": false,
+      "pagination": false
+    }
+  },
+  "about": {
+    "title": "About",
+    "type": "menu",
+    "items": {
+      "tos": {
+        "title": "Terms of Service",
+        "href": "/tos/"
+      },
+      "servers": {
+        "title": "Our Servers",
+        "href": "/servers/"
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "href": "/privacy/"
+      },
+      "sponsors": {
+        "title": "Sponsors",
+        "href": "/sponsors/"
+      },
+      "report": {
+        "title": "Transparency Report",
+        "href": "/report/"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "href": "/contact/"
+      }
+    }
   }
 }
