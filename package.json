@@ -23,7 +23,8 @@
     "nextra-theme-docs": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-wrap-balancer": "^0.3.0"
+    "react-wrap-balancer": "^0.3.0",
+    "swr": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "18.11.10",
