@@ -3,11 +3,55 @@ title: "How to change DNS settings on Windows"
 description: "How to set DNS.SB's regular DNS on on Windows"
 ---
 
-# How to change DNS settings on Windows 10 / Windows Server 2019
+## How to change DNS settings on Windows 11 / Windows Server 2022
 
 If you want to change your DNS settings on Windows system, it's easy with few clicks.
 
-## Step 1 - Open Network Connections
+### Step 1 - Open Network Connections
+
+Find the computer icon on taskbar
+
+[![WjqD7.png](https://s3.image.hosting/2023/01/11/WjqD7.png)](https://image.hosting/image/WjqD7)
+
+Right-click on the icon and then select `Network and Internet settings`
+
+![WjUQH.png](https://s3.image.hosting/2023/01/11/WjUQH.png)
+
+Select `Ethernet` or `Wi-Fi` depending on your connection type:
+
+![WjfVV.png](https://s3.image.hosting/2023/01/11/WjfVV.png)
+
+### Step 2 - Change DNS resolvers to DNS.SB
+
+Find the `DNS` settings on `Ethernet` or `Wi-Fi` and click on `Edit`:
+
+![Wjhsr.png](https://s3.image.hosting/2023/01/11/Wjhsr.png)
+
+Change from `Automatic (DHCP)` to `Manual` and then add DNS.SB's servers:
+
+![Wjibs.png](https://s3.image.hosting/2023/01/11/Wjibs.png)
+
+For IPv4
+
+- **Preffered DNS**: `185.222.222.222`
+- **Alternate DNS**: `45.11.45.11`
+
+![WjVUf.png](https://s3.image.hosting/2023/01/11/WjVUf.png)
+
+For IPv6
+
+- **Preffered DNS**: `2a09::`
+- **Alternate DNS**: `2a11::`
+
+![WjZ6S.png](https://s3.image.hosting/2023/01/11/WjZ6S.png)
+
+Click `Save` button to confirm.
+
+## How to change DNS settings on Windows 10 / Windows Server 2019
+
+There are some small differences between Windows 10 and Windows 11, but the steps are almost the same.
+
+### Step 1 - Open Network Connections
 
 Find the computer icon on taskbar
 
@@ -25,7 +69,7 @@ Find your current adapter with Internet access and right-click the icon, then se
 
 ![5S5D.png](https://s3.image.hosting/2021/07/02/5S5D.png)
 
-## Step 2 - Change DNS resolvers to DNS.SB for IPv4
+### Step 2 - Change DNS resolvers to DNS.SB for IPv4
 
 In the Ethernet Properties windows, select `Internet Protocol Version 4 (TCP/IPv4)`, then click `Properties`
 
@@ -40,7 +84,7 @@ In `Internet Protocol Version 4 (TCP/IPv4) Properties`, select `Use the followin
 
 Click `OK` button to confirm.
 
-## Step 3 - Change DNS resolvers to DNS.SB for IPv6
+### Step 3 - Change DNS resolvers to DNS.SB for IPv6
 
 Select `Internet Protocol Version 6 (TCP/IPv6)`, then click `Properties`
 
