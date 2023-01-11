@@ -24,7 +24,7 @@ const config: DocsThemeConfig = {
   // project: {
   //   link: 'https://github.com/dns-sb/dns.sb'
   // },
-  docsRepositoryBase: 'https://github.com/dns-sb/dns.sb',
+  docsRepositoryBase: 'https://github.com/dns-sb/dns.sb/blob/master/',
   gitTimestamp() {
     return null;
   },
