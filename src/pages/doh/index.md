@@ -17,17 +17,24 @@ With DoH, DNS queries are sent over an HTTPS connection, which means that they a
 
 ### Global CDN
 
-`https://doh.dns.sb/dns-query`
+```
+https://doh.dns.sb/dns-query
+```
 
 or
 
-`https://doh.sb/dns-query`
+```
+https://doh.sb/dns-query
+```
 
 DNS.SB also supports pure IP DNS over HTTPS:
 
 ```
-https://185.222.222.222/dns-query
 https://45.11.45.11/dns-query
+```
+
+```
+https://185.222.222.222/dns-query
 ```
 
 ### Unicast PoPs

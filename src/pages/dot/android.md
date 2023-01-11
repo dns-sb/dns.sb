@@ -19,7 +19,11 @@ description: "How to set DNS.SB's DoT (DNS over TLS) on Android"
 
 ![KnWv.png](https://s3.image.hosting/2021/07/02/KnWv.png)
 
-4. Select `Private DNS provider hostname` and input our hostname `dot.sb`
+4. Select `Private DNS provider hostname` and input our hostname:
+
+```
+dot.sb
+```
 
 ![KCRS.png](https://s3.image.hosting/2021/07/02/KCRS.png)
 

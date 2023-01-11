@@ -21,8 +21,17 @@ description: "How to set DNS.SB's regular DNS on iPhone or iPad"
 
 ```
 185.222.222.222
+```
+
+```
 45.11.45.11
+```
+
+```
 2a09::
+```
+
+```
 2a11::
 ```
 

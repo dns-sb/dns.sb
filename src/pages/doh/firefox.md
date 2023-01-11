@@ -17,6 +17,10 @@ Input `about:preferences` in address bar and search `network` on search bar, the
 
 ## 3. Set DNS.SB DoH Server
 
-On `Connection Settings` page, click `Enable DNS over HTTPS`, choose `Custom` on `Use Provider`, and set `https://doh.dns.sb/dns-query` on `Custom`
+On `Connection Settings` page, click `Enable DNS over HTTPS`, choose `Custom` on `Use Provider`, and input the following on `Custom`:
+
+```
+https://doh.dns.sb/dns-query
+```
 
 ![KTHP.png](https://s3.image.hosting/2021/07/02/KTHP.png)

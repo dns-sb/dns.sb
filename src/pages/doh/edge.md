@@ -17,6 +17,10 @@ Input `edge://settings/` in address bar and search `security` on search bar.
 
 ## 3. Set DNS.SB DoH Server
 
-On `Advanced` section, enable `Use secure DNS to specify how to lookup the network address for websites`, choose `Choose a service provider` and set `https://doh.dns.sb/dns-query`
+On `Advanced` section, enable `Use secure DNS to specify how to lookup the network address for websites`, choose `Choose a service provider` and input:
+
+```
+https://doh.dns.sb/dns-query
+```
 
 [![KtKR.png](https://s3.image.hosting/2021/07/02/KtKR.png)](https://s3.image.hosting/2021/07/02/KtKR.png)

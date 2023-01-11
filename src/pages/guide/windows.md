@@ -33,15 +33,33 @@ Change from `Automatic (DHCP)` to `Manual` and then add DNS.SB's servers:
 
 For IPv4
 
-- **Preffered DNS**: `185.222.222.222`
-- **Alternate DNS**: `45.11.45.11`
+**Preffered DNS**
+
+```
+185.222.222.222
+```
+
+**Alternate DNS**
+
+```
+45.11.45.11
+```
 
 ![WjVUf.png](https://s3.image.hosting/2023/01/11/WjVUf.png)
 
 For IPv6
 
-- **Preffered DNS**: `2a09::`
-- **Alternate DNS**: `2a11::`
+**Preffered DNS**
+
+```
+2a09::
+```
+
+**Alternate DNS**
+
+```
+2a11::
+```
 
 ![WjZ6S.png](https://s3.image.hosting/2023/01/11/WjZ6S.png)
 
@@ -77,8 +95,17 @@ In the Ethernet Properties windows, select `Internet Protocol Version 4 (TCP/IPv
 
 In `Internet Protocol Version 4 (TCP/IPv4) Properties`, select `Use the following DNS server addresses`, and add our DNS servers
 
-- **Preffered DNS server**: `185.222.222.222`
-- **Alternate DNS server**: `45.11.45.11`
+**Preffered DNS server**
+
+```
+185.222.222.222
+```
+
+**Alternate DNS server**
+
+```
+45.11.45.11
+```
 
 ![5rTg.png](https://s3.image.hosting/2021/07/02/5rTg.png)
 
@@ -92,8 +119,17 @@ Select `Internet Protocol Version 6 (TCP/IPv6)`, then click `Properties`
 
 Click `Use The Following DNS Server Addresses` and add our DNS servers
 
-- **Preffered DNS server**: `2a09::`
-- **Alternate DNS server**: `2a11::`
+**Preffered DNS server**
+
+```
+2a09::
+```
+
+**Alternate DNS server**
+
+```
+2a11::
+```
 
 ![5QBu.png](https://s3.image.hosting/2021/07/02/5QBu.png)
 

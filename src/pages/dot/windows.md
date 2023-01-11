@@ -19,9 +19,17 @@ Click `DNS Servers`, then click `Add...`
 
 [![KKqB.png](https://s3.image.hosting/2021/07/02/KKqB.png)](https://s3.image.hosting/2021/07/02/KKqB.png)
 
-Choose Type to `DNS over TLS`, set `IP address and optional port:` to `185.222.222.222`
+Choose Type to `DNS over TLS`, set `IP address and optional port:` to our IP:
 
-Under `DNS over TLS options`, set `Hostname` to `dot.sb`
+```
+185.222.222.222
+```
+
+Under `DNS over TLS options`, set `Hostname` to out hostname:
+
+```
+dot.sb
+```
 
 [![Ks9g.png](https://s3.image.hosting/2021/07/02/Ks9g.png)](https://s3.image.hosting/2021/07/02/Ks9g.png)
 

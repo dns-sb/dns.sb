@@ -72,9 +72,17 @@ Click `DNS Servers`, then click `Add...`
 
 [![KKqB.png](https://s3.image.hosting/2021/07/02/KKqB.png)](https://s3.image.hosting/2021/07/02/KKqB.png)
 
-Choose Type to `DNS over HTTPS`, set `IP address and optional port:` to `185.222.222.222`
+Choose Type to `DNS over HTTPS`, set `IP address and optional port:` to:
 
-Set `DNS over HTTPS options URL` to `https://doh.dns.sb/dns-query`
+```
+185.222.222.222
+```
+
+Set `DNS over HTTPS options URL` to:
+
+```
+https://doh.dns.sb/dns-query
+```
 
 [![KejX.png](https://s3.image.hosting/2021/07/02/KejX.png)](https://s3.image.hosting/2021/07/02/KejX.png)
 
