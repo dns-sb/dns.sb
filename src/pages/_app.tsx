@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {process.env.NODE_ENV === 'production' && (
         <Script
           data-domain="dns.sb"
-          src="https://stat.dns.sb/js/plausible.js"
+          src="https://stat.dns.sb/js/script.js"
           strategy="afterInteractive"
         />
       )}
