@@ -1,0 +1,36 @@
+name: Build Site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Site
+        run: npm run build && npm run export
+      - name: Deploy to Server SYD
+        uses: easingthemes/ssh-deploy@v4.0.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: '-avz --delete'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_SYD }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          SOURCE: out/*
+          TARGET: /home/github/dns.sb/
+          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
