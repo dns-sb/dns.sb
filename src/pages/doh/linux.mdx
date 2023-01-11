@@ -3,6 +3,8 @@ title: "How to set DNS over HTTPS on Linux"
 description: "How to set DNS.SB's DoH (DNS over HTTPS) on Linux"
 ---
 
+import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+
 # How to install DoH client on Linux
 
 We can use [dnsproxy](https://github.com/AdguardTeam/dnsproxy) from AdguardTeam as DoH Client on Linux system.
@@ -54,9 +56,27 @@ We can use [Supervisor](https://github.com/Supervisor/supervisor) or [systemd](h
 
 For Supervisor, we can install it first:
 
+<Tabs items={['Debian / Ubuntu', 'CentOS / Fedora', 'Arch Linux / Manjaro']}>
+  <Tab>
 ```bash
 sudo apt install supervisor -y
 ```
+  </Tab>
+  <Tab>
+```bash
+sudo yum install epel-release -y
+sudo yum update
+sudo yum install supervisor -y
+```
+  </Tab>
+  <Tab>
+```bash
+sudo pacman -S supervisor
+```
+  </Tab>
+</Tabs>
+
+
 Then create a config file named `/etc/supervisor/conf.d/dnsproxy.conf`
 
 ```bash

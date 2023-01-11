@@ -7,7 +7,9 @@ description: "DNS over HTTPS. DNS over HTTPS (DoH) is a protocol for performing 
 
 ## What is DoH (DNS over HTTPS)
 
-DNS over HTTPS (DoH) is a protocol for performing remote Domain Name System (DNS) resolution via the HTTPS protocol. A goal of the method is to increase user privacy and security by preventing eavesdropping and manipulation of DNS data by man-in-the-middle attacks. As of March 2018, Google and the Mozilla Foundation are testing versions of DNS over HTTPS. Cloudflare working with Mozilla claim to destroy all DNS data daily. ([Wikipedia](https://en.wikipedia.org/wiki/DNS_over_HTTPS))
+DNS over HTTPS (DoH) is a protocol for encrypting and authenticating communications between DNS clients and servers using the HTTPS (HTTP over Transport Layer Security) protocol. The goal of DoH is to improve the privacy and security of DNS by encrypting the query and response payloads, and by providing authentication of the DNS server's identity. This allows DNS queries to be protected from eavesdropping and tampering, both on the network and on the client or server side.
+
+With DoH, DNS queries are sent over an HTTPS connection, which means that they are encoded in the same format as web requests and are subject to the same encryption and authentication features as web traffic. This can make it more difficult for an attacker to intercept or tamper with DNS queries, or to correlate the queries with the user's browsing activities.
 
 ## Our DoH Servers
 

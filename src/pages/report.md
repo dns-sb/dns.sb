@@ -3,6 +3,10 @@ title: "Transparency Report"
 description: "DNS.SB Transparency Report"
 ---
 
+## 2022
+
+[DNS-SB-Transparency-Report-2022.pdf](/files/DNS-SB-Transparency-Report-2022.pdf)
+
 ## 2021
 
 [DNS-SB-Transparency-Report-2021.pdf](/files/DNS-SB-Transparency-Report-2021.pdf)

@@ -56,10 +56,19 @@ const config: DocsThemeConfig = {
                   rel="noreferrer nooopenner"
                   className="underline"
                 >
-                  xTom GmbH
+                  xTom
+                </a>
+                {' '} | {' '}
+                <a
+                  href="https://c.im/@dns"
+                  target="_blank"
+                  rel="noreferrer nooopenner me"
+                  className="underline"
+                >
+                  Mastodon
                 </a>
                 {' '}
-                | All right reserved
+                | All rights reserved.
               </span>
             </div>
           </div>

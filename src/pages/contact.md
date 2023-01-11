@@ -5,7 +5,7 @@
 }
 ---
 
-# Contact DNS.SB Staffs
+# Contact DNS.SB
 
 ## Address
 
@@ -21,6 +21,14 @@ admin {a} dns.sb
 
 ## PGP Key
 
+Fingerprint:
+
+```
+BDCB 0C6D CA3D 6EE2 A16D  26CF 030C 5C53 5E55 A725
+```
+
+Public Key:
+
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 mDMEYN6WOBYJKwYBBAHaRw8BAQdAkRVh+1FjEnqUBDyeTsFNu26GJoSnnXi9BiBK
@@ -34,12 +42,6 @@ CRADDFxTXlWnJT1JAPoCWKzXfY5JluscDH/xmrlogg/AsG9NXG9cXONPBA2IdgD/
 blvF54IjffTvzK0ztCmW+V14lB446KSl/P4OjwEbEwo=
 =y5gc
 -----END PGP PUBLIC KEY BLOCK-----
-```
-
-## Telegram
-
-```
-https://t.me/dns_sb
 ```
 
 ## Mastodon

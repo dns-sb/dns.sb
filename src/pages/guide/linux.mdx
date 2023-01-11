@@ -3,13 +3,18 @@ title: "How to change DNS settings on Linux"
 description: "How to set DNS.SB's regular DNS on Linux"
 ---
 
+import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+
 # How to change DNS settings on Linux
 
 Follow this quick guide to start using DNS.SB on your Linux device.
 
 ## Debian
 
->> The guide for Debian also works with most common Linux distributions
+<Callout type="info" emoji="ℹ️">
+The guide also works with most common Linux distributions
+</Callout>
+
 1. Open `/etc/resolv.conf`
 
 ```bash
@@ -34,8 +39,29 @@ nameserver 2a11::
 
 You can also lock this file for security purpose
 
+First, install `e2fsprogs`:
+
+<Tabs items={['Debian / Ubuntu', 'CentOS / Fedora', 'Arch Linux / Manjaro']}>
+  <Tab>
+    ```bash
+    sudo apt install e2fsprogs -y
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    sudo yum install e2fsprogs -y
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    sudo pacman -S e2fsprogs
+    ```
+  </Tab>
+</Tabs>
+
+Then, lock the `/etc/resolv.conf` file:
+
 ```bash
-sudo apt install e2fsprogs -y
 sudo chattr +i /etc/resolv.conf
 ```
 
