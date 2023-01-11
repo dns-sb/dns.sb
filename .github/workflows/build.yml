@@ -38,111 +38,43 @@ jobs:
       - name: Build Site
         run: npm run build && npm run export
 
-      - name: Deploy to Server SYD
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_SYD }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
+      - name: Upload Build Output to Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: ${{ github.workspace }}/out/
+          if-no-files-found: error
 
-      - name: Deploy to Server DUS
-        uses: easingthemes/ssh-deploy@v4.0.5
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build]
+    strategy:
+      matrix:
+        include:
+          - host_id: REMOTE_HOST_SYD
+          - host_id: REMOTE_HOST_DUS
+          - host_id: REMOTE_HOST_FRA
+          - host_id: REMOTE_HOST_AMS
+          - host_id: REMOTE_HOST_LON
+          - host_id: REMOTE_HOST_SJC
+          - host_id: REMOTE_HOST_NRT
+          - host_id: REMOTE_HOST_KIX
+          - host_id: REMOTE_HOST_HKG
+          - host_id: REMOTE_HOST_TLL
+      fail-fast: false
+    env:
+      REMOTE_HOST: ${{ secrets[matrix.host_id] }}
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: ${{ github.workspace }}/out/
+      - run: ls -R ${{ github.workspace }}/out/
+      - uses: easingthemes/ssh-deploy@v4.0.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_DUS }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server FRA
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_FRA }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server AMS
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_AMS }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server LON
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_LON }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server SJC
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_SJC }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server NRT
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_NRT }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server KIX
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_KIX }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server HKG
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_HKG }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: out/*
-          TARGET: /home/github/dns.sb/
-          EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
-
-      - name: Deploy to Server TLL
-        uses: easingthemes/ssh-deploy@v4.0.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: '-avz --delete'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_TLL }}
+          REMOTE_HOST: ${{ env.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           SOURCE: out/*
           TARGET: /home/github/dns.sb/
