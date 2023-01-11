@@ -52,25 +52,15 @@ jobs:
       matrix:
         include:
           - host_id: REMOTE_HOST_SYD
-            host_name: SYD
           - host_id: REMOTE_HOST_DUS
-            host_name: DUS
           - host_id: REMOTE_HOST_FRA
-            host_name: FRA
           - host_id: REMOTE_HOST_AMS
-            host_name: AMS
           - host_id: REMOTE_HOST_LON
-            host_name: LON
           - host_id: REMOTE_HOST_SJC
-            host_name: SJC
           - host_id: REMOTE_HOST_NRT
-            host_name: NRT
           - host_id: REMOTE_HOST_KIX
-            host_name: KIX
           - host_id: REMOTE_HOST_HKG
-            host_name: HKG
           - host_id: REMOTE_HOST_TLL
-            host_name: TLL
       fail-fast: false
     env:
       REMOTE_HOST: ${{ secrets[matrix.host_id] }}
@@ -78,9 +68,8 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: dist
-          working-directory: ${{ github.workspace }}/out/
+          path: ${{ github.workspace }}/out/
       - run: ls -R ${{ github.workspace }}/out/
-      - run: echo "Deploy to ${{ matrix.host_name }}"
       - uses: easingthemes/ssh-deploy@v4.0.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
