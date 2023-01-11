@@ -3,7 +3,7 @@ title: "How to set DNS over TLS on Windows with YogaDNS"
 description: "How to set DNS.SB's DoT (DNS over TLS) on Windows with YogaDNS"
 ---
 
-# How to set DoT on Windows 10 with YogaDNS
+# How to set DoT on Windows with YogaDNS
 
 ## 1. Download YogaDNS
 
