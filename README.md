@@ -6,7 +6,7 @@ This is [DNS.SB](https://dns.sb)'s open-source website and documentation reposit
 
 ```bash
 git clone https://github.com/dns-sb/dns.sb.git
-cd vercel-dns-console
+cd dns.sb
 npm i
 npm run dev
 # npm run build

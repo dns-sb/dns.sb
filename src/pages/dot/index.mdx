@@ -9,7 +9,7 @@ import { Callout } from 'nextra-theme-docs'
 
 ## What is DNS over TLS
 
-DNS over TLS (DoT) is a security protocol for encrypting and wrapping Domain Name System (DNS) queries and answers via the Transport Layer Security (TLS) protocol. The goal of the method is to increase user privacy and security by preventing eavesdropping and manipulation of DNS data via man-in-the-middle attacks. ([Wikipedia](https://en.wikipedia.org/wiki/DNS_over_TLS))
+DNS over TLS (DoT) is a security protocol for encrypting and authenticating communications between DNS clients and servers. The goal of the protocol is to provide privacy and integrity for DNS queries and responses, by encrypting the query and response payloads and by providing authentication of the DNS server's identity. DNS over TLS is designed to operate over port 853, which is separate from the traditional DNS port (53). This allows it to be easily deployed in parallel with an existing DNS infrastructure, while providing an additional layer of security.
 
 ## Our DoT Servers
 
@@ -18,10 +18,6 @@ DNS over TLS (DoT) is a security protocol for encrypting and wrapping Domain Nam
 ### Hostname for TLS Authentication
 
 `dot.sb`
-
-<Callout type="warning">
-The old hostname `dns.sb` will be deprecated soon.
-</Callout>
 
 ### TLS Port
 
@@ -32,17 +28,13 @@ The old hostname `dns.sb` will be deprecated soon.
 - `185.222.222.222`
 - `45.11.45.11`
 
-<Callout type="warning">
-The old address `185.184.222.222` will be deprecated soon.
-</Callout>
-
 ### IPv6
 
 - `2a09::`
 - `2a11::`
 
 <Callout type="warning">
-The old address `2a09::1` will be deprecated soon. When using IPv6 address, you must use specific hostname `dot.sb`
+When using IPv6 address, you must use specific hostname `dot.sb`
 </Callout>
 
 ### IPv6 with Full Address
@@ -52,7 +44,7 @@ The old address `2a09::1` will be deprecated soon. When using IPv6 address, you 
 
 ### PEM / CRT File
 
-[https://github.com/dns-sb/DoT/blob/master/cert/dns.sb.crt](dns.sb.crt)
+[dns.sb.crt](https://github.com/dns-sb/DoT/blob/master/cert/dns.sb.crt)
 
 ### SPKI Pin
 

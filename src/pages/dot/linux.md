@@ -5,7 +5,7 @@ description: "How to set DNS.SB's DoT (DNS over TLS) on Linux"
 
 ## Debian and most popular Linux distributions
 
-For modern Linux distributions, we recommend using `systemd-resolved`
+For most modern Linux distributions, we recommend using `systemd-resolved`
 
 ### 1. Enable systemd-resolved
 
@@ -16,7 +16,7 @@ systemctl enable --now systemd-resolved
 ### 2. Open /etc/systemd/resolved.conf
 
 ```bash
-vim /etc/systemd/resolved.conf
+sudo vim /etc/systemd/resolved.conf
 ```
 
 Here's an example config
@@ -40,19 +40,19 @@ DNSSEC=yes
 ### 3. Restart systemd-resolved
 
 ```bash
-systemctl restart systemd-resolved
+sudo systemctl restart systemd-resolved
 ```
 
 ### 4. Change /etc/resolv.conf
 
 ```bash
-vim /etc/resolv.conf
+sudo vim /etc/resolv.conf
 ```
 
 ### 5. Set nameserver to 127.0.0.53
 
 ```bash
-nameserver 127.0.0.53
+sudo nameserver 127.0.0.53
 ```
 
 ### 6. Test if DNS is working

@@ -5,15 +5,15 @@ description: "How to set DNS.SB's regular DNS on iPhone or iPad"
 
 # How to change DNS settings on iOS
 
-1. Go to `Settings` and open `Wi-Fi`
+1. Go to `Settings` and select `Wi-Fi`
 
 ![5k0i.png](https://s3.image.hosting/2021/07/02/5k0i.png)
 
-2. Press `i` button on right of your connected Wi-Fi
+2. Click on the `i` button on right of your connected Wi-Fi
 
 ![5w3l.png](https://s3.image.hosting/2021/07/02/5w3l.png)
 
-3. Scroll down and find `Configure DNS`, press it
+3. Scroll down and find `Configure DNS`
 
 ![KBrK.png](https://s3.image.hosting/2021/07/02/KBrK.png)
 
@@ -28,4 +28,4 @@ description: "How to set DNS.SB's regular DNS on iPhone or iPad"
 
 ![KYhU.png](https://s3.image.hosting/2021/07/02/KYhU.png)
 
-5. Press `Save`
+5. Click on `Save`
