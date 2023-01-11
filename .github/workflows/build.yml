@@ -76,6 +76,6 @@ jobs:
           ARGS: '-avz --delete'
           REMOTE_HOST: ${{ env.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: ${{ github.workspace }}/out/*
+          SOURCE: out/*
           TARGET: /home/github/dns.sb/
           EXCLUDE: .git,.github,.gitlab-ci.yml,.nojekyll
