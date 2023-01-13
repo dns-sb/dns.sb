@@ -89,7 +89,7 @@ function MassiveNetwork() {
             Since nearly everything you do on the Internet starts with a DNS request. A fast, performant DNS can accelerate almost everything you do online.
           </p>
           <p className="my-8 text-gray-600 dark:text-gray-300">
-            Built on top of <a href="https://xtom.com" className="text-red-600 hover:underline hover:underline-offset-3" target="_blank" rel="noopenner noreferrer">xTom</a>’s massive global anycast network, DNS.SB operates at 30 locations across 6 continents, resolving queries from anywhere of the world.
+            Built on top of <a href="https://xtom.com" className="text-red-600 hover:underline hover:underline-offset-3 link-hover-red" target="_blank" rel="noopenner noreferrer">xTom</a>’s massive global anycast network, DNS.SB operates at 30 locations across 6 continents, resolving queries from anywhere of the world.
           </p>
         </div>
         <div className="md:w-5/12 lg:w-1/2">

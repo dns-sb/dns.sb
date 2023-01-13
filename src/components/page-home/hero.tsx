@@ -12,11 +12,25 @@ export default function Hero() {
             <Balancer>
               Browse Internet,
               <br />
-              <span className="text-red-600">Faster</span>
+              <span className="text-red-600 relative">Faster
+                <svg x="0px" y="0px" viewBox="0 0 21.7 2.8" className="absolute left-0 w-full">
+                  <path
+                    className="fill-red-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M0,1.3c-0.2,0.4,1.2,1.7,1.6,1.5c7-2.4,16.9-1.4,19.2-0.5c0,0,0,0,0,0c0.5,0.2,1-0.3,0.8-0.6  C18.5-0.6,0.9-0.4,0,1.3z" />
+                </svg>
+              </span>
               {' '}
               and
               {' '}
-              <span className="text-red-600">More Private</span>
+              <span className="text-red-600 relative">More Private
+                <svg x="0px" y="0px" viewBox="0 0 50 2.8" className="absolute left-0 w-full">
+                  <path
+                    className="fill-red-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M0,1.3c-0.2,0.4,1.2,1.7,1.6,1.5c7-2.4,16.9-1.4,46.2-0.5c0,0,0,0,0,0c0.5,0.2,1-0.3,0.8-0.6 C18.5-0.6,0.9-0.4,0,1.3z" />
+                </svg>
+              </span>
             </Balancer>
           </h1>
           <p className="mt-8 text-gray-700 dark:text-gray-200">
