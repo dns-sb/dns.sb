@@ -23,7 +23,7 @@ function Privacy() {
             </Balancer>
           </h2>
           <p className="my-8 text-gray-600 dark:text-gray-300">
-            DNS.SB belives, without privacy there is no human dignity. DNS.SB is designed with one goal in mind, to protect your personal DNS data, no logs, forever.
+            DNS.SB believes, without privacy there is no human dignity. DNS.SB is designed with one goal in mind, to protect your personal DNS data, no logs, forever.
           </p>
           <p className="my-8 text-gray-600 dark:text-gray-300">
             We don’t want to know what you do on the Internet. And we’ve taken the technical steps to ensure we can’t.
