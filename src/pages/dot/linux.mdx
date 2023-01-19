@@ -3,9 +3,13 @@ title: "How to set DNS over TLS on Linux"
 description: "How to set DNS.SB's DoT (DNS over TLS) on Linux"
 ---
 
+import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+
 ## Debian and most popular Linux distributions
 
 For most modern Linux distributions, we recommend using `systemd-resolved`
+
+<div className="steps-container">
 
 ### 1. Enable systemd-resolved
 
@@ -13,15 +17,15 @@ For most modern Linux distributions, we recommend using `systemd-resolved`
 systemctl enable --now systemd-resolved
 ```
 
-### 2. Open /etc/systemd/resolved.conf
+### 2. Edit /etc/systemd/resolved.conf
 
 ```bash
 sudo vim /etc/systemd/resolved.conf
 ```
 
-Here's an example config
+Here's an example config:
 
-```conf
+```bash filename="/etc/systemd/resolved.conf"
 [Resolve]
 DNS=185.222.222.222 45.11.45.11 2a09::#dot.sb 2a11::#dot.sb
 DNSOverTLS=yes
@@ -30,7 +34,7 @@ DNSSEC=yes
 
 or
 
-```conf
+```bash filename="/etc/systemd/resolved.conf"
 [Resolve]
 DNS=185.222.222.222#dot.sb 45.11.45.11#dot.sb 2a09::#dot.sb 2a11::#dot.sb
 DNSOverTLS=yes
@@ -43,7 +47,7 @@ DNSSEC=yes
 sudo systemctl restart systemd-resolved
 ```
 
-### 4. Change /etc/resolv.conf
+### 4. Edit /etc/resolv.conf
 
 ```bash
 sudo vim /etc/resolv.conf
@@ -51,8 +55,8 @@ sudo vim /etc/resolv.conf
 
 ### 5. Set nameserver to 127.0.0.53
 
-```bash
-sudo nameserver 127.0.0.53
+```bash filename="/etc/resolv.conf"
+nameserver 127.0.0.53
 ```
 
 ### 6. Test if DNS is working
@@ -75,5 +79,8 @@ example.com.		3309	IN	A	93.184.216.34
 ;; WHEN: Fri Jul 02 10:29:59 UTC 2021
 ;; MSG SIZE  rcvd: 56
 ```
+</div>
 
+<Callout type="info">
 We can see the resonse DNS server is `127.0.0.53#53(127.0.0.53)`, which is working fine.
+</Callout>
