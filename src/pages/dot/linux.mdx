@@ -4,12 +4,13 @@ description: "How to set DNS.SB's DoT (DNS over TLS) on Linux"
 ---
 
 import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+import StepContainer from '../../components/step-container'
 
 ## Debian and most popular Linux distributions
 
 For most modern Linux distributions, we recommend using `systemd-resolved`
 
-<div className="steps-container">
+<StepContainer>
 
 ### 1. Enable systemd-resolved
 
@@ -79,7 +80,7 @@ example.com.		3309	IN	A	93.184.216.34
 ;; WHEN: Fri Jul 02 10:29:59 UTC 2021
 ;; MSG SIZE  rcvd: 56
 ```
-</div>
+</StepContainer>
 
 <Callout type="info">
 We can see the resonse DNS server is `127.0.0.53#53(127.0.0.53)`, which is working fine.
