@@ -65,6 +65,7 @@ https://185.222.222.222/dns-query
 - [Mozilla Firefox](/doh/firefox/)
 - [Google Chrome](/doh/chrome/)
 - [Microsoft Edge](/doh/edge/)
+- [Vivaldi Browser](/doh/vivaldi/)
 - [Windows](/doh/windows/)
 - [Linux](/doh/linux/)
 - [Android](/doh/android/)

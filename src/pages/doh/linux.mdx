@@ -4,6 +4,7 @@ description: "How to set DNS.SB's DoH (DNS over HTTPS) on Linux"
 ---
 
 import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+import StepContainer from '../../components/step-container'
 
 # How to install DoH client on Linux
 
@@ -11,7 +12,9 @@ We can use [dnsproxy](https://github.com/AdguardTeam/dnsproxy) from AdguardTeam 
 
 DNS Proxy is a simple DNS proxy server that supports all existing DNS protocols including DNS-over-TLS, DNS-over-HTTPS, DNSCrypt, and DNS-over-QUIC. Moreover, it can work as a DNS-over-HTTPS, DNS-over-TLS or DNS-over-QUIC server.
 
-## 1. Install DNS Proxy
+<StepContainer>
+
+### Install DNS Proxy
 
 ```bash
 VERSION=$(curl -s https://api.github.com/repos/AdguardTeam/dnsproxy/releases/latest | grep tag_name | cut -d '"' -f 4) && echo "Latest AdguardTeam dnsproxy version is $VERSION"
@@ -21,7 +24,7 @@ cd linux-amd64
 sudo mv dnsproxy /usr/bin/dnsproxy
 ```
 
-## 2. Connect DNS.SB DoH Server
+### Connect DNS.SB DoH Server
 
 ```bash
 sudo dnsproxy -l 127.0.0.1 -p 53 -u https://doh.dns.sb/dns-query -b 185.222.222.222:53
@@ -50,7 +53,7 @@ example.com.		1094	IN	A	93.184.216.34
 
 We can see the response server  `SERVER: 127.0.0.1#53(127.0.0.1)` is working fine.
 
-## 3. Keep DNS Proxy running in background
+### Keep DNS Proxy running in background
 
 We can use [Supervisor](https://github.com/Supervisor/supervisor) or [systemd](https://systemd.io/) to keep DNS Proxy running in background.
 
@@ -79,9 +82,9 @@ sudo pacman -S supervisor
 
 Then create a config file named `/etc/supervisor/conf.d/dnsproxy.conf`
 
-```bash
+```bash filename="/etc/supervisor/conf.d/dnsproxy.conf"
 [program:dnsproxy]
-command = dnsproxy -l 127.0.0.1 -p 53 -u https://doh.dns.sb/dns-query -b 185.222.222.222:53
+command = /usr/bin/dnsproxy -l 127.0.0.1 -p 53 -u https://doh.dns.sb/dns-query -b 185.222.222.222:53
 user = root
 autostart = true
 autorestart = true
@@ -97,7 +100,7 @@ sudo systemctl restart supervisor
 
 For systemd, we can create a service file named `/etc/systemd/system/dnsproxy.service`
 
-```bash
+```bash filename="/etc/systemd/system/dnsproxy.service"
 [Unit]
 Description=DNS Proxy
 After=network.target
@@ -119,7 +122,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now dnsproxy
 ```
 
-## 4. Change /etc/resolv.conf
+### Edit `/etc/resolv.conf``
 
 We can use the same method like [How to change DNS settings on Linux](/guide/linux/), open `/etc/resolv.conf`
 
@@ -129,7 +132,9 @@ sudo vim /etc/resolv.conf
 
 Replace the `nameserver` lines with
 
-```conf
+```conf filename="/etc/resolv.conf"
 nameserver 127.0.0.1
 ```
 Save the file and it's working now.
+
+</StepContainer>

@@ -3,13 +3,17 @@ title: "How to set DNS over HTTPS on Windows"
 description: "How to set DNS.SB's DoH (DNS over HTTPS) on Windows"
 ---
 
+import StepContainer from '../../components/step-container'
+
 # How to set DNS over HTTPS on Windows
 
 This guide is for Microsoft Windows 10 and Windows 11.
 
 ## How to set DoH on Windows 11
 
-### 1. Set DoH Provider
+<StepContainer>
+
+### Set DoH Provider
 
 Open Windows Terminal with Admin access, first, right click on `Start` button on taskbar:
 
@@ -34,7 +38,7 @@ Then use `netsh dns show encryption` command to check if it works:
 
 ![kDfq.png](https://s3.image.hosting/2022/02/28/kDfq.png)
 
-### 2. Change Network Configuration
+### Change Network Configuration
 
 Right click on the small computer icon on taskbar:
 
@@ -56,17 +60,21 @@ Manually set DNS servers and set `Alternate DNS encryption` to `Encrypted only (
 
 ![k6AD.png](https://s3.image.hosting/2022/02/28/k6AD.png)
 
+</StepContainer>
+
 ## How to set DoH on Windows 10
 
-### 1. Download YogaDNS
+<StepContainer>
+
+### Download YogaDNS
 
 You can download and install the latest version [here](https://yogadns.com/download/).
 
-### 2. Set an empty configuration
+### Start with an empty configuration
 
 [![KvND.png](https://s3.image.hosting/2021/07/02/KvND.png)](https://s3.image.hosting/2021/07/02/KvND.png)
 
-### 3. Set DNS.SB DoH Server
+### Set DNS.SB DoH Server
 
 Click `DNS Servers`, then click `Add...`
 
@@ -87,3 +95,5 @@ https://doh.dns.sb/dns-query
 [![KejX.png](https://s3.image.hosting/2021/07/02/KejX.png)](https://s3.image.hosting/2021/07/02/KejX.png)
 
 Click `OK`
+
+</StepContainer>

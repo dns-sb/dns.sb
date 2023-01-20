@@ -49,7 +49,7 @@ const IsUsingDnsSb = () => {
       <div className="flex flex-wrap items-center">
         <div className="mt-1 w-4 h-4 rounded-full bg-green-600 border-4 border-green-900" />
         <p className="ml-3">
-          You are using DNS.SB :)
+          You are using DNS.SB :) Your DNS requests are encrypted and safe.
         </p>
       </div>
     );
@@ -58,7 +58,7 @@ const IsUsingDnsSb = () => {
     <div className="flex flex-wrap items-center">
       <div className="mt-1 w-4 h-4 rounded-full bg-red-600 border-4 border-red-900" />
       <p className="ml-3">
-        You are not using DNS.SB :(
+        You are not using DNS.SB :( Your ISP can monitor and track your DNS requests.
       </p>
     </div>
   );

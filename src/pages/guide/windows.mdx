@@ -3,11 +3,15 @@ title: "How to change DNS settings on Windows"
 description: "How to set DNS.SB's regular DNS on on Windows"
 ---
 
+import StepContainer from '../../components/step-container'
+
 ## How to change DNS settings on Windows 11 / Windows Server 2022
 
 If you want to change your DNS settings on Windows system, it's easy with few clicks.
 
-### Step 1 - Open Network Connections
+<StepContainer>
+
+### Open Network Connections
 
 Find the computer icon on taskbar
 
@@ -21,7 +25,7 @@ Select `Ethernet` or `Wi-Fi` depending on your connection type:
 
 ![WjfVV.png](https://s3.image.hosting/2023/01/11/WjfVV.png)
 
-### Step 2 - Change DNS resolvers to DNS.SB
+### Change DNS resolvers to DNS.SB
 
 Find the `DNS` settings on `Ethernet` or `Wi-Fi` and click on `Edit`:
 
@@ -64,12 +68,14 @@ For IPv6
 ![WjZ6S.png](https://s3.image.hosting/2023/01/11/WjZ6S.png)
 
 Click `Save` button to confirm.
+</StepContainer>
 
 ## How to change DNS settings on Windows 10 / Windows Server 2019
 
 There are some small differences between Windows 10 and Windows 11, but the steps are almost the same.
 
-### Step 1 - Open Network Connections
+<StepContainer>
+### Open Network Connections
 
 Find the computer icon on taskbar
 
@@ -87,7 +93,7 @@ Find your current adapter with Internet access and right-click the icon, then se
 
 ![5S5D.png](https://s3.image.hosting/2021/07/02/5S5D.png)
 
-### Step 2 - Change DNS resolvers to DNS.SB for IPv4
+### Change DNS resolvers to DNS.SB for IPv4
 
 In the Ethernet Properties windows, select `Internet Protocol Version 4 (TCP/IPv4)`, then click `Properties`
 
@@ -111,7 +117,7 @@ In `Internet Protocol Version 4 (TCP/IPv4) Properties`, select `Use the followin
 
 Click `OK` button to confirm.
 
-### Step 3 - Change DNS resolvers to DNS.SB for IPv6
+### Change DNS resolvers to DNS.SB for IPv6
 
 Select `Internet Protocol Version 6 (TCP/IPv6)`, then click `Properties`
 
@@ -134,3 +140,4 @@ Click `Use The Following DNS Server Addresses` and add our DNS servers
 ![5QBu.png](https://s3.image.hosting/2021/07/02/5QBu.png)
 
 Click `OK` button to confirm.
+</StepContainer>
