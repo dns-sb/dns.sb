@@ -56,6 +56,7 @@ https://185.222.222.222/dns-query
 | San Jose, United States | `https://us-sjc.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Bengaluru, India        | `https://in-blr.doh.sb/dns-query`  | [DigitalOcean](https://xt.om/digitalocean) |
 | Singapore               | `https://sg-sin.doh.sb/dns-query`  | [DigitalOcean](https://xt.om/digitalocean) |
+| Singapore               | `https://sg-sin2.doh.sb/dns-query` | [xTom](https://xtom.com/)                  |
 | Seoul, South Korea      | `https://kr-sel.doh.sb/dns-query`  | [Amazon AWS](https://aws.amazon.com/)      |
 | Moscow, Russia          | `https://ru-mow.doh.sb/dns-query`  | [Servers.com](https://xt.om/serverscom)    |
 | Toronto, Canada         | `https://ca-yyz.doh.sb/dns-query`  | [Vultr](https://xt.om/vultr)               |
