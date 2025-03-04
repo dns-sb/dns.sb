@@ -76,7 +76,6 @@ https://[2a11::]/dns-query
 | Chicago, United States     | `https://us-chi.doh.sb/dns-query`  | [HostVenom](https://xt.om/hostvenom)       |
 | New York, United States    | `https://us-nyc.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | San Jose, United States    | `https://us-sjc.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
-| Los Angeles, United States | `https://us-lax.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Bengaluru, India           | `https://in-blr.doh.sb/dns-query`  | [DigitalOcean](https://xt.om/digitalocean) |
 | Singapore                  | `https://sg-sin.doh.sb/dns-query`  | [DigitalOcean](https://xt.om/digitalocean) |
 | Singapore                  | `https://sg-sin2.doh.sb/dns-query` | [xTom](https://xtom.com/)                  |
