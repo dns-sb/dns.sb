@@ -39,7 +39,7 @@ jobs:
         run: npm run build && npm run export
 
       - name: Upload Build Output to Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist
           path: ${{ github.workspace }}/out/
@@ -67,7 +67,7 @@ jobs:
     env:
       REMOTE_HOST: ${{ secrets[matrix.host_id] }}
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: dist
           path: ${{ github.workspace }}/out/
