@@ -62,7 +62,6 @@ jobs:
           - host_id: REMOTE_HOST_HKG
           - host_id: REMOTE_HOST_TLL
           - host_id: REMOTE_HOST_SIN
-          - host_id: REMOTE_HOST_LAX
       fail-fast: false
     env:
       REMOTE_HOST: ${{ secrets[matrix.host_id] }}
