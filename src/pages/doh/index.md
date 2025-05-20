@@ -66,7 +66,6 @@ https://[2a11::]/dns-query
 | Düsseldorf, Germany        | `https://de-dus.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Frankfurt, Germany         | `https://de-fra.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Amsterdam, Netherlands     | `https://nl-ams.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
-| Amsterdam, Netherlands     | `https://nl-ams2.doh.sb/dns-query` | [xTom](https://xtom.com/)                  |
 | London, United Kingdom     | `https://uk-lon.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Tallinn, Estonia           | `https://ee-tll.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Osaka, Japan               | `https://jp-kix.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
@@ -77,8 +76,7 @@ https://[2a11::]/dns-query
 | New York, United States    | `https://us-nyc.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | San Jose, United States    | `https://us-sjc.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Bengaluru, India           | `https://in-blr.doh.sb/dns-query`  | [DigitalOcean](https://xt.om/digitalocean) |
-| Singapore                  | `https://sg-sin.doh.sb/dns-query`  | [DigitalOcean](https://xt.om/digitalocean) |
-| Singapore                  | `https://sg-sin2.doh.sb/dns-query` | [xTom](https://xtom.com/)                  |
+| Singapore                  | `https://sg-sin.doh.sb/dns-query`  | [xTom](https://xtom.com/)                  |
 | Seoul, South Korea         | `https://kr-sel.doh.sb/dns-query`  | [Amazon AWS](https://aws.amazon.com/)      |
 | Moscow, Russia             | `https://ru-mow.doh.sb/dns-query`  | [Servers.com](https://xt.om/serverscom)    |
 | Toronto, Canada            | `https://ca-yyz.doh.sb/dns-query`  | [Vultr](https://xt.om/vultr)               |
