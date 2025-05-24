@@ -1,25 +1,25 @@
 import clsx from 'clsx';
-import { useCallback, useState } from 'react';
+import {useCallback, useState} from 'react';
 import useSWRImmutable from 'swr/immutable';
-import { XIcon } from 'nextra/icons';
+import {XIcon} from 'nextra/icons';
 
 interface IPInfo {
-  asn: number
-  asn_organization: string
-  city: string
-  continent_code: string
-  country: string
-  country_code: string
-  ip: string
-  isp: string
-  latitude: number
-  longitude: number
-  offset: number
-  organization: string
-  postal_code: string
-  region: string
-  region_code: string
-  timezone: string
+  asn: number;
+  asn_organization: string;
+  city: string;
+  continent_code: string;
+  country: string;
+  country_code: string;
+  ip: string;
+  isp: string;
+  latitude: number;
+  longitude: number;
+  offset: number;
+  organization: string;
+  postal_code: string;
+  region: string;
+  region_code: string;
+  timezone: string;
 }
 
 const useIP = () => {
@@ -30,7 +30,7 @@ const useIP = () => {
 };
 
 const useCheckDns = () => {
-  const { data, isLoading, error } = useSWRImmutable(
+  const {data, isLoading, error} = useSWRImmutable(
     'https://check.dns.sh/',
     (key: string) => fetch(key).then((res) => res.arrayBuffer()),
     {
@@ -41,31 +41,44 @@ const useCheckDns = () => {
   return [isUsingDnsSb, isLoading] as const;
 };
 
-const IsUsingDnsSb = () => {
+interface IsUsingDnsSbProps {
+  handleBannerClose: () => void;
+}
+
+const IsUsingDnsSb = ({handleBannerClose}: IsUsingDnsSbProps) => {
   const [isUsingDnsSb, isCheckingDns] = useCheckDns();
   if (isCheckingDns) return <div>...</div>;
   if (isUsingDnsSb) {
     return (
-      <div className="flex flex-wrap items-center">
-        <div className="mt-1 w-4 h-4 rounded-full bg-green-600 border-4 border-green-900" />
-        <p className="ml-3">
+      <div className="flex items-center">
+        <div className="w-4 flex-shrink-0 h-4 rounded-full bg-green-600 border-4 border-green-900" />
+        <p className="mx-2 sm:ml-3 text-[12px] sm:text-sm">
           You are using DNS.SB :) Your DNS requests are encrypted and safe.
         </p>
       </div>
     );
   }
   return (
-    <div className="flex flex-wrap items-center">
-      <div className="mt-1 w-4 h-4 rounded-full bg-red-600 border-4 border-red-900" />
-      <p className="ml-3">
+    <div className="flex items-center">
+      <div
+        className="w-4 flex-shrink-0 h-4 rounded-full bg-red-600 dark:bg-red-600 border-4 border-red-400 dark:border-red-900" />
+      <p className="mx-2 sm:ml-3 text-[12px] sm:text-sm">
         You are not using DNS.SB :( Your ISP can monitor and track your DNS requests.
       </p>
+      <button
+        type="button"
+        aria-label="Dismiss banner"
+        className="block sm:hidden opacity-80 hover:opacity-100 border-[1px] rounded ltr:right-0 rtl:left-0"
+        onClick={handleBannerClose}
+      >
+        <XIcon className="h-4 w-4" />
+      </button>
     </div>
   );
 };
 
 const YourIP = () => {
-  const { data, error } = useIP();
+  const {data, error} = useIP();
   if (error) {
     return <p>Fail to fetch your IP addresses</p>;
   }
@@ -79,9 +92,7 @@ const YourIP = () => {
       </p>
     );
   }
-  return (
-    <p>...</p>
-  );
+  return <p>...</p>;
 };
 
 export default function AreYouUsingDnsSb() {
@@ -94,28 +105,20 @@ export default function AreYouUsingDnsSb() {
       <div
         className={clsx(
           'relative z-20 flex items-center justify-center',
-          'bg-neutral-900 text-sm font-medium text-slate-50',
-          'h-24 sm:h-16 md:h-10',
+          'bg-neutral-200 dark:bg-neutral-900 text-sm font-medium text-neutral-700 dark:text-slate-50',
+          'sm:h-16 md:h-10',
           'dark:bg-[linear-gradient(1deg,#383838,#212121)] dark:text-white',
-          'py-2 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),3rem)]'
+          'py-2 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-left),1rem)] sm:pr-[max(env(safe-area-inset-right),3rem)]'
         )}
       >
-        <div className="w-full truncate">
+        <div className="w-full">
           <div className="space-y-2 md:space-y-0 md:flex flex-wrap justify-between">
-            <IsUsingDnsSb />
+            <IsUsingDnsSb handleBannerClose={handleBannerClose} />
             <div>
               <YourIP />
             </div>
           </div>
         </div>
-        <button
-          type="button"
-          aria-label="Dismiss banner"
-          className="absolute opacity-80 hover:opacity-100 ltr:right-0 rtl:left-0"
-          onClick={handleBannerClose}
-        >
-          <XIcon className="mx-4 h-4 w-4" />
-        </button>
       </div>
     );
   }

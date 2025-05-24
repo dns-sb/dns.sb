@@ -9,8 +9,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-
-  @apply bg-zinc-900
 }
 .pl_logo_warp a {
   text-align: left;
