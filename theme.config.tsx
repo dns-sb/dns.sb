@@ -138,6 +138,9 @@ const config: DocsThemeConfig = {
     );
   },
   darkMode: false,
+  nextThemes: {
+    defaultTheme: 'dark'
+  },
   navbar: {
     extraContent: <ThemeToggle />
   },
