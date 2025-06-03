@@ -15,7 +15,7 @@ const footerLinks = [
 const footerContacts = [
   {
     name: '𝕏',
-    href: 'https://x/dns_dot_sb',
+    href: 'https://x.com/dns_dot_sb',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 50 50">
         <path d="M11 4C7.134 4 4 7.134 4 11v28c0 3.866 3.134 7 7 7h28c3.866 0 7-3.134 7-7V11c0-3.866-3.134-7-7-7H11zm2.086 9h7.937l5.637 8.01L33.5 13H36l-8.211 9.613L37.914 37h-7.936l-6.54-9.293L15.5 37H13l9.309-10.896L13.086 13zm3.828 2l14.107 20h3.064L18.979 15h-3.065z" />
