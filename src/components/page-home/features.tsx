@@ -23,7 +23,7 @@ function Privacy() {
             </Balancer>
           </h2>
           <p className="my-8 text-gray-600 dark:text-gray-300">
-            DNS.SB believes, without privacy there is no human dignity. DNS.SB is designed with one goal in mind, to protect your personal DNS data, no logs, forever.
+            DNS.SB believes that without privacy, there is no human dignity. DNS.SB is designed with one goal in mind: to protect your personal DNS data—no logs, forever.
           </p>
           <p className="my-8 text-gray-600 dark:text-gray-300">
             We don’t want to know what you do on the Internet. And we’ve taken the technical steps to ensure we can’t.
@@ -86,10 +86,10 @@ function MassiveNetwork() {
             </Balancer>
           </h2>
           <p className="my-8 text-gray-600 dark:text-gray-300">
-            Since nearly everything you do on the Internet starts with a DNS request. A fast, performant DNS can accelerate almost everything you do online.
+            Since nearly everything you do on the Internet starts with a DNS request, a fast, performant DNS can accelerate almost everything you do online.
           </p>
           <p className="my-8 text-gray-600 dark:text-gray-300">
-            Built on top of <a href="https://xtom.com" className="text-red-600 hover:underline hover:underline-offset-3 link-hover-red" target="_blank" rel="noopenner noreferrer">xTom</a>’s massive global anycast network, DNS.SB operates at 30 locations across 6 continents, resolving queries from anywhere of the world.
+            Built on top of <a href="https://xtom.com" className="text-red-600 hover:underline hover:underline-offset-3 link-hover-red" target="_blank" rel="noopener noreferrer">xTom</a>&apos;s massive global anycast network, DNS.SB operates at 30 locations across 6 continents, resolving queries from anywhere in the world.
           </p>
         </div>
         <div className="md:w-5/12 lg:w-1/2">
@@ -118,7 +118,7 @@ function EncryptedDNS() {
             Ensuring secure navigation with key controls built into the service to protect you from threats online and potential prying eyes.
           </p>
           <p className="my-8 text-gray-600 dark:text-gray-300">
-            Encrypted DNS.SB increase user privacy and security by preventing eavesdropping and manipulation of DNS data via man-in-the-middle attacks.
+            Encrypted DNS services increase user privacy and security by preventing eavesdropping and manipulation of DNS data via man-in-the-middle attacks.
           </p>
           <div className="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
             <div className="mt-8 flex gap-4 md:items-center">

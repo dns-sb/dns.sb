@@ -1,6 +1,6 @@
 ---
 title: "Our DNS Servers"
-description: "DNS.SB are operating multiple DNS resolvers around the globe"
+description: "DNS.SB operates multiple DNS resolvers around the globe"
 ---
 
 # Our DNS Servers

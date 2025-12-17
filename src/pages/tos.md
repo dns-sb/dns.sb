@@ -7,7 +7,7 @@ description: "DNS.SB Terms of Service"
 
 ## 1. Terms
 
-By using services provided by DNS.SB, through web browser or any software that interface with DNS.SB service, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using services provided by this site.
+By using services provided by DNS.SB, through a web browser or any software that interfaces with the DNS.SB service, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using services provided by this site.
 
 ## 2. Use License
 
@@ -17,7 +17,7 @@ Permission is granted for personal and non-commercial use of services provided b
 
 2. Use the service to conduct illegal penetration tests.
 
-3. Occupy large amount of computing resources in order to degrade service quality for other users.
+3. Occupy a large amount of computing resources in order to degrade service quality for other users.
 
 4. Remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or “mirror” the materials on any other server.
 
@@ -35,7 +35,7 @@ In no event shall DNS.SB or its suppliers be liable for any damages (including, 
 
 ## 5. Accuracy of materials
 
-The materials appearing on DNS.SB’s website could include technical, typographical, or photographic errors. DNS.SB does not warrant that any of the materials on its website are accurate, complete or current. DNS.SB may make changes to the materials contained on its website at any time without notice. However DNS.SB does not make any commitment to update the materials.
+The materials appearing on DNS.SB’s website could include technical, typographical, or photographic errors. DNS.SB does not warrant that any of the materials on its website are accurate, complete or current. DNS.SB may make changes to the materials contained on its website at any time without notice. However, DNS.SB does not make any commitment to update the materials.
 
 ## 6. Links
 
@@ -51,6 +51,6 @@ These terms and conditions are governed by and construed in accordance with the 
 
 ## 9. Privacy Policy
 
-Your privacy is important to us. Please head to [Privacy Policy](/privacy/) page for further information.
+Your privacy is important to us. Please visit our [Privacy Policy](/privacy/) page for further information.
 
 *This policy is effective as of April 3, 2020.*

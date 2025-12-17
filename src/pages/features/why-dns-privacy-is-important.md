@@ -8,7 +8,7 @@ description: "An introduction to the positive and negative side of Privacy in DN
 > Despite the privacy and security enhancements offered by encrypted transport protocols, the DNS resolver's privacy policy is important because the service still has the ability to see, store, or use the DNS query history associated with individual IP addresses, or in some cases, individual devices.
 > By Stan Adams in [DNS: Strengthening the Weakest Link in Internet Privacy](https://cdt.org/insights/dns-strengthening-the-weakest-link-in-internet-privacy/)
 
-All of ISP operators can easily get your DNS Query logs. If you don't trust your ISP, **DO NOT** use.
+All ISP operators can easily access your DNS query logs. If you don't trust your ISP, **DO NOT** use their DNS servers.
 
 ![Example DNS Query Log](https://s3.image.hosting/2021/07/02/5GgP.png "Example DNS Query Log")
 

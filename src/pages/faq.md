@@ -13,7 +13,7 @@ DNS is based on a distributed database system, consisting of many DNS servers th
 
 The DNS server looks up the IP address associated with the domain name in its local database or cache, and if it can't find it, it sends the query to other DNS servers that are authoritative for that domain or to the root DNS servers.
 
-Once it gets the IP address for the domain, DNS server responds with that IP address to the client, which then uses it to connect to the appropriate web server.
+Once it gets the IP address for the domain, the DNS server responds with that IP address to the client, which then uses it to connect to the appropriate web server.
 
 DNS is a fundamental component of the Internet's infrastructure and is used every time you visit a website, send an email, or connect to any other service on the Internet.
 
@@ -31,4 +31,4 @@ No, we do not store any type of logs for DNS queries.
 
 ## Does DNS.SB have EDNS Client Subnet?
 
-No, DNS.SB is a privacy centric resolver so it does not send any client IP information and does not send the EDNS Client Subnet Header to authoritative servers.
+No, DNS.SB is a privacy-centric resolver, so it does not send any client IP information and does not send the EDNS Client Subnet Header to authoritative servers.

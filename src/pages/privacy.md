@@ -17,7 +17,7 @@ description: "DNS.SB Privacy Policy"
 
   - We shall not record personally identifiable information (PII) of users accessing our DoH Servers, including user IP, browser information, etc. These logs are disabled on the servers.
 
-  - We apply the DNS Query Name Minimisation to minimize the amount of data sent from the DNS resolver to the authoritative Name server, in order to ensure and improve the privacy security. We hereby declare that our DoH services comply with [RFC 7816](https://datatracker.ietf.org/doc/html/rfc7816) and can be used for any level of Internet standards.
+  - We apply DNS Query Name Minimisation to minimize the amount of data sent from the DNS resolver to the authoritative name server, in order to enhance privacy and security. We hereby declare that our DoH services comply with [RFC 7816](https://datatracker.ietf.org/doc/html/rfc7816) and can be used for any level of Internet standards.
 
 ## 2. Information we share
 
@@ -31,25 +31,25 @@ description: "DNS.SB Privacy Policy"
 
 We reserve the right to block your IP address and/or ASN for legal reasons, including but not limited to:
 
-- abuse our network when using our DNS service.
+- Abusing our network when using our DNS service.
 
-- investigate potential violations of [Terms of Service](/tos/).
+- Investigating potential violations of [Terms of Service](/tos/).
 
-- protect against harm to our safety and rights of other users and us.
+- Protecting against harm to our safety and the rights of other users and ourselves.
 
-- detect, prevent, address, or investigate fraud, security or technical issues.
+- Detecting, preventing, addressing, or investigating fraud, security, or technical issues.
 
-- meet any applicable law, regulation, legal process or enforceable governmental request.
+- Meeting any applicable law, regulation, legal process, or enforceable governmental request.
 
-We cannot share any information we do not have, or have not stored, or have erased in prior.
+We cannot share any information we do not have, have not stored, or have previously erased.
 
 ## 3. Cookies
 
-Currently we do not actively use Cookie in our website or our DNS service.
+Currently, we do not actively use cookies on our website or in our DNS service.
 
 ## 4. Third-party services
 
-Currently we do not use any 3rd party services in our website or our DNS service.
+Currently, we do not use any third-party services on our website or in our DNS service.
 
 ## 5. Changes
 
@@ -57,7 +57,7 @@ Our Privacy Policy may change from time to time. In case of a change, we would p
 
 ## 6. Service termination
 
-You may choose to terminate the utilization of our service, and write to us to request deletion of your data. Please note that this is at best-effort, since most data are anonymised and we may not be able to find all data related to you.
+You may choose to terminate your use of our service and write to us to request deletion of your data. Please note that this is done on a best-effort basis, since most data is anonymized and we may not be able to locate all data related to you.
 
 ## 7. Contact
 
