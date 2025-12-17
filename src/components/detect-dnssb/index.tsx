@@ -1,3 +1,5 @@
+'use client'
+
 import clsx from 'clsx';
 import {useCallback, useState} from 'react';
 import useSWRImmutable from 'swr/immutable';
@@ -95,7 +97,7 @@ const YourIP = () => {
   return <p>...</p>;
 };
 
-export default function AreYouUsingDnsSb() {
+export function AreYouUsingDnsSb() {
   const [isOpen, setOpen] = useState(true);
 
   const handleBannerClose = useCallback(() => setOpen(false), []);

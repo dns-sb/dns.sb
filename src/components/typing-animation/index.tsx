@@ -1,3 +1,5 @@
+'use client'
+
 import type { HtmlHTMLAttributes} from 'react';
 import { useMemo, useRef, useEffect, memo } from 'react';
 import type React from 'react';

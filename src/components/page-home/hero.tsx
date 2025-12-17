@@ -52,7 +52,7 @@ export default function Hero() {
                   ]}
                   wrapper="span"
                   repeat={Infinity}
-                  className="w-full px-2 py-2 md:py-4 md:px-3 font-bold text-lg leading-none flex items-center md:text-3xl xl:text-4xl h-12 md:h-[72px]"
+                  className="w-full px-2 py-2 md:py-4 md:px-3 font-bold text-lg leading-none flex items-center md:text-3xl xl:text-4xl h-12 md:h-[72px] text-gray-900 dark:text-white"
                 />
                 <Link href="/guide/" title="Start using DNS.SB" className="border-none ml-auto py-2 md:py-3 px-3 sm:px-6 md:px-8 lg:px-12 rounded-xl text-center transition !bg-red-600 flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 mx-auto text-white">

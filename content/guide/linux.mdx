@@ -1,0 +1,119 @@
+---
+title: "How to change DNS settings on Linux"
+description: "How to set DNS.SB's regular DNS on Linux"
+---
+
+# How to change DNS settings on Linux
+
+Follow this quick guide to start using DNS.SB on your Linux device.
+
+## Debian
+
+<Callout type="info" emoji="ℹ️">
+The guide also works with most common Linux distributions
+</Callout>
+
+<StepContainer>
+
+### Edit `/etc/resolv.conf`
+
+```bash
+sudo vim /etc/resolv.conf
+```
+
+### Replace the `nameserver` lines with
+
+- For IPv4
+
+```bash filename="/etc/resolv.conf"
+nameserver 185.222.222.222
+nameserver 45.11.45.11
+```
+
+- For IPv6
+
+```bash filename="/etc/resolv.conf"
+nameserver 2a09::
+nameserver 2a11::
+```
+
+You can also lock this file for security purposes
+
+### First, install `e2fsprogs`:
+
+<Tabs items={['Debian / Ubuntu', 'CentOS / Fedora', 'Arch Linux / Manjaro']}>
+  <Tab>
+    ```bash
+    sudo apt install e2fsprogs -y
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    sudo yum install e2fsprogs -y
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    sudo pacman -S e2fsprogs
+    ```
+  </Tab>
+</Tabs>
+
+### Then, lock the `/etc/resolv.conf` file:
+
+```bash
+sudo chattr +i /etc/resolv.conf
+```
+
+Or unlock it with `sudo chattr -i /etc/resolv.conf`
+
+</StepContainer>
+
+## Ubuntu 18.04 and later
+
+Since Ubuntu 18.04, you should make the change in netplan configs at `/etc/netplan/*.yaml`. This file could be `50-cloud-init.yaml` or something like `01-netcfg.yaml`
+
+<StepContainer>
+
+### Open this file and it looks like
+
+```yaml filename="/etc/netplan/01-netcfg.yaml"
+network:
+    version: 2
+    ethernets:
+        eth0:
+            addresses:
+            - 192.0.2.2/24
+            gateway4: 192.0.2.1/24
+            match:
+                macaddress: 01:23:45:67:89:AB
+            nameservers:
+                addresses:
+                - 198.51.100.1
+                - 203.0.113.1
+                search: []
+            set-name: eth0
+```
+
+### Replace the `nameservers` section with
+
+```yaml
+nameservers:
+  addresses:
+  - 185.222.222.222
+  - 45.11.45.11
+```
+
+### Then run the following command
+
+```bash
+sudo netplan apply
+```
+
+### You can check your current DNS assignment by running the `systemd-resolve` command
+
+```bash
+systemd-resolve --status
+```
+
+</StepContainer>

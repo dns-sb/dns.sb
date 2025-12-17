@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ncu)",
+      "Bash(ncu:*)",
+      "mcp__deepwiki__ask_question"
+    ]
+  }
+}

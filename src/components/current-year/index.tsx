@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react';
 
 export const CurrentYear = (props: { defaultYear: number }) => {

@@ -1,0 +1,86 @@
+---
+title: "How to set DNS over TLS on Linux"
+description: "How to set DNS.SB's DoT (DNS over TLS) on Linux"
+---
+
+# How to set DNS over TLS on Linux
+
+## Debian and most popular Linux distributions
+
+For most modern Linux distributions, we recommend using `systemd-resolved`
+
+<StepContainer>
+
+### Enable systemd-resolved
+
+```bash
+sudo systemctl enable --now systemd-resolved
+```
+
+### Edit /etc/systemd/resolved.conf
+
+```bash
+sudo vim /etc/systemd/resolved.conf
+```
+
+Here's an example config:
+
+```bash filename="/etc/systemd/resolved.conf"
+[Resolve]
+DNS=185.222.222.222 45.11.45.11 2a09:: 2a11::
+DNSOverTLS=yes
+DNSSEC=yes
+```
+
+or
+
+```bash filename="/etc/systemd/resolved.conf"
+[Resolve]
+DNS=185.222.222.222#dot.sb 45.11.45.11#dot.sb 2a09::#dot.sb 2a11::#dot.sb
+DNSOverTLS=yes
+DNSSEC=yes
+```
+
+### Restart systemd-resolved
+
+```bash
+sudo systemctl restart systemd-resolved
+```
+
+### Edit /etc/resolv.conf
+
+```bash
+sudo vim /etc/resolv.conf
+```
+
+### Set nameserver to `127.0.0.53`
+
+```bash filename="/etc/resolv.conf"
+nameserver 127.0.0.53
+```
+
+### Test if DNS is working
+
+```
+root@server ~ # dig example.com
+; <<>> DiG 9.11.5-P4-5.1+deb10u5-Debian <<>> example.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63006
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;example.com.			IN	A
+;; ANSWER SECTION:
+example.com.		3309	IN	A	93.184.216.34
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Fri Jul 02 10:29:59 UTC 2021
+;; MSG SIZE  rcvd: 56
+```
+</StepContainer>
+
+<Callout type="info">
+We can see that the response DNS server is `127.0.0.53#53(127.0.0.53)`, which indicates it is working correctly.
+</Callout>

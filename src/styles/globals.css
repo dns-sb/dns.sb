@@ -1,6 +1,9 @@
-/* @tailwind base; *//* Already imported by nextra */
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+html {
+  scroll-behavior: smooth;
+}
 
 .pl_logo_warp {
   max-width: 500px;
@@ -72,3 +75,4 @@ article ul li a:hover:after{
 .gl_logo_warp a img {
   height: 90px;
 }
+
