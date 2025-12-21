@@ -41,3 +41,6 @@ yarn-error.log*
 astrolus
 
 .idea/
+
+# generated sitemap
+public/sitemap.xml

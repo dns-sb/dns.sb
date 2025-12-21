@@ -3,7 +3,11 @@
     "allow": [
       "Bash(ncu)",
       "Bash(ncu:*)",
-      "mcp__deepwiki__ask_question"
+      "mcp__deepwiki__ask_question",
+      "Bash(mkdir:*)",
+      "Bash(npm install)",
+      "Bash(npm run sitemap:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }

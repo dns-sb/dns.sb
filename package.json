@@ -5,7 +5,8 @@
   "description": "DNS.SB",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
+    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "build": "npm run sitemap && next build && npm run postbuild",
     "postbuild": "pagefind --site out --output-path out/_pagefind",
     "start": "next start"
   },
@@ -39,6 +40,7 @@
     "typescript-eslint": "^8.50.0",
     "tailwindcss": "^4.1.18",
     "postcss": "^8.5.6",
+    "tsx": "^4.19.2",
     "typescript": "^5.9.3"
   }
 }
