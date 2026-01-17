@@ -25,7 +25,7 @@ sudo vim /etc/systemd/resolved.conf
 
 Add the following configuration:
 
-```ini filename="/etc/systemd/resolved.conf"
+```bash filename="/etc/systemd/resolved.conf"
 [Resolve]
 DNS=185.222.222.222 45.11.45.11 2a09:: 2a11::
 DNSOverTLS=yes
@@ -34,7 +34,7 @@ DNSSEC=yes
 
 Alternatively, you can specify the hostname explicitly:
 
-```ini filename="/etc/systemd/resolved.conf"
+```bash filename="/etc/systemd/resolved.conf"
 [Resolve]
 DNS=185.222.222.222#dot.sb 45.11.45.11#dot.sb 2a09::#dot.sb 2a11::#dot.sb
 DNSOverTLS=yes

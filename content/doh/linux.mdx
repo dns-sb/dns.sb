@@ -78,7 +78,7 @@ sudo pacman -S supervisor
 
 Create the configuration file `/etc/supervisor/conf.d/dnsproxy.conf`:
 
-```ini filename="/etc/supervisor/conf.d/dnsproxy.conf"
+```bash filename="/etc/supervisor/conf.d/dnsproxy.conf"
 [program:dnsproxy]
 command = /usr/bin/dnsproxy -l 127.0.0.1 -p 53 -u https://doh.dns.sb/dns-query -b 185.222.222.222:53
 user = root
@@ -99,7 +99,7 @@ sudo systemctl restart supervisor
 
 Create the service file `/etc/systemd/system/dnsproxy.service`:
 
-```ini filename="/etc/systemd/system/dnsproxy.service"
+```bash filename="/etc/systemd/system/dnsproxy.service"
 [Unit]
 Description=DNS Proxy
 After=network.target
