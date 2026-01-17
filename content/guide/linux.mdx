@@ -81,7 +81,7 @@ Ubuntu 18.04 and later use Netplan for network configuration. The config file is
 
 Open your Netplan config file. A typical configuration looks like:
 
-```yaml filename="/etc/netplan/01-netcfg.yaml"
+```bash filename="/etc/netplan/01-netcfg.yaml"
 network:
     version: 2
     ethernets:
@@ -103,7 +103,7 @@ network:
 
 Replace the `nameservers` section with:
 
-```yaml filename="YAML"
+```bash filename="YAML"
 nameservers:
   addresses:
   - 185.222.222.222
