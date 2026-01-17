@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://dns.sb',
+    canonical: './',
   },
   icons: {
     icon: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://dns.sb',
+    url: './',
     siteName: 'DNS.SB',
     title: 'DNS.SB - Free, Fast & Privacy-First DNS Resolver',
     description: "DNS.SB is a free, fast, and privacy-focused DNS resolver service. Supports DNS over HTTPS (DoH) and DNS over TLS (DoT) with no logging.",
