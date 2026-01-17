@@ -17,19 +17,19 @@ With DoH, DNS queries are sent over an HTTPS connection, which means that they a
 
 ### Global CDN
 
-```txt
+```bash
 https://doh.dns.sb/dns-query
 ```
 
 or
 
-```txt
+```bash
 https://doh.sb/dns-query
 ```
 
 or
 
-```txt
+```bash
 https://dns.sb/dns-query
 ```
 
@@ -37,25 +37,25 @@ DNS.SB also supports pure IP DNS over HTTPS:
 
 IPv4:
 
-```txt
+```bash
 https://185.222.222.222/dns-query
 ```
 
 or
 
-```txt
+```bash
 https://45.11.45.11/dns-query
 ```
 
 IPv6:
 
-```txt
+```bash
 https://[2a09::]/dns-query
 ```
 
 or
 
-```txt
+```bash
 https://[2a11::]/dns-query
 ```
 

@@ -105,7 +105,7 @@ Most modern browsers support DoH natively. We provide setup guides for:
 
 **Global CDN (Recommended)**
 
-```txt
+```bash
 https://doh.dns.sb/dns-query
 ```
 
@@ -140,14 +140,14 @@ Both provide strong encryption and privacy. Choose based on your needs and what 
 
 **IPv4**
 
-```txt
+```bash
 185.222.222.222
 45.11.45.11
 ```
 
 **IPv6**
 
-```txt
+```bash
 2a09::
 2a11::
 ```
@@ -156,7 +156,7 @@ Yes, we really have the shortest IPv6 addresses in the world!
 
 If your device requires full IPv6 addresses:
 
-```txt
+```bash
 2a09:0000:0000:0000:0000:0000:0000:0000
 2a11:0000:0000:0000:0000:0000:0000:0000
 ```
