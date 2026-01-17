@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "sitemap": "tsx scripts/generate-sitemap.ts",
-    "build": "npm run sitemap && next build && npm run postbuild",
+    "build": "bun run sitemap && next build && bun run postbuild",
     "postbuild": "pagefind --site out --output-path out/_pagefind",
     "start": "next start"
   },

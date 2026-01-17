@@ -7,7 +7,8 @@
       "Bash(mkdir:*)",
       "Bash(npm install)",
       "Bash(npm run sitemap:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "WebSearch"
     ]
   }
 }

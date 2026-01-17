@@ -12,31 +12,30 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Use Node.js 24
-        uses: actions/setup-node@v6
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 24
+          bun-version: latest
 
-      - name: node_modules CI Cache
+      - name: Bun Cache
         uses: actions/cache@v5
         with:
-          path: ${{ github.workspace }}/node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
 
       - name: Next.js CI Cache
         uses: actions/cache@v5
         with:
           path: ${{ github.workspace }}/.next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('src/**', 'contents/**') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-${{ hashFiles('src/**', 'content/**') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-
+
       - name: Install Dependencies
-        run: npm clean-install
+        run: bun install --frozen-lockfile
 
       - name: Build Site
-        run: npm run build
+        run: bun run build
 
       - name: Upload Build Output to Artifacts
         uses: actions/upload-artifact@v4
@@ -71,7 +70,7 @@ jobs:
           name: dist
           path: ${{ github.workspace }}/out/
       - run: ls -R ${{ github.workspace }}/out/
-      - uses: easingthemes/ssh-deploy@v5
+      - uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: '-avz --delete'
