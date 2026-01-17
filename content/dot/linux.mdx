@@ -5,9 +5,7 @@ description: "How to set DNS.SB's DoT (DNS over TLS) on Linux"
 
 # How to set DNS over TLS on Linux
 
-## Debian and most popular Linux distributions
-
-For most modern Linux distributions, we recommend using `systemd-resolved`
+This guide uses `systemd-resolved`, which is available on most modern Linux distributions.
 
 <StepContainer>
 
@@ -17,70 +15,71 @@ For most modern Linux distributions, we recommend using `systemd-resolved`
 sudo systemctl enable --now systemd-resolved
 ```
 
-### Edit /etc/systemd/resolved.conf
+### Configure DNS over TLS
+
+Edit `/etc/systemd/resolved.conf`:
 
 ```bash
 sudo vim /etc/systemd/resolved.conf
 ```
 
-Here's an example config:
+Add the following configuration:
 
-```bash filename="/etc/systemd/resolved.conf"
+```ini filename="/etc/systemd/resolved.conf"
 [Resolve]
 DNS=185.222.222.222 45.11.45.11 2a09:: 2a11::
 DNSOverTLS=yes
 DNSSEC=yes
 ```
 
-or
+Alternatively, you can specify the hostname explicitly:
 
-```bash filename="/etc/systemd/resolved.conf"
+```ini filename="/etc/systemd/resolved.conf"
 [Resolve]
 DNS=185.222.222.222#dot.sb 45.11.45.11#dot.sb 2a09::#dot.sb 2a11::#dot.sb
 DNSOverTLS=yes
 DNSSEC=yes
 ```
 
-### Restart systemd-resolved
+### Restart the Service
 
 ```bash
 sudo systemctl restart systemd-resolved
 ```
 
-### Edit /etc/resolv.conf
+### Configure System DNS
+
+Edit `/etc/resolv.conf`:
 
 ```bash
 sudo vim /etc/resolv.conf
 ```
 
-### Set nameserver to `127.0.0.53`
+Set the nameserver to the local resolver:
 
-```bash filename="/etc/resolv.conf"
+```txt filename="/etc/resolv.conf"
 nameserver 127.0.0.53
 ```
 
-### Test if DNS is working
+### Verify Configuration
 
+Test the DNS resolution:
+
+```bash
+dig example.com
 ```
-root@server ~ # dig example.com
-; <<>> DiG 9.11.5-P4-5.1+deb10u5-Debian <<>> example.com
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63006
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 65494
-;; QUESTION SECTION:
-;example.com.			IN	A
+
+You should see a response similar to:
+
+```txt
 ;; ANSWER SECTION:
 example.com.		3309	IN	A	93.184.216.34
-;; Query time: 0 msec
+
 ;; SERVER: 127.0.0.53#53(127.0.0.53)
-;; WHEN: Fri Jul 02 10:29:59 UTC 2021
-;; MSG SIZE  rcvd: 56
 ```
+
 </StepContainer>
 
 <Callout type="info">
-We can see that the response DNS server is `127.0.0.53#53(127.0.0.53)`, which indicates it is working correctly.
+The `SERVER: 127.0.0.53#53` in the response confirms that systemd-resolved is handling DNS queries correctly.
 </Callout>

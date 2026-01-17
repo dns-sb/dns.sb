@@ -8,10 +8,11 @@ const meta: MetaRecord = {
     theme: {
       layout: 'full',
       breadcrumb: false,
-      footer: true,
       sidebar: false,
       toc: false,
-      pagination: false
+      pagination: false,
+      timestamp: false,
+      copyPage: false
     }
   },
   features: {

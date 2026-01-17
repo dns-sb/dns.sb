@@ -3,6 +3,11 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .pl_logo_warp {
@@ -30,38 +35,48 @@ html {
   height: calc(53px + 32px);
 }
 
+.nextra-content p a,
+.nextra-content td a,
+.nextra-content ul li a,
+.nextra-content ol li a,
 article p a,
 article td a,
-article ul li a{
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
+article ul li a,
+article ol li a,
+main p a,
+main td a,
+main ul li a,
+main ol li a {
     text-decoration: none !important;
-    vertical-align: top;
+    background: linear-gradient(#008ae670, #008ae670) no-repeat 0 100% !important;
+    background-size: 100% 35% !important;
+    transition: background-size 200ms cubic-bezier(0, 0.8, 0.13, 1) !important;
+    box-decoration-break: clone !important;
+    -webkit-box-decoration-break: clone !important;
 }
 
-article p a::after,
-article td a::after,
-article ul li a::after{
-    content: '';
-    position: absolute;
-    top: 60%;
-    left: 0;
-    right: 0;
-    bottom: 4px;
-    background: #008ae670;
-    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-    z-index: -1;
+.nextra-content p a:hover,
+.nextra-content td a:hover,
+.nextra-content ul li a:hover,
+.nextra-content ol li a:hover,
+article p a:hover,
+article td a:hover,
+article ul li a:hover,
+article ol li a:hover,
+main p a:hover,
+main td a:hover,
+main ul li a:hover,
+main ol li a:hover {
+    background-size: 100% 90% !important;
 }
 
-.link-hover-red::after{
-    background: #e6373770;
+.link-hover-red {
+    background: linear-gradient(#e6373770, #e6373770) no-repeat 0 100% !important;
+    background-size: 100% 35% !important;
 }
 
-article p a:hover:after,
-article td a:hover:after,
-article ul li a:hover:after{
-    top: 4px;
+.link-hover-red:hover {
+    background-size: 100% 90% !important;
 }
 
 @media (max-width: 570px) {

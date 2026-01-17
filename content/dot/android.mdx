@@ -7,40 +7,55 @@ description: "How to set DNS.SB's DoT (DNS over TLS) on Android"
 
 ## Android 11+
 
+Android 11 and later versions have built-in support for DNS over TLS via the Private DNS feature.
+
 <StepContainer>
 
-### Go to `Settings` and open `Network & internet`
+### Open Network Settings
 
-![KqRI.png](https://s3.image.hosting/2021/07/02/KqRI.png)
+Go to `Settings` and open `Network & internet`:
 
-### Press `Advanced`
+[![Android settings menu](/images/dot/android/android-settings-menu.webp)](/images/dot/android/android-settings-menu.webp)
 
-![K0cs.png](https://s3.image.hosting/2021/07/02/K0cs.png)
+### Access Advanced Options
 
-### Press `Private DNS`
+Tap `Advanced`:
 
-![KnWv.png](https://s3.image.hosting/2021/07/02/KnWv.png)
+[![Android Network and Internet settings](/images/dot/android/android-network-internet-settings.webp)](/images/dot/android/android-network-internet-settings.webp)
 
-### Select `Private DNS provider hostname` and input our hostname:
+### Open Private DNS Settings
 
-```
+Tap `Private DNS`:
+
+[![Android Private DNS settings](/images/dot/android/android-private-dns-settings.webp)](/images/dot/android/android-private-dns-settings.webp)
+
+### Configure DNS.SB
+
+1. Select `Private DNS provider hostname`
+2. Enter the following hostname:
+
+```txt
 dot.sb
 ```
 
-![KCRS.png](https://s3.image.hosting/2021/07/02/KCRS.png)
+[![Android Private DNS hostname input](/images/dot/android/android-private-dns-hostname.webp)](/images/dot/android/android-private-dns-hostname.webp)
 
-### Press `Save`
+3. Tap `Save`
 
 </StepContainer>
 
-## Use Nebulo
+## Alternative Apps
 
-Nebulo is a free, open-source, no-root, light-weight dns-over-https, dns-over-tls, and dns-over-http-over-quic client for Android with emphasis on privacy and security.
+### Nebulo
 
-You can download from [Google Play](https://play.google.com/store/apps/details?id=com.frostnerd.smokescreen) or its [source code](https://git.frostnerd.com/PublicAndroidApps/smokescreen).
+[Nebulo](https://play.google.com/store/apps/details?id=com.frostnerd.smokescreen) is a free, open-source, no-root, lightweight DNS client for Android that supports DNS-over-HTTPS, DNS-over-TLS, and DNS-over-QUIC protocols with emphasis on privacy and security.
 
-## Use Intra
+- [Google Play](https://play.google.com/store/apps/details?id=com.frostnerd.smokescreen)
+- [Source Code](https://git.frostnerd.com/PublicAndroidApps/smokescreen)
 
-Intra is faster than a VPN: it protects you from DNS manipulation, a type of cyber attack used to block access to news sites, social media platforms, and messaging apps.
+### Intra
 
-You can download from [Google Play](https://play.google.com/store/apps/details?id=app.intra) or its [source code](https://github.com/Jigsaw-Code/intra).
+[Intra](https://play.google.com/store/apps/details?id=app.intra) protects you from DNS manipulation, a type of cyber attack used to block access to news sites, social media platforms, and messaging apps.
+
+- [Google Play](https://play.google.com/store/apps/details?id=app.intra)
+- [Source Code](https://github.com/Jigsaw-Code/intra)

@@ -1,46 +1,39 @@
 ---
-{
-  "title": "Contact DNS.SB",
-  "description": "DNS.SB Contact"
-}
+title: "Contact DNS.SB"
+description: "Get in touch with the DNS.SB team."
 ---
 
 # Contact DNS.SB
 
 ## Address
 
-```
-DNS.SB c/o xTom GmbH, Kreuzstraße 60, 40210 Düsseldorf, Germany
+```txt
+DNS.SB c/o xTom GmbH
+Kreuzstraße 60
+40210 Düsseldorf
+Germany
 ```
 
 ## Email
 
-```
-admin {a} dns.sb
-```
+[admin@dns.sb](mailto:admin@dns.sb)
 
 ## PGP Key
 
-Fingerprint:
+**Fingerprint:**
 
-```
-BDCB 0C6D CA3D 6EE2 A16D  26CF 030C 5C53 5E55 A725
-```
-
-Public Key:
-
-[pgp-key.asc](/pgp-key.asc)
-
-## Mastodon
-
-```
-https://c.im/@dns
+```txt
+15D2 BF80 C229 4D11 1CC9 E1CE A1DD 2222 2222 2222
 ```
 
-## Github
+**Public Key:** [pgp-key.asc](/pgp-key.asc)
 
-```
-https://github.com/dns-sb/dns.sb/issues
-https://github.com/dns-sb/dot/issues
-https://github.com/dns-sb/doh/issues
-```
+## Social
+
+- **Mastodon:** [@dns@c.im](https://c.im/@dns)
+
+## GitHub
+
+- [dns.sb Website Issues](https://github.com/dns-sb/dns.sb/issues)
+- [DoT Issues](https://github.com/dns-sb/dot/issues)
+- [DoH Issues](https://github.com/dns-sb/doh/issues)

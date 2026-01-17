@@ -1,56 +1,207 @@
 ---
 title: "Terms of Service"
-description: "DNS.SB Terms of Service"
+description: "DNS.SB Terms of Service - Please read these terms carefully before using our services."
 ---
 
 # Terms of Service
 
-## 1. Terms
+Please read these Terms of Service ("Terms") carefully before using the DNS.SB website and services operated by xTom GmbH ("we", "us", "our", or "DNS.SB").
 
-By using services provided by DNS.SB, through a web browser or any software that interfaces with the DNS.SB service, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using services provided by this site.
+---
 
-## 2. Use License
+## 1. Acceptance of Terms
 
-Permission is granted for personal and non-commercial use of services provided by DNS.SB. This is the grant of a license, not a transfer of title, and under this license you may not:
+By accessing or using DNS.SB services - whether through a web browser, operating system DNS settings, or any software that interfaces with our DNS resolvers - you agree to be bound by these Terms, our [Privacy Policy](/privacy/), and all applicable laws and regulations.
 
-1. Use the service to initiate a network attack.
+If you do not agree with any of these terms, you must not use our services.
 
-2. Use the service to conduct illegal penetration tests.
+---
 
-3. Occupy a large amount of computing resources in order to degrade service quality for other users.
+## 2. Service Description
 
-4. Remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or “mirror” the materials on any other server.
+DNS.SB provides public DNS resolver services, including:
 
-This license shall automatically terminate if you violate any of these restrictions and may be terminated by DNS.SB at any time. In these cases, DNS.SB reserves the right to prohibit you from accessing the server and to take actions in order to protect the services.
+- Standard DNS resolution (UDP/TCP port 53)
+- DNS over TLS (DoT, port 853)
+- DNS over HTTPS (DoH, port 443)
 
-## 3. Disclaimer
+Our services are designed to provide fast, secure, and private DNS resolution with no logging of DNS queries.
 
-The materials and services provided by DNS.SB’s website are provided on an ‘as is’ basis. DNS.SB makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+---
 
-Further, DNS.SB does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+## 3. Personal and Non-Commercial Use
 
-## 4. Limitations
+DNS.SB services are provided **free of charge for personal and non-commercial use**.
 
-In no event shall DNS.SB or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials or services on DNS.SB’s website, even if DNS.SB or a DNS.SB authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+Under this license, you may:
 
-## 5. Accuracy of materials
+- Use our DNS resolvers for personal devices and home networks
+- Configure applications and browsers to use our DoH/DoT services
+- Recommend our services to others
 
-The materials appearing on DNS.SB’s website could include technical, typographical, or photographic errors. DNS.SB does not warrant that any of the materials on its website are accurate, complete or current. DNS.SB may make changes to the materials contained on its website at any time without notice. However, DNS.SB does not make any commitment to update the materials.
+---
 
-## 6. Links
+## 4. Commercial Use and Licensing
 
-DNS.SB has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by DNS.SB of the site. Use of any such linked website is at the user’s own risk.
+**Commercial use requires prior authorization.** This includes, but is not limited to:
 
-## 7. Modifications
+- Using DNS.SB as an upstream resolver for commercial products or services
+- Integrating DNS.SB into software or hardware sold to customers
+- Operating a business that relies on DNS.SB for critical infrastructure
+- Reselling or redistributing DNS.SB services
 
-DNS.SB may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+If you wish to use DNS.SB for commercial purposes, please [contact us](/contact/) to discuss licensing options. We offer custom solutions including:
 
-## 8. Governing Law
+- Dedicated DNS infrastructure
+- Custom filtering and security policies
+- Branded DNS services
+- Service level agreements (SLAs)
+- Technical support
 
-These terms and conditions are governed by and construed in accordance with the laws of Germany and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+---
 
-## 9. Privacy Policy
+## 5. Prohibited Activities
 
-Your privacy is important to us. Please visit our [Privacy Policy](/privacy/) page for further information.
+You may not use DNS.SB services to:
 
-*This policy is effective as of April 3, 2020.*
+1. **Initiate network attacks**: Including but not limited to DDoS attacks, DNS amplification attacks, or cache poisoning attempts.
+
+2. **Conduct unauthorized security testing**: Penetration testing or vulnerability scanning without explicit authorization.
+
+3. **Degrade service quality**: Generating excessive traffic that impacts service availability for other users.
+
+4. **Facilitate illegal activities**: Using our services in connection with any unlawful purpose or to promote illegal activities.
+
+5. **Circumvent access controls**: Attempting to bypass any security measures or access restrictions we implement.
+
+6. **Misrepresent your identity**: Impersonating DNS.SB or creating confusion about your affiliation with us.
+
+Violation of these terms may result in immediate termination of access without notice.
+
+---
+
+## 6. Service Availability
+
+DNS.SB strives to provide reliable service, but we do not guarantee:
+
+- 100% uptime or availability
+- Specific response times or latency
+- Uninterrupted or error-free operation
+
+We may modify, suspend, or discontinue any aspect of our services at any time without prior notice. We are not liable for any modification, suspension, or discontinuation of services.
+
+---
+
+## 7. Disclaimer of Warranties
+
+DNS.SB SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+
+We specifically disclaim:
+
+- Warranties of merchantability
+- Warranties of fitness for a particular purpose
+- Warranties of non-infringement
+- Warranties regarding security, reliability, timeliness, or performance
+
+We do not warrant that our services will meet your requirements or that the results obtained will be accurate or reliable.
+
+---
+
+## 8. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, DNS.SB AND ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, AND SUPPLIERS SHALL NOT BE LIABLE FOR:
+
+- Any indirect, incidental, special, consequential, or punitive damages
+- Any loss of profits, data, business, or goodwill
+- Any damages arising from service interruption or inability to use services
+
+This limitation applies regardless of the legal theory (contract, tort, negligence, strict liability, or otherwise), even if we have been advised of the possibility of such damages.
+
+Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you.
+
+---
+
+## 9. Indemnification
+
+You agree to indemnify, defend, and hold harmless DNS.SB, xTom GmbH, and their respective officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising from:
+
+- Your use of our services
+- Your violation of these Terms
+- Your violation of any rights of third parties
+- Any content or data transmitted through our services
+
+---
+
+## 10. Intellectual Property
+
+All content on the DNS.SB website, including text, graphics, logos, and software, is the property of xTom GmbH or its licensors and is protected by intellectual property laws.
+
+You may not:
+
+- Copy, modify, or distribute our content without permission
+- Use our trademarks or branding without authorization
+- Remove any copyright or proprietary notices
+
+---
+
+## 11. Third-Party Links
+
+Our website may contain links to third-party websites or services. We are not responsible for:
+
+- The content or practices of third-party sites
+- Any damages arising from your use of third-party services
+
+Inclusion of any link does not imply endorsement by DNS.SB.
+
+---
+
+## 12. Modifications to Terms
+
+We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to our website.
+
+Your continued use of our services after any changes constitutes acceptance of the modified Terms. We encourage you to review these Terms periodically.
+
+---
+
+## 13. Termination
+
+We may terminate or suspend your access to our services immediately, without prior notice, for any reason, including:
+
+- Violation of these Terms
+- Conduct that we determine is harmful to other users or our infrastructure
+- Requests from law enforcement or government agencies
+
+Upon termination, your right to use our services ceases immediately.
+
+---
+
+## 14. Governing Law and Jurisdiction
+
+These Terms are governed by and construed in accordance with the laws of **Germany**, without regard to conflict of law principles.
+
+Any disputes arising from these Terms or your use of our services shall be subject to the exclusive jurisdiction of the courts in **Düsseldorf, Germany**.
+
+---
+
+## 15. Severability
+
+If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.
+
+---
+
+## 16. Entire Agreement
+
+These Terms, together with our [Privacy Policy](/privacy/), constitute the entire agreement between you and DNS.SB regarding your use of our services.
+
+---
+
+## 17. Contact
+
+If you have questions about these Terms, please contact us:
+
+- **Email**: admin (at) dns.sb
+- **Address**: xTom GmbH, Kreuzstraße 60, 40210 Düsseldorf, Germany
+
+---
+
+*These Terms are effective as of January 17, 2026.*

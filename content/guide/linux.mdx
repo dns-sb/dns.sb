@@ -5,77 +5,81 @@ description: "How to set DNS.SB's regular DNS on Linux"
 
 # How to change DNS settings on Linux
 
-Follow this quick guide to start using DNS.SB on your Linux device.
+## Using resolv.conf
 
-## Debian
-
-<Callout type="info" emoji="ℹ️">
-The guide also works with most common Linux distributions
+<Callout type="info">
+This method works with most Linux distributions.
 </Callout>
 
 <StepContainer>
 
-### Edit `/etc/resolv.conf`
+### Edit resolv.conf
 
 ```bash
 sudo vim /etc/resolv.conf
 ```
 
-### Replace the `nameserver` lines with
+### Add DNS Servers
 
-- For IPv4
+Replace the existing `nameserver` lines with:
 
-```bash filename="/etc/resolv.conf"
+**IPv4**
+
+```txt filename="/etc/resolv.conf"
 nameserver 185.222.222.222
 nameserver 45.11.45.11
 ```
 
-- For IPv6
+**IPv6**
 
-```bash filename="/etc/resolv.conf"
+```txt filename="/etc/resolv.conf"
 nameserver 2a09::
 nameserver 2a11::
 ```
 
-You can also lock this file for security purposes
+### Prevent Automatic Overwrites (Optional)
 
-### First, install `e2fsprogs`:
+Some systems may overwrite `/etc/resolv.conf` automatically. To prevent this, you can lock the file.
+
+Install `e2fsprogs`:
 
 <Tabs items={['Debian / Ubuntu', 'CentOS / Fedora', 'Arch Linux / Manjaro']}>
   <Tab>
-    ```bash
-    sudo apt install e2fsprogs -y
-    ```
+```bash
+sudo apt install e2fsprogs -y
+```
   </Tab>
   <Tab>
-    ```bash
-    sudo yum install e2fsprogs -y
-    ```
+```bash
+sudo dnf install e2fsprogs -y
+```
   </Tab>
   <Tab>
-    ```bash
-    sudo pacman -S e2fsprogs
-    ```
+```bash
+sudo pacman -S e2fsprogs
+```
   </Tab>
 </Tabs>
 
-### Then, lock the `/etc/resolv.conf` file:
+Lock the file:
 
 ```bash
 sudo chattr +i /etc/resolv.conf
 ```
 
-Or unlock it with `sudo chattr -i /etc/resolv.conf`
+To unlock later, use `sudo chattr -i /etc/resolv.conf`.
 
 </StepContainer>
 
-## Ubuntu 18.04 and later
+## Using Netplan (Ubuntu 18.04+)
 
-Since Ubuntu 18.04, you should make the change in netplan configs at `/etc/netplan/*.yaml`. This file could be `50-cloud-init.yaml` or something like `01-netcfg.yaml`
+Ubuntu 18.04 and later use Netplan for network configuration. The config file is located at `/etc/netplan/*.yaml` (e.g., `50-cloud-init.yaml` or `01-netcfg.yaml`).
 
 <StepContainer>
 
-### Open this file and it looks like
+### Edit Netplan Configuration
+
+Open your Netplan config file. A typical configuration looks like:
 
 ```yaml filename="/etc/netplan/01-netcfg.yaml"
 network:
@@ -95,7 +99,9 @@ network:
             set-name: eth0
 ```
 
-### Replace the `nameservers` section with
+### Update DNS Servers
+
+Replace the `nameservers` section with:
 
 ```yaml
 nameservers:
@@ -104,16 +110,16 @@ nameservers:
   - 45.11.45.11
 ```
 
-### Then run the following command
+### Apply Changes
 
 ```bash
 sudo netplan apply
 ```
 
-### You can check your current DNS assignment by running the `systemd-resolve` command
+### Verify Configuration
 
 ```bash
-systemd-resolve --status
+resolvectl status
 ```
 
 </StepContainer>

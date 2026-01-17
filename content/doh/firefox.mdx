@@ -7,23 +7,26 @@ description: "How to set DNS.SB's DoH (DNS over HTTPS) on Firefox"
 
 <StepContainer>
 
-### Upgrade your Firefox to latest version
+### Update Firefox
 
-Make sure you have installed the latest version of Firefox, or you can download it [here](https://www.mozilla.org/en-US/firefox/all/).
+Ensure you have the latest version of Firefox installed. You can download it from the [official website](https://www.mozilla.org/firefox/all/).
 
-### Go to Settings
+### Open Settings
 
-Input `about:preferences` in address bar and search `DNS over HTTPS` on search bar.
+Enter `about:preferences` in the address bar and search for `DNS over HTTPS`.
 
+### Configure DNS over HTTPS
 
-### Set DNS.SB DoH Server
+On the `Enable DNS over HTTPS using` section:
 
-On the `Enable DNS over HTTPS using` page, choose `Increased Protection`, select provider as `Custom`, and enter:
+1. Select `Increased Protection`
+2. Set the provider to `Custom`
+3. Enter the following URL:
 
-```
+```txt
 https://doh.dns.sb/dns-query
 ```
 
-![image](https://s3.image.hosting/2025/07/09/pmWDVq.png)
+[![Firefox DNS over HTTPS settings](/images/doh/firefox/firefox-doh-settings.webp)](/images/doh/firefox/firefox-doh-settings.webp)
 
 </StepContainer>

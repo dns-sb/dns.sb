@@ -5,45 +5,61 @@ description: "How to set DNS.SB's regular DNS on Android"
 
 # How to change DNS settings on Android
 
+<Callout type="info">
+For a simpler setup, consider using [Private DNS (DNS over TLS)](/dot/android/) which is available on Android 11 and later.
+</Callout>
+
 <StepContainer>
 
-### Go to `Settings` and select `Network & internet`
+### Open Network Settings
 
-![KqRI.png](https://s3.image.hosting/2021/07/02/KqRI.png)
+Go to `Settings` and select `Network & internet`:
 
-### Select `Wi-Fi`
+[![Android settings menu](/images/guide/android/android-settings-menu.webp)](/images/guide/android/android-settings-menu.webp)
 
-![KUWY.png](https://s3.image.hosting/2021/07/02/KUWY.png)
+### Open Wi-Fi Settings
 
-### Click on the `setting` icon
+Tap `Wi-Fi`:
 
-![Khrk.png](https://s3.image.hosting/2021/07/02/Khrk.png)
+[![Android connections settings](/images/guide/android/android-connections-settings.webp)](/images/guide/android/android-connections-settings.webp)
 
-### Click on `Advanced`
+### Access Network Details
 
-![Ka08.png](https://s3.image.hosting/2021/07/02/Ka08.png)
+Tap the gear icon next to your connected network:
 
-### Remember your `IP address`, `Gateway` and `Subnet mask`, then click on the `setting` icon
+[![Android WiFi settings](/images/guide/android/android-wifi-settings.webp)](/images/guide/android/android-wifi-settings.webp)
 
-![KOhH.png](https://s3.image.hosting/2021/07/02/KOhH.png)
+### Open Advanced Settings
 
-### Find `IP settings` and change to `Static`
+Tap `Advanced`:
 
-![KVKV.png](https://s3.image.hosting/2021/07/02/KVKV.png)
+[![Android WiFi network details](/images/guide/android/android-wifi-network-details.webp)](/images/guide/android/android-wifi-network-details.webp)
 
-### Enter your `IP address`, `Gateway`, `Network prefix length` and DNS.SB's servers
+### Note Your Current Settings
 
-```
-185.222.222.222
-```
+Take note of your current `IP address`, `Gateway`, and `Subnet mask`, then tap the pencil icon to edit:
 
-```
-45.11.45.11
-```
+[![Android IP settings static mode](/images/guide/android/android-ip-settings-static.webp)](/images/guide/android/android-ip-settings-static.webp)
 
-![KZ4r.png](https://s3.image.hosting/2021/07/02/KZ4r.png)
+### Configure Static IP
+
+1. Change `IP settings` to `Static`
+2. Re-enter your `IP address`, `Gateway`, and `Network prefix length`
+3. Set the DNS servers:
+
+| Setting | Value |
+|---------|-------|
+| DNS 1 | `185.222.222.222` |
+| DNS 2 | `45.11.45.11` |
+
+[![Android DNS server settings](/images/guide/android/android-dns-server-settings.webp)](/images/guide/android/android-dns-server-settings.webp)
+
+4. Tap `Save`
+
+[![Android DNS saved confirmation](/images/guide/android/android-dns-saved-confirmation.webp)](/images/guide/android/android-dns-saved-confirmation.webp)
+
 </StepContainer>
 
 <Callout type="warning">
-If this guide doesn't work, ask your geek friend for help.
+The exact steps may vary depending on your Android device manufacturer and version. If this guide doesn't match your device, try searching for "change DNS settings" along with your device model.
 </Callout>

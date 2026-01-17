@@ -8,96 +8,110 @@
       "2a09::",
       "2a11::"
     ],
-    "Hostname": "dot.sb"
+    "Hostname": "dot.sb",
+    "Port": 853
   },
   "DoH": {
     "Default": [
       "https://doh.dns.sb/dns-query",
       "https://doh.sb/dns-query",
+      "https://dns.sb/dns-query",
       "https://185.222.222.222/dns-query",
-      "https://45.11.45.11/dns-query"
+      "https://45.11.45.11/dns-query",
+      "https://[2a09::]/dns-query",
+      "https://[2a11::]/dns-query"
     ],
     "PoP": [
-        {
-          "Location": "Düsseldorf, Germany",
-          "DoH": "https://de-dus.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Frankfurt, Germany",
-          "DoH": "https://de-fra.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Amsterdam, Netherlands",
-          "DoH": "https://nl-ams.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Amsterdam, Netherlands",
-          "DoH": "https://nl-ams2.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "London, United Kingdom",
-          "DoH": "https://uk-lon.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Tallinn, Estonia",
-          "DoH": "https://ee-tll.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Osaka, Japan",
-          "DoH": "https://jp-kix.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Tokyo, Japan",
-          "DoH": "https://jp-nrt.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Hong Kong, China",
-          "DoH": "https://hk-hkg.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Sydney, Australia",
-          "DoH": "https://au-syd.doh.sb/dns-query",
-          "Provider": "xTom"
-        },
-        {
-          "Location": "Chicago, United States",
-          "DoH": "https://us-chi.doh.sb/dns-query",
-          "Provider": "HostVenom"
-        },
-        {
-          "Location": "Bengaluru, India",
-          "DoH": "https://in-blr.doh.sb/dns-query",
-          "Provider": "DigitalOcean"
-        },
-        {
-          "Location": "Singapore",
-          "DoH": "https://sg-sin.doh.sb/dns-query",
-          "Provider": "DigitalOcean"
-        },
-        {
-          "Location": "Seoul, South Korea",
-          "DoH": "https://kr-sel.doh.sb/dns-query",
-          "Provider": "Amazon AWS"
-        },
-        {
-          "Location": "Moscow, Russia",
-          "DoH": "https://ru-mow.doh.sb/dns-query",
-          "Provider": "Servers.com"
-        },
-        {
-          "Location": "Calgary, Canada",
-          "DoH": "https://ca-yyc.doh.sb/dns-query",
-          "Provider": "Arrow Calgary"
-        }
+      {
+        "Location": "Düsseldorf, Germany",
+        "DoH": "https://de-dus.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Frankfurt, Germany",
+        "DoH": "https://de-fra.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Berlin, Germany",
+        "DoH": "https://de-ber.doh.sb/dns-query",
+        "Provider": "Misaka"
+      },
+      {
+        "Location": "Amsterdam, Netherlands",
+        "DoH": "https://nl-ams.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "London, United Kingdom",
+        "DoH": "https://uk-lon.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Tallinn, Estonia",
+        "DoH": "https://ee-tll.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Moscow, Russia",
+        "DoH": "https://ru-mow.doh.sb/dns-query",
+        "Provider": "Servers.com"
+      },
+      {
+        "Location": "Osaka, Japan",
+        "DoH": "https://jp-kix.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Tokyo, Japan",
+        "DoH": "https://jp-nrt.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Hong Kong, China",
+        "DoH": "https://hk-hkg.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Seoul, South Korea",
+        "DoH": "https://kr-sel.doh.sb/dns-query",
+        "Provider": "Amazon AWS"
+      },
+      {
+        "Location": "Singapore",
+        "DoH": "https://sg-sin.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Bengaluru, India",
+        "DoH": "https://in-blr.doh.sb/dns-query",
+        "Provider": "DigitalOcean"
+      },
+      {
+        "Location": "Sydney, Australia",
+        "DoH": "https://au-syd.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "New York, United States",
+        "DoH": "https://us-nyc.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "San Jose, United States",
+        "DoH": "https://us-sjc.doh.sb/dns-query",
+        "Provider": "xTom"
+      },
+      {
+        "Location": "Chicago, United States",
+        "DoH": "https://us-chi.doh.sb/dns-query",
+        "Provider": "HostVenom"
+      },
+      {
+        "Location": "Toronto, Canada",
+        "DoH": "https://ca-yyz.doh.sb/dns-query",
+        "Provider": "Vultr"
+      }
     ]
   }
 }

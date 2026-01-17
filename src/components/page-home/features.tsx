@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Balancer from 'react-wrap-balancer';
+import { CopyableIP } from '../copyable-ip';
 
 export default function Features() {
   return (
@@ -55,7 +56,8 @@ function EasyToRemember() {
           </h2>
           <p className="my-4 text-gray-600 dark:text-gray-300 text-lg">
             We have <span className="font-bold text-red-600">the shortest IPv6 address in the world</span>.
-            <br />
+          </p>
+          <p className="my-4 text-gray-600 dark:text-gray-300 text-lg">
             Damn, we actually have
             {' '}
             <span className="font-bold text-red-600">two of them</span>.
@@ -65,10 +67,10 @@ function EasyToRemember() {
           </p>
         </div>
         <div className="md:5/12 md:px-4 lg:px-6">
-          <p className="font-mono my-6 font-bold text-4xl text-red-600">185.222.222.222</p>
-          <p className="font-mono my-6 font-bold text-4xl text-red-600">45.11.45.11</p>
-          <p className="font-mono my-6 font-bold text-4xl text-red-600">2a09::</p>
-          <p className="font-mono my-6 font-bold text-4xl text-red-600">2a11::</p>
+          <CopyableIP ip="185.222.222.222" className="font-mono my-6 font-bold text-4xl text-red-600 block" />
+          <CopyableIP ip="45.11.45.11" className="font-mono my-6 font-bold text-4xl text-red-600 block" />
+          <CopyableIP ip="2a09::" className="font-mono my-6 font-bold text-4xl text-red-600 block" />
+          <CopyableIP ip="2a11::" className="font-mono my-6 font-bold text-4xl text-red-600 block" />
         </div>
       </div>
     </div>
@@ -120,7 +122,7 @@ function EncryptedDNS() {
           <p className="my-8 text-gray-600 dark:text-gray-300">
             Encrypted DNS services increase user privacy and security by preventing eavesdropping and manipulation of DNS data via man-in-the-middle attacks.
           </p>
-          <div className="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
+          <div className="space-y-4">
             <div className="mt-8 flex gap-4 md:items-center">
               <div className="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 m-auto text-indigo-500 dark:text-indigo-400">

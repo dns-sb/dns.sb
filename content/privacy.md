@@ -1,66 +1,132 @@
 ---
 title: "Privacy Policy"
-description: "DNS.SB Privacy Policy"
+description: "DNS.SB Privacy Policy - We believe privacy is a fundamental human right."
 ---
 
 # Privacy Policy
 
-## 1. Information we collect:
+At DNS.SB, we believe that **privacy is a fundamental human right**. This Privacy Policy explains how we handle your information when you use our website and DNS services.
 
-- Website: None
+**TL;DR: We don't collect or store your DNS queries. Period.**
 
-- DNS Servers: None
+---
 
-- DoT Servers: None
+## 1. Information We Collect
 
-- DoH Servers: None
+### DNS Services (DNS, DoT, DoH)
 
-  - We shall not record personally identifiable information (PII) of users accessing our DoH Servers, including user IP, browser information, etc. These logs are disabled on the servers.
+**We do not log DNS queries.** Specifically:
 
-  - We apply DNS Query Name Minimisation to minimize the amount of data sent from the DNS resolver to the authoritative name server, in order to enhance privacy and security. We hereby declare that our DoH services comply with [RFC 7816](https://datatracker.ietf.org/doc/html/rfc7816) and can be used for any level of Internet standards.
+- We do not record which domains you query
+- We do not record your IP address in connection with DNS queries
+- We do not record timestamps of your queries
+- We do not record any personally identifiable information (PII)
 
-## 2. Information we share
+Our servers are configured with logging disabled. We cannot see what websites you visit, and we have no data to share with anyone.
 
-- Website: None
+### Technical Measures
 
-- DNS Servers: None
+To further protect your privacy, we implement:
 
-- DoT Servers: None
+- **DNS Query Name Minimisation** ([RFC 7816](https://datatracker.ietf.org/doc/html/rfc7816)): We only send the minimum necessary information to authoritative name servers.
+- **No EDNS Client Subnet**: We do not send any portion of your IP address to upstream DNS servers.
+- **Encrypted protocols**: We support DNS over TLS (DoT) and DNS over HTTPS (DoH) to prevent eavesdropping.
 
-- DoH Servers: None
+### Website
 
-We reserve the right to block your IP address and/or ASN for legal reasons, including but not limited to:
+Our website uses a **self-hosted instance** of Plausible Analytics, a privacy-focused, open-source analytics tool. Because we host it ourselves, your data never leaves our infrastructure - no third-party services are involved.
 
-- Abusing our network when using our DNS service.
+Plausible:
 
-- Investigating potential violations of [Terms of Service](/tos/).
+- Does not use cookies
+- Does not collect personal data
+- Does not track users across websites
+- Is fully compliant with GDPR, CCPA, and PECR
+- Collects only aggregate, anonymous statistics (page views, referrers, country)
 
-- Protecting against harm to our safety and the rights of other users and ourselves.
+We do not use any tracking scripts, advertising networks, or third-party analytics services.
 
-- Detecting, preventing, addressing, or investigating fraud, security, or technical issues.
+---
 
-- Meeting any applicable law, regulation, legal process, or enforceable governmental request.
+## 2. Information We Share
 
-We cannot share any information we do not have, have not stored, or have previously erased.
+**We share nothing because we collect nothing.**
 
-## 3. Cookies
+We cannot share, sell, or disclose information that we do not have. Since we do not log DNS queries, there is no query data to share with anyone - including governments, law enforcement, or commercial entities.
 
-Currently, we do not actively use cookies on our website or in our DNS service.
+---
 
-## 4. Third-party services
+## 3. When We May Block Access
 
-Currently, we do not use any third-party services on our website or in our DNS service.
+We reserve the right to block IP addresses or ASNs to protect our service, including situations where:
 
-## 5. Changes
+- Our network is being abused (e.g., DDoS attacks originating through our service)
+- There are violations of our [Terms of Service](/tos/)
+- We need to protect the service quality for other users
+- We are required to comply with applicable laws or regulations
 
-Our Privacy Policy may change from time to time. In case of a change, we would post a notice on our website.
+Blocking is done at the network level and does not involve logging or storing your DNS queries.
 
-## 6. Service termination
+---
 
-You may choose to terminate your use of our service and write to us to request deletion of your data. Please note that this is done on a best-effort basis, since most data is anonymized and we may not be able to locate all data related to you.
+## 4. Cookies
 
-## 7. Contact
+We do not use cookies on our website or in our DNS services.
 
-Feel free to email `admin at dns dot sb`, or post legal letter to `xTom GmbH, Kreuzstraße 60, 40210 Düsseldorf, Germany`
+---
 
-*This policy is effective as of July 2, 2021.*
+## 5. Data Retention
+
+Since we do not collect DNS query data, there is nothing to retain or delete.
+
+For website analytics (Plausible), only aggregate statistics are stored. No individual user data is collected or retained.
+
+---
+
+## 6. Your Rights Under GDPR
+
+As a service operated by xTom GmbH in Germany, we comply with the General Data Protection Regulation (GDPR). You have the following rights:
+
+- **Right of Access**: You may request access to any personal data we hold about you.
+- **Right to Rectification**: You may request correction of inaccurate data.
+- **Right to Erasure**: You may request deletion of your personal data.
+- **Right to Restriction**: You may request restriction of processing.
+- **Right to Data Portability**: You may request a copy of your data in a portable format.
+- **Right to Object**: You may object to processing of your personal data.
+
+However, since we do not collect or store personal data from our DNS services, most of these rights do not practically apply. If you believe we hold any personal data about you, please [contact us](/contact/).
+
+### Legal Basis for Processing
+
+For our website analytics, we rely on **legitimate interests** (Article 6(1)(f) GDPR) to understand aggregate usage patterns and improve our service. This processing is minimal, anonymous, and does not impact your rights or freedoms.
+
+---
+
+## 7. International Data Transfers
+
+Our DNS servers are located in multiple countries worldwide to provide low-latency service. When you use our DNS service, your query is processed by the nearest server. Since we do not log queries, no personal data is transferred or stored internationally.
+
+---
+
+## 8. Children's Privacy
+
+Our services are not directed at children under 16. We do not knowingly collect any information from children.
+
+---
+
+## 9. Changes to This Policy
+
+We may update this Privacy Policy from time to time. When we make significant changes, we will post a notice on our website. Your continued use of our services after any changes indicates your acceptance of the updated policy.
+
+---
+
+## 10. Contact Us
+
+If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
+
+- **Email**: admin (at) dns.sb
+- **Address**: xTom GmbH, Kreuzstraße 60, 40210 Düsseldorf, Germany
+
+---
+
+*This policy is effective as of January 17, 2026.*

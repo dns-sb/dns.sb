@@ -5,26 +5,30 @@ description: "How to set DNS.SB's DoH (DNS over HTTPS) on Chrome"
 
 # How to set DoH on Chrome
 
-This guide is for Google Chrome, also works with most Chromium based browsers.
+This guide is for Google Chrome and most Chromium-based browsers.
 
 <StepContainer>
 
-### Upgrade your Chrome to latest version
+### Update Chrome
 
-Make sure you have installed the latest version of Chrome, or you can download it [here](https://www.google.com/chrome/).
+Ensure you have the latest version of Chrome installed. You can download it from the [official website](https://www.google.com/chrome/).
 
-### Go to Settings
+### Open Security Settings
 
-Input `chrome://settings/security` in address bar.
+Enter `chrome://settings/security` in the address bar.
 
-### Set DNS.SB DoH Server
+### Configure DNS over HTTPS
 
-In the `Advanced` section, enable `Use secure DNS`, choose `Add custom DNS service provider`, and enter:
+In the `Advanced` section:
 
-```
+1. Enable `Use secure DNS`
+2. Select `Add custom DNS service provider`
+3. Enter the following URL:
+
+```txt
 https://doh.dns.sb/dns-query
 ```
 
-![image](https://s3.image.hosting/2025/07/09/pmW0XS.png)
+[![Google Chrome DNS over HTTPS settings](/images/doh/chrome/chrome-doh-settings.webp)](/images/doh/chrome/chrome-doh-settings.webp)
 
 </StepContainer>

@@ -3,139 +3,118 @@ title: "How to change DNS settings on Windows"
 description: "How to set DNS.SB's regular DNS on Windows"
 ---
 
-## How to change DNS settings on Windows 11 / Windows Server 2022
+# How to change DNS settings on Windows
 
-If you want to change your DNS settings on Windows system, it's easy with few clicks.
+<Callout type="info">
+For a simpler setup, consider using [Private DNS (DNS over HTTPS)](/doh/windows/) which is available on Windows 11 and later.
+</Callout>
+
+## Windows 11 / Windows Server 2022
 
 <StepContainer>
 
-### Open Network Connections
+### Open Network Settings
 
-Find the computer icon on taskbar
+Right-click the network icon in the taskbar:
 
-[![WjqD7.png](https://s3.image.hosting/2023/01/11/WjqD7.png)](https://image.hosting/image/WjqD7)
+[![Windows 11 taskbar network icon](/images/guide/windows/win11-taskbar-network-icon.webp)](/images/guide/windows/win11-taskbar-network-icon.webp)
 
-Right-click on the icon and then select `Network and Internet settings`
+Select `Network and Internet settings`:
 
-![WjUQH.png](https://s3.image.hosting/2023/01/11/WjUQH.png)
+[![Windows 11 Network and Internet settings menu](/images/guide/windows/win11-network-internet-settings-menu.webp)](/images/guide/windows/win11-network-internet-settings-menu.webp)
 
-Select `Ethernet` or `Wi-Fi` depending on your connection type:
+Click `Ethernet` or `Wi-Fi` depending on your connection type:
 
-![WjfVV.png](https://s3.image.hosting/2023/01/11/WjfVV.png)
+[![Windows 11 Ethernet or Wi-Fi selection](/images/guide/windows/win11-ethernet-wifi-selection.webp)](/images/guide/windows/win11-ethernet-wifi-selection.webp)
 
-### Change DNS resolvers to DNS.SB
+### Configure DNS Servers
 
-Find the `DNS` settings on `Ethernet` or `Wi-Fi` and click on `Edit`:
+In the `DNS server assignment` section, click `Edit`:
 
-![Wjhsr.png](https://s3.image.hosting/2023/01/11/Wjhsr.png)
+[![Windows 11 DNS server assignment edit button](/images/guide/windows/win11-dns-server-edit-button.webp)](/images/guide/windows/win11-dns-server-edit-button.webp)
 
-Change from `Automatic (DHCP)` to `Manual` and then add DNS.SB's servers:
+Change from `Automatic (DHCP)` to `Manual`:
 
-![Wjibs.png](https://s3.image.hosting/2023/01/11/Wjibs.png)
+[![Windows 11 DNS manual configuration dialog](/images/guide/windows/win11-dns-manual-configuration.webp)](/images/guide/windows/win11-dns-manual-configuration.webp)
 
-For IPv4
+Enter the following DNS servers:
 
-**Preferred DNS**
+**IPv4**
 
-```
-185.222.222.222
-```
+| Setting | Value |
+|---------|-------|
+| Preferred DNS | `185.222.222.222` |
+| Alternate DNS | `45.11.45.11` |
 
-**Alternate DNS**
+[![Windows 11 DNS IPv4 settings](/images/guide/windows/win11-dns-ipv4-settings.webp)](/images/guide/windows/win11-dns-ipv4-settings.webp)
 
-```
-45.11.45.11
-```
+**IPv6**
 
-![WjVUf.png](https://s3.image.hosting/2023/01/11/WjVUf.png)
+| Setting | Value |
+|---------|-------|
+| Preferred DNS | `2a09::` |
+| Alternate DNS | `2a11::` |
 
-For IPv6
+[![Windows 11 DNS IPv6 settings](/images/guide/windows/win11-dns-ipv6-settings.webp)](/images/guide/windows/win11-dns-ipv6-settings.webp)
 
-**Preferred DNS**
+Click `Save` to apply the changes.
 
-```
-2a09::
-```
-
-**Alternate DNS**
-
-```
-2a11::
-```
-
-![WjZ6S.png](https://s3.image.hosting/2023/01/11/WjZ6S.png)
-
-Click `Save` button to confirm.
 </StepContainer>
 
-## How to change DNS settings on Windows 10 / Windows Server 2019
-
-There are some small differences between Windows 10 and Windows 11, but the steps are almost the same.
+## Windows 10 / Windows Server 2019
 
 <StepContainer>
-### Open Network Connections
 
-Find the computer icon on taskbar
+### Open Network Settings
 
-![5P3j.png](https://s3.image.hosting/2021/07/02/5P3j.png)
+Right-click the network icon in the taskbar:
 
-Right-click on the icon and then select `Open Network & Internet settings`
+[![Windows 10 taskbar network icon](/images/guide/windows/win10-taskbar-network-icon.webp)](/images/guide/windows/win10-taskbar-network-icon.webp)
 
-![5xrp.png](https://s3.image.hosting/2021/07/02/5xrp.png)
+Select `Open Network & Internet settings`:
 
-Select `Change adapter options`
+[![Windows 10 Network and Internet settings menu](/images/guide/windows/win10-network-internet-settings-menu.webp)](/images/guide/windows/win10-network-internet-settings-menu.webp)
 
-![5NfR.png](https://s3.image.hosting/2021/07/02/5NfR.png)
+Click `Change adapter options`:
 
-Find your current adapter with Internet access and right-click the icon, then select `Properties`
+[![Windows 10 change adapter options](/images/guide/windows/win10-change-adapter-options.webp)](/images/guide/windows/win10-change-adapter-options.webp)
 
-![5S5D.png](https://s3.image.hosting/2021/07/02/5S5D.png)
+Right-click your active network adapter and select `Properties`:
 
-### Change DNS resolvers to DNS.SB for IPv4
+[![Windows 10 adapter properties menu](/images/guide/windows/win10-adapter-properties-menu.webp)](/images/guide/windows/win10-adapter-properties-menu.webp)
 
-In the Ethernet Properties windows, select `Internet Protocol Version 4 (TCP/IPv4)`, then click `Properties`
+### Configure IPv4 DNS
 
-![5b4B.png](https://s3.image.hosting/2021/07/02/5b4B.png)
+Select `Internet Protocol Version 4 (TCP/IPv4)` and click `Properties`:
 
-In `Internet Protocol Version 4 (TCP/IPv4) Properties`, select `Use the following DNS server addresses`, and add our DNS servers
+[![Windows 10 TCP/IPv4 properties](/images/guide/windows/win10-tcpip-v4-properties.webp)](/images/guide/windows/win10-tcpip-v4-properties.webp)
 
-**Preferred DNS server**
+Select `Use the following DNS server addresses` and enter:
 
-```
-185.222.222.222
-```
+| Setting | Value |
+|---------|-------|
+| Preferred DNS server | `185.222.222.222` |
+| Alternate DNS server | `45.11.45.11` |
 
-**Alternate DNS server**
+[![Windows 10 DNS IPv4 settings](/images/guide/windows/win10-dns-ipv4-settings.webp)](/images/guide/windows/win10-dns-ipv4-settings.webp)
 
-```
-45.11.45.11
-```
+Click `OK` to save.
 
-![5rTg.png](https://s3.image.hosting/2021/07/02/5rTg.png)
+### Configure IPv6 DNS
 
-Click `OK` button to confirm.
+Select `Internet Protocol Version 6 (TCP/IPv6)` and click `Properties`:
 
-### Change DNS resolvers to DNS.SB for IPv6
+[![Windows 10 TCP/IPv6 properties](/images/guide/windows/win10-tcpip-v6-properties.webp)](/images/guide/windows/win10-tcpip-v6-properties.webp)
 
-Select `Internet Protocol Version 6 (TCP/IPv6)`, then click `Properties`
+Select `Use the following DNS server addresses` and enter:
 
-![5yAz.png](https://s3.image.hosting/2021/07/02/5yAz.png)
+| Setting | Value |
+|---------|-------|
+| Preferred DNS server | `2a09::` |
+| Alternate DNS server | `2a11::` |
 
-Click `Use The Following DNS Server Addresses` and add our DNS servers
+[![Windows 10 DNS IPv6 settings](/images/guide/windows/win10-dns-ipv6-settings.webp)](/images/guide/windows/win10-dns-ipv6-settings.webp)
 
-**Preferred DNS server**
+Click `OK` to save.
 
-```
-2a09::
-```
-
-**Alternate DNS server**
-
-```
-2a11::
-```
-
-![5QBu.png](https://s3.image.hosting/2021/07/02/5QBu.png)
-
-Click `OK` button to confirm.
 </StepContainer>

@@ -5,93 +5,75 @@ description: "How to set DNS.SB's DoH (DNS over HTTPS) on Windows"
 
 # How to set DNS over HTTPS on Windows
 
-This guide is for Microsoft Windows 10 and Windows 11.
+This guide covers DNS over HTTPS configuration for Windows 10 and Windows 11.
 
 ## How to set DoH on Windows 11
 
 <StepContainer>
 
-### Set DoH Provider
+### Open Network Settings
 
-Open Windows Terminal with Admin access, first, right click on `Start` button on taskbar:
+Right-click the network icon in the taskbar:
 
-![k0uS.png](https://s3.image.hosting/2022/02/28/k0uS.png)
+[![Windows 11 taskbar network icon](/images/doh/windows/win11-taskbar-network-icon.webp)](/images/doh/windows/win11-taskbar-network-icon.webp)
 
-Then choose `Windows Terminal (Admin)`:
+Select `Network and Internet settings`:
 
-![kggf.png](https://s3.image.hosting/2022/02/28/kggf.png)
+[![Windows 11 Network and Internet settings](/images/doh/windows/win11-network-internet-settings.webp)](/images/doh/windows/win11-network-internet-settings.webp)
 
-Input the following commands:
+### Configure Your Connection
 
-```powershell
-netsh dns add encryption 185.222.222.222 https://doh.dns.sb/dns-query
-netsh dns add encryption 45.11.45.11 https://doh.dns.sb/dns-query
-netsh dns add encryption 2a09:: https://doh.dns.sb/dns-query
-netsh dns add encryption 2a11:: https://doh.dns.sb/dns-query
-```
+Click `Ethernet` (or `Wi-Fi` if using a wireless connection):
 
-![k7ov.png](https://s3.image.hosting/2022/02/28/k7ov.png)
+[![Windows 11 Ethernet settings](/images/doh/windows/win11-ethernet-settings.webp)](/images/doh/windows/win11-ethernet-settings.webp)
 
-Then use `netsh dns show encryption` command to check if it works:
+In the `DNS server assignment` section, click `Edit`:
 
-![kDfq.png](https://s3.image.hosting/2022/02/28/kDfq.png)
+[![Windows 11 DNS server assignment edit](/images/doh/windows/win11-dns-server-assignment-edit.webp)](/images/doh/windows/win11-dns-server-assignment-edit.webp)
 
-### Change Network Configuration
+### Enable DNS over HTTPS
 
-Right click on the small computer icon on taskbar:
+Configure the following settings:
 
-![kIxj.png](https://s3.image.hosting/2022/02/28/kIxj.png)
+1. Enter your preferred DNS server IP address
+2. Set `DNS over HTTPS` to `On (manual template)`
+3. Enter `https://doh.dns.sb/dns-query` as the `DNS over HTTPS template` (or choose another [unicast server](/doh/))
+4. Click `Save`
 
-Click `Network and Internet settings`
-
-![knvP.png](https://s3.image.hosting/2022/02/28/knvP.png)
-
-Choose `Ethernet`:
-
-![kjLp.png](https://s3.image.hosting/2022/02/28/kjLp.png)
-
-On `DNS Server assignment` section, click `Edit`:
-
-![k2IR.png](https://s3.image.hosting/2022/02/28/k2IR.png)
-
-Manually set DNS servers and set `Alternate DNS encryption` to `Encrypted only (DNS over HTTPS)`, then click `Save` button:
-
-![k6AD.png](https://s3.image.hosting/2022/02/28/k6AD.png)
+[![Windows 11 DoH encryption settings](/images/doh/windows/win11-doh-encryption-settings.webp)](/images/doh/windows/win11-doh-encryption-settings.webp)
 
 </StepContainer>
 
 ## How to set DoH on Windows 10
 
+Windows 10 does not have native DNS over HTTPS support. You can use a third-party application like YogaDNS.
+
 <StepContainer>
 
-### Download YogaDNS
+### Install YogaDNS
 
-You can download and install the latest version [here](https://yogadns.com/download/).
+Download and install the latest version from the [official website](https://yogadns.com/download/).
 
-### Start with an empty configuration
+### Launch with Empty Configuration
 
-[![KvND.png](https://s3.image.hosting/2021/07/02/KvND.png)](https://s3.image.hosting/2021/07/02/KvND.png)
+After installation, launch YogaDNS. Start with an empty configuration:
 
-### Set DNS.SB DoH Server
+[![YogaDNS empty configuration](/images/doh/windows/yogadns-empty-configuration.webp)](/images/doh/windows/yogadns-empty-configuration.webp)
+
+### Add DNS.SB DoH Server
 
 Click `DNS Servers`, then click `Add...`
 
-[![KKqB.png](https://s3.image.hosting/2021/07/02/KKqB.png)](https://s3.image.hosting/2021/07/02/KKqB.png)
+[![YogaDNS DNS servers menu](/images/doh/windows/yogadns-dns-servers-menu.webp)](/images/doh/windows/yogadns-dns-servers-menu.webp)
 
-Choose Type to `DNS over HTTPS`, set `IP address and optional port:` to:
+Configure the following settings:
 
-```
-185.222.222.222
-```
+- Set `Type` to `DNS over HTTPS`
+- Set `IP address and optional port` to `185.222.222.222`
+- Set `DNS over HTTPS options` URL to `https://doh.dns.sb/dns-query`
 
-Set `DNS over HTTPS options URL` to:
+[![YogaDNS DoH server settings](/images/doh/windows/yogadns-doh-server-settings.webp)](/images/doh/windows/yogadns-doh-server-settings.webp)
 
-```
-https://doh.dns.sb/dns-query
-```
-
-[![KejX.png](https://s3.image.hosting/2021/07/02/KejX.png)](https://s3.image.hosting/2021/07/02/KejX.png)
-
-Click `OK`
+Click `OK` to save.
 
 </StepContainer>

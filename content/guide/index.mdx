@@ -9,50 +9,52 @@ description: "An introduction to how to set DNS.SB name servers."
 
 ### IPv4
 
-```
+```txt
 185.222.222.222
 ```
 
-```
+```txt
 45.11.45.11
 ```
 
 ### IPv6
 
-```
+```txt
 2a09::
 ```
 
-```
+```txt
 2a11::
 ```
 
-You may need to use the full IPv6 address on some older devices:
+Some older devices may require the full IPv6 address:
 
-```
+```txt
 2a09:0000:0000:0000:0000:0000:0000:0000
 ```
 
-```
+```txt
 2a11:0000:0000:0000:0000:0000:0000:0000
 ```
 
-## How to set regular DNS.SB Name Servers
+## Setup Guides
+
+### Regular DNS
 
 - [Windows](/guide/windows/)
-- [Linux](/guide/linux/)
 - [macOS](/guide/macos/)
+- [Linux](/guide/linux/)
 - [iOS](/guide/ios/)
 - [Android](/guide/android/)
 
-## How to set DNS.SB DoT Server
+### DNS over TLS (DoT)
 
 - [Android](/dot/android/)
 - [Linux](/dot/linux/)
 - [Windows](/dot/windows/)
 - [iOS & macOS](/dot/apple/)
 
-# How to set DNS.SB DoH Server
+### DNS over HTTPS (DoH)
 
 - [Mozilla Firefox](/doh/firefox/)
 - [Google Chrome](/doh/chrome/)
@@ -63,14 +65,14 @@ You may need to use the full IPv6 address on some older devices:
 - [Android](/doh/android/)
 - [iOS & macOS](/doh/apple/)
 
-## How to verify if I'm using DNS.SB?
+## Verify Your Configuration
 
-You can simply visit [DNS.SB](https://dns.sb/) and check on top of the website
+Visit [dns.sb](https://dns.sb/) to check if you're using DNS.SB. The status is displayed at the top of the page.
 
-If you are using our service:
+If you are using DNS.SB:
 
-![Klik.png](https://s3.image.hosting/2021/07/16/Klik.png)
+[![DNS.SB verification - using our service](/images/guide/router/router-dns-settings-panel.webp)](/images/guide/router/router-dns-settings-panel.webp)
 
 If not:
 
-![KrSV.png](https://s3.image.hosting/2021/07/16/KrSV.png)
+[![DNS.SB verification - not using our service](/images/guide/router/router-wan-dns-configuration.webp)](/images/guide/router/router-wan-dns-configuration.webp)

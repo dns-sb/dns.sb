@@ -5,26 +5,30 @@ description: "How to set DNS.SB's DoH (DNS over HTTPS) on Microsoft Edge"
 
 # How to set DoH on Microsoft Edge
 
-This guide is for Microsoft Edge, also works with most Chromium based browsers.
+This guide is for Microsoft Edge and most Chromium-based browsers.
 
 <StepContainer>
 
-### Upgrade your Microsoft Edge to latest version
+### Update Microsoft Edge
 
-Make sure you have installed the latest version of Microsoft Edge, or you can download it [here](https://www.microsoft.com/edge/).
+Ensure you have the latest version of Microsoft Edge installed. You can download it from the [official website](https://www.microsoft.com/edge/).
 
-### Go to Settings
+### Open Security Settings
 
-Input `edge://settings/privacy/security` in address bar.
+Enter `edge://settings/privacy` in the address bar and scroll down to the `Security` section.
 
-### Set DNS.SB DoH Server
+### Configure DNS over HTTPS
 
-In the `Use secure DNS` section, enable it, choose `Choose a service provider`, and enter:
+In the `Use secure DNS` section:
 
-```
+1. Enable the toggle
+2. Select `Choose a service provider`
+3. Enter the following URL:
+
+```txt
 https://doh.dns.sb/dns-query
 ```
 
-![image](https://s3.image.hosting/2025/07/09/pmW7Qv.png)
+[![Microsoft Edge DNS over HTTPS settings](/images/doh/edge/edge-doh-settings.webp)](/images/doh/edge/edge-doh-settings.webp)
 
 </StepContainer>

@@ -1,37 +1,38 @@
 ---
 title: "Why DNS Privacy is Especially Important"
-description: "An introduction to the positive and negative side of Privacy in DNS today."
+description: "Understanding the importance of DNS privacy and how encrypted DNS protocols protect your online activity."
 ---
 
 # Why DNS Privacy is Especially Important
 
 > Despite the privacy and security enhancements offered by encrypted transport protocols, the DNS resolver's privacy policy is important because the service still has the ability to see, store, or use the DNS query history associated with individual IP addresses, or in some cases, individual devices.
-> By Stan Adams in [DNS: Strengthening the Weakest Link in Internet Privacy](https://cdt.org/insights/dns-strengthening-the-weakest-link-in-internet-privacy/)
+>
+> — Stan Adams, [DNS: Strengthening the Weakest Link in Internet Privacy](https://cdt.org/insights/dns-strengthening-the-weakest-link-in-internet-privacy/)
 
-All ISP operators can easily access your DNS query logs. If you don't trust your ISP, **DO NOT** use their DNS servers.
+All ISP operators can easily access your DNS query logs. If you don't trust your ISP, do not use their DNS servers.
 
-![Example DNS Query Log](https://s3.image.hosting/2021/07/02/5GgP.png "Example DNS Query Log")
+[![Example DNS Query Log](/images/features/dns-query-log-example.webp)](/images/features/dns-query-log-example.webp)
 
 ---
 
 ## Introduction to DNS Privacy
 
-Almost every time we use an Internet application, it starts with a DNS (Domain Name System) transaction to map a human-friendly domain name to a set of IP addresses that can be used to deliver packets over the Internet. DNS transactions can therefore be correlated to the applications we use, the websites we visit, and sometimes even the people we communicate with.
+Almost every time we use an Internet application, it starts with a DNS (Domain Name System) transaction to map a human-friendly domain name to a set of IP addresses. DNS transactions can therefore be correlated to the applications we use, the websites we visit, and sometimes even the people we communicate with.
 
-While the domain name information itself is public, the transactions performed by the hosts are not. Unfortunately, the DNS does not inherently employ any mechanisms to provide confidentiality for these transactions, and the corresponding information can therefore easily be logged by the operators of DNS resolvers and name servers, as well as be eavesdropped by others.
+While domain name information itself is public, the transactions performed by individual hosts are not. Unfortunately, DNS does not inherently employ any mechanisms to provide confidentiality for these transactions. The corresponding information can therefore easily be logged by operators of DNS resolvers and name servers, as well as be eavesdropped by others on the network.
 
 ## DNS over TLS (DoT)
 
-[RFC7858](https://datatracker.ietf.org/doc/html/rfc7858) specifies how to communicate with a recursive resolver over a TLS-secured connection. However, it also has the potential for improving the privacy properties of transactions between recursive resolvers and authoritative nameservers (see e.g. [DNS over TLS: Encrypting DNS end-to-end](https://engineering.fb.com/2018/12/21/security/dns-over-tls/)).
+[RFC 7858](https://datatracker.ietf.org/doc/html/rfc7858) specifies how to communicate with a recursive resolver over a TLS-secured connection. It also has the potential for improving the privacy properties of transactions between recursive resolvers and authoritative nameservers (see [DNS over TLS: Encrypting DNS end-to-end](https://engineering.fb.com/2018/12/21/security/dns-over-tls/)).
 
-The service employs a separate port number, TCP port 853, rather than the existing DNS service port (53). The recursive resolvers may be authenticated by means of a Subject Public Key Info (SPKI) Fingerprint (please see Section 3.2 and Section 4 of [RFC7858](https://datatracker.ietf.org/doc/html/rfc7858) for details).
+DoT uses a dedicated port (TCP 853), separate from the standard DNS port (53). Recursive resolvers may be authenticated using a Subject Public Key Info (SPKI) fingerprint (see Section 3.2 and Section 4 of [RFC 7858](https://datatracker.ietf.org/doc/html/rfc7858) for details).
 
 ## DNS over HTTPS (DoH)
 
-[RFC8484](https://datatracker.ietf.org/doc/html/rfc8484) specifies how to send and receive DNS queries over HTTPS. Server configuration is performed out of band, and the connection with the resolver is secured as any other HTTPS traffic. DoH is mostly targeted at web browsers and does **not** have the potential for improving the privacy properties of transactions between recursive resolvers and authoritative nameservers.
+[RFC 8484](https://datatracker.ietf.org/doc/html/rfc8484) specifies how to send and receive DNS queries over HTTPS. The connection with the resolver is secured like any other HTTPS traffic. DoH is primarily targeted at web browsers and does not have the potential for improving privacy between recursive resolvers and authoritative nameservers.
 
-One possible benefit from a user standpoint is that since DNS queries can be intermingled with normal web traffic, DoH might prove more difficult to block than DoD and DoT – or at the very least would require blocking the IP addresses of well-known DoH servers, rather than simply the corresponding DoH service port.
+One benefit from a user standpoint is that DNS queries can be intermingled with normal web traffic. This makes DoH more difficult to block than DoT — blocking would require filtering the IP addresses of well-known DoH servers, rather than simply blocking the DoT service port.
 
 ## References
 
-[Internet Society](https://www.internetsociety.org/resources/deploy360/dns-privacy/intro/)
+- [DNS Privacy - Introduction (Internet Society)](https://www.internetsociety.org/resources/deploy360/dns-privacy/intro/)

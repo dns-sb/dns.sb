@@ -7,22 +7,26 @@ description: "How to set DNS.SB's DoH (DNS over HTTPS) on Vivaldi Browser"
 
 <StepContainer>
 
-### Upgrade your Vivaldi to latest version
+### Update Vivaldi
 
-Make sure you have installed the latest version of Vivaldi, or you can download it [here](https://vivaldi.com/download/).
+Ensure you have the latest version of Vivaldi installed. You can download it from the [official website](https://vivaldi.com/download/).
 
-### Go to Settings
+### Open Network Settings
 
-Input `vivaldi:settings/network/` in address bar or use `ctrl` + `F12` to open settings page.
+Enter `vivaldi://settings/privacy/` in the address bar, or press `Ctrl` + `F12` to open settings, then navigate to `Privacy and Security`.
 
-### Set DNS.SB DoH Server
+### Configure DNS over HTTPS
 
-In the `Network` section (or you can search for `DNS Over HTTPS`), enable `DNS Over HTTPS`, choose `Custom DNS Provider`, and enter:
+In the `DNS over HTTPS` section:
 
-```
+1. Enable `DNS over HTTPS`
+2. Select `Custom`
+3. Enter the following URL:
+
+```txt
 https://doh.dns.sb/dns-query
 ```
 
-![Vivaldi](https://s3.image.hosting/2025/07/09/pmWgDf.png)
+[![Vivaldi DNS over HTTPS settings](/images/doh/vivaldi/vivaldi-doh-settings.webp)](/images/doh/vivaldi/vivaldi-doh-settings.webp)
 
 </StepContainer>

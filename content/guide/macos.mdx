@@ -7,54 +7,40 @@ description: "How to set DNS.SB's regular DNS on Apple macOS"
 
 <StepContainer>
 
-### Go to `System Settings` and find `Network`
+### Open System Settings
 
-![WjEGY.png](https://s3.image.hosting/2023/01/11/WjEGY.png)
+Go to `System Settings` and select `Network`:
 
-If you are on Wi-Fi, select `Wi-Fi` and if you are on Ethernet, select `Ethernet`.
+[![macOS System Preferences Network settings](/images/guide/macos/macos-system-preferences-network.webp)](/images/guide/macos/macos-system-preferences-network.webp)
 
-### When you are on Ethernet, click on `Details...` button, and select `DNS`:
+Select your connection type (`Wi-Fi` or `Ethernet`).
 
-Delete the old records and add DNS.SB's servers
+### Configure DNS Servers
 
-```
+Click `Details...` on your active connection, then select the `DNS` tab.
+
+Remove any existing DNS servers and add the following:
+
+```txt
 185.222.222.222
 ```
 
-```
+```txt
 45.11.45.11
 ```
 
-```
+```txt
 2a09::
 ```
 
-```
+```txt
 2a11::
 ```
 
-[![Wjcd8.png](https://s3.image.hosting/2023/01/11/Wjcd8.png)](https://image.hosting/image/Wjcd8)
+[![macOS DNS server settings](/images/guide/macos/macos-dns-server-settings.webp)](/images/guide/macos/macos-dns-server-settings.webp)
 
-### When you are on Wi-Fi, click on `Details...` button from the connected network, and select `DNS`:
+### Save Changes
 
-Delete the old records and add DNS.SB's servers
-
-```
-185.222.222.222
-```
-
-```
-45.11.45.11
-```
-
-```
-2a09::
-```
-
-```
-2a11::
-```
-
-### Finally, Click on the `OK` button
+Click `OK` to apply the new DNS settings.
 
 </StepContainer>

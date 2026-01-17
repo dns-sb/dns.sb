@@ -8,7 +8,14 @@
       "Bash(npm install)",
       "Bash(npm run sitemap:*)",
       "Bash(npm run build:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(du:*)",
+      "Bash(bun add:*)",
+      "Bash(bun run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
