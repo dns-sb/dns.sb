@@ -15,7 +15,7 @@ This method works with most Linux distributions.
 
 ### Edit resolv.conf
 
-```bash
+```bash filename="Terminal"
 sudo vim /etc/resolv.conf
 ```
 
@@ -45,17 +45,17 @@ Install `e2fsprogs`:
 
 <Tabs items={['Debian / Ubuntu', 'CentOS / Fedora', 'Arch Linux / Manjaro']}>
   <Tab>
-```bash
+```bash filename="Terminal"
 sudo apt install e2fsprogs -y
 ```
   </Tab>
   <Tab>
-```bash
+```bash filename="Terminal"
 sudo dnf install e2fsprogs -y
 ```
   </Tab>
   <Tab>
-```bash
+```bash filename="Terminal"
 sudo pacman -S e2fsprogs
 ```
   </Tab>
@@ -63,7 +63,7 @@ sudo pacman -S e2fsprogs
 
 Lock the file:
 
-```bash
+```bash filename="Terminal"
 sudo chattr +i /etc/resolv.conf
 ```
 
@@ -103,7 +103,7 @@ network:
 
 Replace the `nameservers` section with:
 
-```yaml
+```yaml filename="YAML"
 nameservers:
   addresses:
   - 185.222.222.222
@@ -112,13 +112,13 @@ nameservers:
 
 ### Apply Changes
 
-```bash
+```bash filename="Terminal"
 sudo netplan apply
 ```
 
 ### Verify Configuration
 
-```bash
+```bash filename="Terminal"
 resolvectl status
 ```
 

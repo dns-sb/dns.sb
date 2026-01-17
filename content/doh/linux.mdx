@@ -15,7 +15,7 @@ dnsproxy is a lightweight DNS proxy server that supports DNS-over-TLS, DNS-over-
 
 Download and install the latest version:
 
-```bash
+```bash filename="Terminal"
 VERSION=$(curl -s https://api.github.com/repos/AdguardTeam/dnsproxy/releases/latest | grep tag_name | cut -d '"' -f 4) && echo "Latest dnsproxy version is $VERSION"
 wget -O dnsproxy.tar.gz "https://github.com/AdguardTeam/dnsproxy/releases/download/${VERSION}/dnsproxy-linux-amd64-${VERSION}.tar.gz"
 tar -xzvf dnsproxy.tar.gz
@@ -27,19 +27,19 @@ sudo mv dnsproxy /usr/bin/dnsproxy
 
 Start dnsproxy with DNS.SB as the upstream server:
 
-```bash
+```bash filename="Terminal"
 sudo dnsproxy -l 127.0.0.1 -p 53 -u https://doh.dns.sb/dns-query -b 185.222.222.222:53
 ```
 
 Open another terminal and test the DNS resolution:
 
-```bash
+```bash filename="Terminal"
 dig example.com @127.0.0.1
 ```
 
 You should see a response similar to:
 
-```txt
+```txt filename="Output"
 ;; ANSWER SECTION:
 example.com.		1094	IN	A	93.184.216.34
 
@@ -58,19 +58,19 @@ Install Supervisor:
 
 <Tabs items={['Debian / Ubuntu', 'CentOS / Fedora', 'Arch Linux / Manjaro']}>
   <Tab>
-```bash
+```bash filename="Terminal"
 sudo apt install supervisor -y
 ```
   </Tab>
   <Tab>
-```bash
+```bash filename="Terminal"
 sudo yum install epel-release -y
 sudo yum update
 sudo yum install supervisor -y
 ```
   </Tab>
   <Tab>
-```bash
+```bash filename="Terminal"
 sudo pacman -S supervisor
 ```
   </Tab>
@@ -91,7 +91,7 @@ environment = LANG="en_US.UTF-8"
 
 Restart Supervisor to apply the configuration:
 
-```bash
+```bash filename="Terminal"
 sudo systemctl restart supervisor
 ```
 
@@ -116,7 +116,7 @@ WantedBy=multi-user.target
 
 Enable and start the service:
 
-```bash
+```bash filename="Terminal"
 sudo systemctl daemon-reload
 sudo systemctl enable --now dnsproxy
 ```
@@ -127,7 +127,7 @@ Follow the same method as [How to change DNS settings on Linux](/guide/linux/).
 
 Edit `/etc/resolv.conf`:
 
-```bash
+```bash filename="Terminal"
 sudo vim /etc/resolv.conf
 ```
 

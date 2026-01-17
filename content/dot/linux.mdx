@@ -11,7 +11,7 @@ This guide uses `systemd-resolved`, which is available on most modern Linux dist
 
 ### Enable systemd-resolved
 
-```bash
+```bash filename="Terminal"
 sudo systemctl enable --now systemd-resolved
 ```
 
@@ -19,7 +19,7 @@ sudo systemctl enable --now systemd-resolved
 
 Edit `/etc/systemd/resolved.conf`:
 
-```bash
+```bash filename="Terminal"
 sudo vim /etc/systemd/resolved.conf
 ```
 
@@ -43,7 +43,7 @@ DNSSEC=yes
 
 ### Restart the Service
 
-```bash
+```bash filename="Terminal"
 sudo systemctl restart systemd-resolved
 ```
 
@@ -51,7 +51,7 @@ sudo systemctl restart systemd-resolved
 
 Edit `/etc/resolv.conf`:
 
-```bash
+```bash filename="Terminal"
 sudo vim /etc/resolv.conf
 ```
 
@@ -65,13 +65,13 @@ nameserver 127.0.0.53
 
 Test the DNS resolution:
 
-```bash
+```bash filename="Terminal"
 dig example.com
 ```
 
 You should see a response similar to:
 
-```txt
+```txt filename="Output"
 ;; ANSWER SECTION:
 example.com.		3309	IN	A	93.184.216.34
 
