@@ -91,3 +91,15 @@ main ol li a:hover {
   height: 90px;
 }
 
+/* Solid background for code block Copy button */
+.nextra-code pre > div:first-child {
+  background-color: rgb(0, 0, 0) !important;
+  padding: 0.25rem !important;
+  border-radius: 0.375rem !important;
+}
+
+html:not(.dark) .nextra-code pre > div:first-child {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+

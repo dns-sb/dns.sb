@@ -15,7 +15,9 @@
       "Bash(bun add:*)",
       "Bash(bun run build:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(grep:*)"
     ]
   }
 }
