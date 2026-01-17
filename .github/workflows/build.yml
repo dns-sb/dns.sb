@@ -10,21 +10,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
 
       - name: Use Node.js 24
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 24
 
       - name: node_modules CI Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: ${{ github.workspace }}/node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Next.js CI Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: ${{ github.workspace }}/.next/cache
           # Generate a new cache whenever packages or source files change.
@@ -66,12 +66,12 @@ jobs:
     env:
       REMOTE_HOST: ${{ secrets[matrix.host_id] }}
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           name: dist
           path: ${{ github.workspace }}/out/
       - run: ls -R ${{ github.workspace }}/out/
-      - uses: easingthemes/ssh-deploy@v4.0.5
+      - uses: easingthemes/ssh-deploy@v5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: '-avz --delete'
