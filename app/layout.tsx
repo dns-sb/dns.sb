@@ -32,10 +32,28 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://dns.sb'),
   title: {
-    default: 'DNS.SB',
+    default: 'DNS.SB - Free, Fast & Privacy-First DNS Resolver',
     template: '%s - DNS.SB'
   },
-  description: "Browse Internet, Faster and More Private with DNS.SB's extremely performant and stable DNS resolver services",
+  description: "DNS.SB is a free, fast, and privacy-focused DNS resolver service. Supports DNS over HTTPS (DoH) and DNS over TLS (DoT) with no logging. Protect your online privacy today.",
+  keywords: ['DNS', 'DNS resolver', 'DNS over HTTPS', 'DoH', 'DNS over TLS', 'DoT', 'privacy DNS', 'secure DNS', 'free DNS', 'fast DNS', 'DNSSEC', 'encrypted DNS'],
+  authors: [{ name: 'DNS.SB', url: 'https://dns.sb' }],
+  creator: 'xTom GmbH',
+  publisher: 'DNS.SB',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://dns.sb',
+  },
   icons: {
     icon: [
       { url: '/favicon/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
@@ -47,19 +65,33 @@ export const metadata: Metadata = {
     apple: '/favicon/apple-touch-icon.png',
   },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://dns.sb',
     siteName: 'DNS.SB',
+    title: 'DNS.SB - Free, Fast & Privacy-First DNS Resolver',
+    description: "DNS.SB is a free, fast, and privacy-focused DNS resolver service. Supports DNS over HTTPS (DoH) and DNS over TLS (DoT) with no logging.",
     images: [
       {
-        url: '/images/logo_with_text.png',
-        type: 'image/png',
+        url: 'https://dns.sb/images/logo_with_text.png',
         width: 2048,
-        height: 632
+        height: 632,
+        alt: 'DNS.SB Logo',
+        type: 'image/png',
       }
     ]
   },
   twitter: {
-    card: 'summary_large_image'
-  }
+    card: 'summary_large_image',
+    site: '@dns_dot_sb',
+    creator: '@dns_dot_sb',
+    title: 'DNS.SB - Free, Fast & Privacy-First DNS Resolver',
+    description: "DNS.SB is a free, fast, and privacy-focused DNS resolver service. Supports DoH and DoT with no logging.",
+    images: ['https://dns.sb/images/logo_with_text.png'],
+  },
+  verification: {
+    google: undefined,
+  },
 }
 
 const footerLinks = [
@@ -172,6 +204,49 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html lang="en" dir="ltr" suppressHydrationWarning className={`${spaceGrotesk.variable} ${inter.variable} ${spaceMono.variable}`}>
       <Head faviconGlyph="🌐">
         <script defer data-domain="dns.sb" src="https://stat.dns.sb/js/script.js" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://dns.sb/#organization',
+                  name: 'DNS.SB',
+                  url: 'https://dns.sb',
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: 'https://dns.sb/images/logo_with_text.png',
+                    width: 2048,
+                    height: 632,
+                  },
+                  sameAs: [
+                    'https://x.com/dns_dot_sb',
+                    'https://github.com/dns-sb',
+                    'https://c.im/@DNS',
+                  ],
+                  contactPoint: {
+                    '@type': 'ContactPoint',
+                    email: 'admin@dns.sb',
+                    contactType: 'customer service',
+                  },
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://dns.sb/#website',
+                  url: 'https://dns.sb',
+                  name: 'DNS.SB',
+                  description: 'Free, fast, and privacy-focused DNS resolver service',
+                  publisher: {
+                    '@id': 'https://dns.sb/#organization',
+                  },
+                  inLanguage: 'en-US',
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
       <body>
         <AreYouUsingDnsSb />
